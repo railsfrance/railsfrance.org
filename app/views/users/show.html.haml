@@ -1,0 +1,85 @@
+- set_meta_tags :title => @user.username
+#usersListNav.fullwidth
+#theUserInformation.fullwidth
+  %div.center960
+    #theUserName.fullwidth
+      = image_tag @user.gravatar_url(:size => 42)
+      = @user.username
+    #theUserAddressAndSocial
+      %p
+        Site :
+        %a(href="#{@user.website}") #{@user.website}
+        %br
+        Github :
+        = link_to @user.github, "https://github.com/#{@user.github}", :target => "_blank","data-skip-pjax" => true
+        %br
+        Twitter :
+        = link_to @user.twitter, "http://twitter.com/#{@user.twitter}", :target => "_blank","data-skip-pjax" => true
+      %p
+        Ville :
+        %span= @user.city
+        %br
+        Date d'inscription :
+        %span= l(@user.created_at, :format => :tiny)
+    #questionsEventsTabs
+      %ul
+        %li#questionTabLink
+          = link_to "QUESTIONS", "#questionTab", "data-skip-pjax" => true
+        %li#eventTabLink
+          = link_to "EVENEMENTS", "#eventsTab", "data-skip-pjax" => true
+      #questionTab
+        #questionTabAsk
+          %h2 
+            Questions posées :
+            %span
+              = @user.questions_count
+          - @presenter.recent_questions.each do |q|
+            %div
+              = link_to q.title, question_path(q)
+              %p
+                %span
+                  &nbsp; 
+                Posée il y a 
+                = distance_of_time_in_words(q.created_at, Time.now)
+        #questionTabAnswer
+          %h2
+            Réponses apportées : 
+            %span
+              = @user.answers_count
+          - @presenter.recent_answers.each do |a|
+            %div
+              = link_to truncate(a.description, :length => 50), question_path(a.question)
+              %p
+                %span
+                  &nbsp;
+                Postée il y a 
+                = distance_of_time_in_words(a.created_at, Time.now) 
+      #eventsTab
+        #eventTabParticipations
+          %h2 
+            Participations à un événement : 
+            %span
+              = @user.event_attendee.size
+          - @presenter.recent_attended_events.each do |e|
+            %div
+              = link_to e.title, event_path(e)
+              %p
+                %span
+                  &nbsp;
+                Le
+                = l(e.date, :format => :default)
+                = l(e.date, :format => :short)
+        #eventTabcreation
+          %h2 
+            Evénements créés : 
+            %span
+              = @user.events_count
+          - @presenter.recent_created_events.each do |e|
+            %div
+              = link_to e.title, event_path(e)
+              %p
+                %span
+                  &nbsp;
+                Le
+                = l(e.date, :format => :default)
+                = l(e.date, :format => :short)

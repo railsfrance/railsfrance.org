@@ -1,0 +1,49 @@
+- set_meta_tags :title => "Toutes les ressources disponibles sur Railsfrance"
+%nav#resourcesNav.fullwidth
+  %div
+    = image_tag "resources/github-icon.png", :width => 72, :height => 57
+    = link_to "Github", "https://github.com/railsfrance",:target => "_blank","data-skip-pjax" => "true"
+    = image_tag "resources/twitter-icon.png", :width => 72, :height => 57
+    = link_to "Twitter", "http://twitter.com/railsfrance",:target => "_blank","data-skip-pjax" => "true"
+    = image_tag "resources/mail-icon.png", :width => 72, :height => 57
+    = link_to "Mailing list", "http://groups.google.com/group/railsfrance",:target => "_blank","data-skip-pjax" => "true"
+#theResources.fullwidth
+  %div.center960
+    #resourcesTabs
+      %ul
+        %li
+          = link_to "Les entreprises", "#workersTab", "data-skip-pjax" => true
+        %li
+          = link_to "Les guides", "#guidesTab", "data-skip-pjax" => true
+      #workersTab
+        %h2
+          Vous trouverez ici
+          %span
+            les entreprises 
+          évoluant avec 
+          %span
+            ruby on rails
+        #workersTabContent
+          - @presenter.workers.each do |w|
+            %article
+              %h3
+                = w.name
+              %span
+                = w.city
+              = link_to "site<span>&nbsp;</span>".html_safe, w.website, :title => w.name, :target => "_blank", "data-skip-pjax" => true
+      #guidesTab
+        %h2
+          Vous trouverez ici 
+          %span
+            les guides
+          pour bien débuter 
+          %span
+            ruby on rails
+        #guidesTabContent
+          - @presenter.guides.each do |g|
+            %article
+              = link_to "Voir le guide<span>&nbsp;</span>".html_safe, g.website, :title => g.name, :target => "_blank", "data-skip-pjax" => true
+              %h3
+                = g.name
+              %div
+                = g.description

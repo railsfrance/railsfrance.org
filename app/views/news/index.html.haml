@@ -1,0 +1,8 @@
+- feed("RailsFrance » News", news_index_url(:atom))
+%nav#newsNav.fullwidth
+#newsFull.fullwidth
+  %aside
+    = link_to image_tag("rss.png", :width => 32, :height => 32), news_index_url(:atom), "data-skip-pjax" => true, :class => "buttonCurved"
+  = render @news
+  #pagination.center960
+    = paginate @news

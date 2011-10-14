@@ -1,0 +1,14 @@
+#jobsSort
+  = simple_form_for @search, :url => jobs_path, :html => {:id => 'search',:method => :get} do |f|
+    %div.input
+      = f.label :cdi
+      = f.input :cdi, :as => :boolean, :label => false, :wrapper => false
+    %div.input
+      = f.label :cdd
+      = f.input :cdd, :as => :boolean, :label => false, :wrapper => false
+    %div.input
+      = f.label :freelance
+      = f.input :freelance, :as => :boolean, :label => false, :wrapper => false
+    %div.input
+      = f.label :internship, "Stage"
+      = f.input :internship, :as => :boolean, :label => false, :wrapper => false

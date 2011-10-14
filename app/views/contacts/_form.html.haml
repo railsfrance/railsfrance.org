@@ -1,0 +1,10 @@
+= simple_form_for @contact_form, :url => send_email_contacts_path  do |f|
+  %fieldset
+    %legend Posez votre question
+  = f.input :email, :autofocus => "autofocus"
+  %br
+  = f.input :subject
+  = f.input :body, :as => :text
+  = recaptcha_tags
+  %br
+  = f.button :submit

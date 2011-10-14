@@ -1,0 +1,24 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: rails_france_development
+  pool: 5
+  username: postgres
+  password: 
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: rails_france_test
+  pool: 5
+  username: postgres
+  password: 
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: rails_france_production
+  pool: 15
+  username: postgres
+  password: 
+

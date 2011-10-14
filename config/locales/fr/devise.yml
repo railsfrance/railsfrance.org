@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+fr:
+  errors:
+    messages:
+      expired: "a expiré, veuillez en demander un nouveau"
+      not_found: "pas trouvé"
+      already_confirmed: "était déjà confirmé, veuillez essayer de vous connecter"
+      not_locked: "n'était pas verrouillé"    
+      not_saved:
+        one: "Ce %{resource} n'a pu être enregistré à cause d'une erreur :"
+        other: "Ce %{resource} n'a pu être enregistré à cause de %{count} erreurs :"
+  devise:
+    failure:
+      already_authenticated: "Vous êtes déjà connecté"
+      unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer"
+      unconfirmed: "Vous devez confirmer votre compte pour continuer"
+      invalid: "Email ou mot de passe incorrect"
+      invalid_token: "Jeton d'authentification incorrect"
+      timeout: "Votre session a expiré, veuillez vous reconnecter pour continuer"
+      inactive: "Votre compte n'est pas encore activé"  
+    sessions:
+      signed_in: "Connexion réussie"
+      signed_out: "Déconnexion réussie"
+    passwords:
+      send_instructions: "Vous allez recevoir un email avec les instructions de réinitialisation de mot de passe"
+      updated: "Votre mot de passe a été modifié avec succès. Vous êtes maintenant connecté."
+    confirmations:
+      confirmed: "Votre compte a été confirmé avec succès"
+    registrations:
+      signed_up: "Vous vous êtes inscrit avec succès. Vous allez recevoir les instructions de confirmation par email"
+      inactive_signed_up: "Vous vous êtes inscrit avec succès. Mais vous ne pouvez pas encore vous connecter car votre compte n'a pas encore été confirmé"
+      updated: "Votre compte a été modifié avec succès"
+      destroyed: "Au revoir! Votre compte a été annulé avec succès. Nous espérons vous revoir bientôt :)"
+    mailer:
+      confirmation_instructions:
+        subject: "Railsfrance.org - Confirmation de votre compte"
+      reset_password_instructions:
+        subject: "Railsfrance.org - Changement de mot de passe"

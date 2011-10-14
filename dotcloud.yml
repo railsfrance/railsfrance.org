@@ -1,0 +1,9 @@
+www:
+  type: ruby
+  exclude_bundler_groups:
+    - development
+    - test
+db:
+  type: postgresql
+redis:
+  type: redis

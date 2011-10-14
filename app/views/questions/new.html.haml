@@ -1,0 +1,10 @@
+- set_meta_tags :title => 'Posez votre question'
+
+#stationNav.fullwidth
+%div{ :id =>"stationQuestionForm", :class => "fullwidth"}
+  = simple_form_for @question, :url => questions_path, :html => { :class => "center960", :id => "questionAddForm", :method => :post } do |form|
+    %fieldset
+      %legend Posez votre question
+      = link_to "<span>&nbsp;</span>Retour aux questions".html_safe, questions_path, :class => "buttonSmall", :id => "backToQuestions"
+      = render 'form', :f => form
+      = render 'markdown/markdown'

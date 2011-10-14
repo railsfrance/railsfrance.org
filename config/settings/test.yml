@@ -1,0 +1,18 @@
+app:
+  secret_token: "4c53cb6f0c089e9272270545fcdf9a11d94aa67a4a24e7821f82c8440706a88e36c356afef46f7f2239a64dff3f2fbc805af8b18c8134c5f5cf2368b25a5b262"
+  cookie_key: "_rails_france_session"
+devise:
+  pepper: "64938f37b8971a10d01e87eac89e62b18ff9cce636a1cb461245cbfac79dbf35bb28d1fc2f908536568e3038af442c93043e9de6dfac4c1e4012087433c5b9ee"
+mailer:
+  host: "0.0.0.0:3000"
+  from: "no-reply@railsfrance.org"
+redis:
+  host: "localhost"
+  port: 6379 
+  password: ""
+  db: 2
+  expire_view: 86400
+  expire_tweet: 3600
+recaptcha:
+  public_key: ""
+  private_key: ""

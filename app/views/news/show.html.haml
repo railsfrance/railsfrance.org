@@ -1,0 +1,30 @@
+%nav#newsNav.fullwidth
+#newsFull.fullwidth
+  %article#Thenews.center960
+    %h3
+      = @news.title
+    #theNewsDate
+      = l(@news.created_at, :format => :tiny)
+    #theNewsDescription
+      = @news.description
+    #theNewsHourUser
+      %span
+        Posté il y a #{distance_of_time_in_words_to_now(@news.created_at)}
+      par #{link_to @news.user_username, user_path(@news.user), "data-skip-pjax" => true}
+      = image_tag @news.user_gravatar_url
+    %h5
+      Commentaires :
+    %div#theEventComments
+    - if @comments.empty?
+      %p.noComment
+        = image_tag "flash/warning_mess.png"
+        Aucun commentaire
+    - else
+      = render @comments
+    #pagination.center960
+      = paginate @comments
+    #eventAnswer
+      = simple_form_for @comment, :url => news_comments_path(@news), :html => { :method => :post } do |f|
+        = f.input :description, :as => :wysiwyg, :label => "Ajouter un commentaire", :required => false
+        = f.button :submit
+      = render 'markdown/markdown'

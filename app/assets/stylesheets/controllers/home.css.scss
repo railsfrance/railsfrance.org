@@ -1,0 +1,265 @@
+/*--- SLIDER ---*/
+
+#slider {
+  background: image-url('slider/slider-background.jpg');
+  height: 470px;
+  article {
+    position: relative;
+    z-index: 10;
+    float: left;
+    width: 300px;
+    height: 470px;
+    text-align: center; } }
+
+#slideMiddle {
+  padding: 0 20px 0 30px;
+  margin-right:10px;
+  background: image-url('slider/slider-separations.png') center center no-repeat; }
+
+.sliderButton {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  margin-left: -115px;
+  width: 230px; }
+
+#embarquementImmediat {
+  background: image-url('slider/embarquement-immediat.png') no-repeat;
+  width: 234px;
+  height: 166px;
+  margin: 0 auto;
+  text-indent: -9999px; }
+  
+#homeMapContainer{
+  width:246px;
+  height:353px;
+  margin:0 auto;
+  padding-top:20px;
+  background: image-url('home/home-map-background.png') center bottom  no-repeat;
+}
+
+#homeMap{
+  width:198px;
+  height:240px;
+  margin:30px auto 0 auto;
+}
+
+.sliderActu, .sliderConvers {
+  position: relative;
+  text-align: left;
+  width: 300px; }
+
+.sliderActuDate {
+  float: left;
+  position: relative;
+  color: #66b5be;
+  font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  span {
+    position: absolute;
+    top: -11px;
+    left: 35px;
+    font-size: 0.375em; } }
+
+.sliderActu {
+margin-bottom:25px;
+  h2 {
+    float: left;
+    margin: 0;
+    margin-top: 9px;
+    font-size: 1.375em;
+    font-weight:normal;
+  }
+  a{
+    color: #fff;
+  }
+  p {
+    clear: both;
+    display: block;
+    color: #fff;
+    font-size: 0.9em;
+    line-height: 1.3em;
+    font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
+  } 
+}
+
+.sliderConvers {
+  h2 {
+    color: #fff;
+    font-size: 1.375em;
+    font-weight:normal;
+    margin: 0; 
+    text-transform:uppercase;
+  }
+  p {
+    font-size: 0.75em;
+    font-family: OswaldRegular,Verdana,Geneva,Arial,Helvetica,sans-serif;
+    color: #66b5be; }
+  a {
+    color: #fff; }
+  p:last-child {
+    color: #fff;
+    font-size: 0.7em;
+    line-height: 1.5em;
+    font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
+    margin-bottom: 12px; } }
+
+/*--- OUVRIERS & TWITTER ---*/
+
+#workersTweets {
+  background: image-url('home/background-menu-separation.jpg') top repeat-x;
+  article {
+    float: left; } }
+
+#workersContainer {
+  width: 600px;
+  padding-right: 20px;
+  h1 {
+    background: image-url('home/les-jobs-rails.jpg') no-repeat;
+    width: 214px;
+    height: 74px;
+    margin: 8px 0 50px 0;
+    text-indent: -9999px; }
+   }
+#workersContent
+{
+  padding-right:10px;
+  width: 600px;
+  height:433px;
+  margin-bottom:20px;
+}
+.worker {
+  font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
+  font-size: 0.9em;
+  line-height: 1.3em;
+  color:#202020;
+  margin-bottom:10px;
+  img {
+    display: inline-block;
+    vertical-align:top; 
+  }
+  div {
+    display: inline-block;
+    width: 310px;
+    margin: 0 20px;
+  }
+  h2 {
+    color: #951515;
+    font-size: 1.375em;
+    margin-bottom: 10px;
+  }
+}
+
+.workerButton {
+ display: inline-block;
+  color: #f4e3c5;
+  position: relative;
+  top:-20px;
+  width: 120px;
+  span {
+    padding-left: 26px;
+    background: image-url('home/worker-arrow.png') no-repeat center left; }
+}
+
+#tweetsContainer {
+  width: 340px;
+  height:585px;
+  background: image-url('home/workerstweets-separation.png') left 120px no-repeat;
+  h1 {
+    background: image-url('home/derniers-tweets.jpg') no-repeat;
+    width: 314px;
+    height: 78px;
+    margin: 19px auto 30px auto;
+    text-indent: -9999px; } }
+
+.tweet {
+  background: image-url('home/tweet.png') 10px 5px no-repeat;
+  width: 290px;
+  color: #202020;
+  padding-left: 50px;
+  margin-top: 20px;
+  font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
+  font-size: 0.9em;
+  line-height: 1.3em;
+  color:#202020;
+  a {
+    color: #202020;
+    font-weight: bold; }
+  span {
+    color: #821315;
+    font-size: 0.8em; } }
+
+/*--- PROJET RAILS ---*/
+
+#railsProject {
+  background: image-url('home/background-menu-separation.jpg') top repeat-x; }
+
+#railsProjectContainer {
+  h1 {
+    background: image-url('home/les-projets-sur-les-rails.jpg') no-repeat center bottom;
+    width: 330px;
+    padding-top: 8px;
+    height: 81px;
+    margin: 0 auto;
+    text-indent: -9999px; }
+  ul {
+    width: 960px; }
+  li {
+    width: 180px;
+    text-align: center; } }
+
+.bx-wrapper {
+  margin: 0 auto;
+  padding: 70px 0 60px 0; }
+
+.bx-next, .bx-prev {
+  position: absolute;
+  z-index: 999;
+  width: 60px;
+  text-indent: -999999px;
+  background: #a51515;
+  background: -moz-linear-gradient(top, #a51515 0%, #821314 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a51515), color-stop(100%,#821314)); 
+  background: -webkit-linear-gradient(top, #a51515 0%,#821314 100%); 
+  background: -o-linear-gradient(top, #a51515 0%,#821314 100%); 
+  background: -ms-linear-gradient(top, #a51515 0%,#821314 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a51515', endColorstr='#821314',GradientType=0 ); 
+  background: linear-gradient(top, #a51515 0%,#821314 100%); 
+  height: 56px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000; 
+  -moz-transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  &:hover, &.selected{
+    background:#4d0505;
+    -webkit-box-shadow: inset 3px 3px 10px 0 #000;
+    -moz-box-shadow: inset 3px 3px 10px 0 #000;
+    box-shadow: inset 3px 3px 10px 0 #000;
+  }
+}
+
+.bx-next {
+  top: 35%;
+  right: -35px; }
+
+.bx-prev {
+  top: 35%;
+  left: -35px; }
+
+.bx-next span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -8px; }
+
+.bx-prev span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -28px; }

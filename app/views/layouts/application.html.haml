@@ -1,0 +1,42 @@
+!!! 5
+%html{:lang => I18n.locale}
+  %head
+    %meta{:name => "viewport", :content =>"width=device-width, initial-scale=0.5"}
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    = display_meta_tags :site => "Railsfrance.org", :reverse => true
+    = favicon_link_tag "favicon/favicon.ico"
+    = favicon_link_tag "favicon/apple-touch-icon.png", :rel => 'apple-touch-icon', :type => 'image/png'
+    - if @feeds
+      - @feeds.each do |link, title|
+        = auto_discovery_link_tag(:atom, link, { :title => title })
+    = stylesheet_link_tag :application
+    /[if IE 7]
+      = stylesheet_link_tag "ie/ie7"
+    /[if IE 8]
+      = stylesheet_link_tag "ie/ie8"
+    /[if lt IE 9]
+      = javascript_include_tag "http://html5shiv.googlecode.com/svn/trunk/html5.js"
+    = csrf_meta_tag
+  %body
+    = render "layouts/header"
+    = yield :banner
+    %div{"data-pjax-container" => true}
+      = yield
+    = render "layouts/footer"
+    - if flash.present?
+      - if flash[:notice].present?
+        #flash.flashNotice
+          %div.center960
+            = image_tag "flash/true-icon.png"
+            = flash[:notice]
+      - elsif flash[:error].present?
+        #flash.flashError
+          %div.center960
+            = image_tag "flash/error-icon.png"
+            = flash[:error]
+      - elsif flash[:alert].present?
+        #flash.flashAlert
+          %div.center960
+            = image_tag "flash/notification-icon.png"
+            = flash[:alert]
+    = javascript_include_tag :application

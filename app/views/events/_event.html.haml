@@ -1,0 +1,29 @@
+%article.event.center960
+  .eventSummary
+    %h3
+      = link_to truncate(event.title, :length => 50), event, :class => "eventHyperLink"
+    %p.eventAddress
+      %span
+        Adresse :
+      = event.street
+      = event.postal_code
+      = event.city
+    .eventDescription
+      = event.description
+    %aside.eventInformations
+      %div.eventAuthor
+        Créateur :
+        %span
+          = link_to event.user_username, user_path(event.user)
+          = image_tag event.user_gravatar_url
+      %div.eventHour
+        Heure de l'événement :
+        %span
+          = l(event.date, :format => :short)
+      %div.eventMemberRegisterd
+        Participants :
+        %span
+          = event.attendees_count/2
+  %aside.eventDate
+    = l(event.date, :format => :tiny)
+  .clear

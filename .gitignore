@@ -1,0 +1,14 @@
+.bundle
+.project
+.sass-cache
+.rvmrc
+/db/*.sqlite3
+/log/*.log
+/log/*.pid
+/tmp/
+/config/database.yml
+/public/system
+/public/images
+/config/settings/development.yml
+*~
+*#*

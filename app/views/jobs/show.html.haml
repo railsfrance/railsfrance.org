@@ -1,0 +1,26 @@
+- set_meta_tags :title => "Offre d'emploi : #{@job.title}", :description => @job.description.truncate(150)
+%nav#jobsNav.fullwidth
+%div#theJob.fullwidth
+  %article.center960
+    %h3
+      = @job.title
+    = image_tag (@job.logo_uid.present? ? @job.logo.thumb('100x').url : image_path('jobs/job_default.png')), :width => 100
+    %aside.jobInformations
+      %div.jobCompany
+        Employeur :
+        %span= @job.company
+      %div.jobCity
+        Lieu :
+        %span= @job.city
+      %div.jobType
+        Type:
+        %span= format_contracts @job.contracts
+    %div#theJobDate
+      = l(@job.created_at, :format => :tiny)
+    #theJobDescription.userMarkdown
+      = markdown @job.description
+    .clear
+    - if params[:action] == "preview"
+      <br/>
+      = link_to "Confirmer", confirm_jobs_path, "data-skip-pjax" => true, :class => "buttonSmall", :id =>"theJobConfirm"
+    = link_to "<span>&nbsp;</span>Retour aux annonces".html_safe, jobs_path, :class => "buttonSmall", :id => "backToJobs"

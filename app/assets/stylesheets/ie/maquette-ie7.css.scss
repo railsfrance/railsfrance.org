@@ -1,0 +1,12 @@
+nav {
+  ul, li {
+    display: inline; } }
+
+.button, .button_small, .bx-next, .bx-prev {
+  behavior: url("PIE.htc"); }
+
+.sliderActuDate {
+  margin-top: -10px;
+  line-height: 1em;
+  span {
+    left: 35px; } }

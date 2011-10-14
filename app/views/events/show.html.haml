@@ -1,0 +1,66 @@
+%nav#eventNav.fullwidth
+#theEvent.fullwidth
+  %article.center960
+    %h3
+      = @event.title
+      - if can? :update, @event
+        = link_to "Editer", edit_event_path(@event), :id => "eventEdit", :title => "Editer cet événement"
+    = link_to "<span>&nbsp;</span>Retour aux événements".html_safe, events_path, :class => "buttonSmall", :id => "backToEvents"
+    %p#theEventAddress
+      %span
+        Adresse :
+      = @event.street
+      = @event.postal_code
+      = @event.city
+    #theEventDate
+      %div
+        Date :
+        %span
+          = l(@event.date, :format => :default)
+      %div
+        Heure :
+        %span
+          = l(@event.date, :format => :short)
+      %div
+        Créateur :
+        %span
+          = link_to @event.user_username, user_path(@event.user)
+          = image_tag @event.user_gravatar_url
+    #theEventDescription.userMarkdown
+      = markdown @event.description
+      %br/
+      = link_to @event.website, @event.website, :id => "theEventWebSite", :target => "_blank"
+    %section#theEventInscription
+      %h4
+        Participants :
+      %div#theEventSubscribe
+        - if user_signed_in?
+          - if can? :attend, @event
+            = link_to "Participer", attend_event_path, "data-skip-pjax" => true, :class => "buttonSmall subscribe"
+          - if can? :unattend, @event
+            = link_to "Se désinscrire", unattend_event_path, "data-skip-pjax" => true, :class => "buttonSmall unsubscribe"
+      %div#theEventAttendees
+        - if @event.attendees_count > 0
+          - @event.attendees.each do |a|
+            = link_to(image_tag(a.gravatar_url, :alt => a.username, :title => a.username, :class => "attendees"), user_path(a))
+        - else
+          %p.noAttendee
+            = image_tag "flash/warning_mess.png"
+            Aucun participant
+      %h5
+        Commentaires :
+      %div#theEventComments
+      - if @comments.empty?
+        %p.noComment
+          = image_tag "flash/warning_mess.png" 
+          Aucun commentaire
+      - else
+        = render @comments
+      #pagination.center960
+        = paginate @comments
+      #eventAnswer
+        = simple_form_for @comment, :url => event_comments_path(@event), :html => { :method => :post } do |f|
+          = f.input :description, :as => :wysiwyg, :label => "Ajouter un commentaire", :required => false
+          %p La syntaxe #{link_to "Markdown", "http://github.github.com/github-flavored-markdown/","data-skip-pjax" => "true", :target => "_blank", :id => "markdownHelp"} est supportée  
+          = f.button :submit
+        = render 'markdown/markdown'

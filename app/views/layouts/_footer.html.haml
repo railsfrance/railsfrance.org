@@ -1,0 +1,14 @@
+%footer.fullwidth
+  %ul#footerLeft
+    %li
+      = link_to "Crédits", root_path, "data-skip-pjax" => "true"
+    %li
+      = link_to "Twitter", "http://twitter.com/railsfrance", "data-skip-pjax" => "true"
+  = link_to "Rails France", root_path, :id => "logoFooterRailsFrance", "data-skip-pjax" => "true"
+  %ul#footerRight
+    %li
+      = link_to "Contact", new_contact_path,"data-skip-pjax" => "true"
+    %li
+      = link_to "Github", "https://github.com/railsfrance","data-skip-pjax" => "true"
+  #footerBottom.fullwidth
+    = link_to "Mentions legales".html_safe, root_path,"data-skip-pjax" => "true"

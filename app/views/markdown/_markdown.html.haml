@@ -1,0 +1,83 @@
+%div{:id=>'dialogMarkdownHelp', :title => 'Feuille de style de la syntaxe Markdown'}
+  #markdowncontent
+    .cheatsheet-content
+      .col
+        %h3 Formatage du Texte
+        %p Titres
+        %pre
+          :preserve
+            # Ceci est une balise &lt;h1&gt;
+            ## Ceci est une balise &lt;h2&gt;
+            ###### Ceci est une balise &lt;h6&gt;
+        %p Style du texte
+        %pre
+          :preserve
+            *Ce texte sera en italique*
+            _Ce texte sera en italique_
+            **Ce texte sera en gras**
+            __Ce texte sera en gras__
+
+            *Vous **pouvez** les combiner*
+      .col
+        %h3 Listes
+        %p Non ordonnée
+        %pre
+          :preserve
+            * Item 1
+            * Item 2
+              * Item 2a
+              * Item 2b
+        %p Ordonnée
+        %pre
+          :preserve
+             1. Item 1
+             2. Item 2
+             3. Item 3
+               * Item 3a
+               * Item 3b
+      .col
+        %h3 Divers
+        %p Liens
+        %pre
+          :preserve
+            http://railsfrance.org - automatique
+            [railsfrance](http://railsfrance.org)
+        %p Blocs de texte
+        %pre
+          :preserve
+            Comme disait Nietzsche :
+            &gt; Ce qui se dit la nuit
+            &gt; ne voit jamais le jour.
+
+      %hr
+      %h3 Exemples de code avec Markdown
+      .col
+        %p
+          Coloration syntaxique automatique avec <a href="http://github.github.com/github-flavored-markdown/" title="GitHub Flavored Markdown" target="_blank">GFM</a>
+        %pre
+          :preserve
+            ```javascript
+            function fancyAlert(arg) {
+              if(arg) {
+                $.facebox({div:'#foo'})
+              }
+            }
+            ```
+      .col
+        %p Ou, indentation du code avec 4 espaces
+        %pre
+          :preserve
+            Un exemple de code ruby
+            sans la coloration syntaxique
+            automatique:
+
+                def foo
+                  if not bar
+                    return true
+                  end
+      .col
+        %p Code dans une ligne
+        %pre
+          :preserve
+            Pour afficher toto utiliser
+            `&lt;puts "toto"&gt;` et c'est tout !

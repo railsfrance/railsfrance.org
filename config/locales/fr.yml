@@ -1,0 +1,54 @@
+# -*- coding: utf-8 -*-
+fr:
+  # Job
+  messages:
+    form_not_valid: "Veuillez remplir tous les champs requis"
+    job_confirmation: "Un email vient de vous être envoyé. Merci de cliquer sur le lien de confirmation afin de mettre l'annonce en ligne."
+    job_validated: "Votre annonce est desormais en ligne !"
+    job_updated: "Votre annonce a été mise à jour !"
+    job_not_updated: "Une erreur est survenue, votre annonce n'a pas été mise à jour !"
+    job_unknown: "Ma joie de donner est morte à force de donner."
+    job_not_activated: "Cette offre d'emploi n'a pas encore été validée !"
+    destroyed: "Entrée supprimé !"
+    not_destroyed: "Une erreur est survenue, la suppression a échouée"
+
+  # Question
+  question:
+    flash:
+      created: "Votre question a été créée"
+      updated: "Votre question a été editée"
+
+  # Vote
+  vote:
+    flash: 
+      voted: "Votre vote a été pris en compte"
+
+  # Answer
+  answer:
+    flash:
+      created: "Votre réponse été créée"
+      answered: "La réponse a été acceptée"
+
+  # Event
+  event:
+    flash:
+      created: "Votre événement a été créé"
+      updated: "Votre événement a été edité"
+      attended: "Vous êtes inscris a cet evenement"
+      unattended: "Vous êtes desinscris de cet evenement"
+    error:
+      date: "La date doit être supérieure à aujourd'hui" 
+
+  # Comment
+  comment:
+    flash:
+      created: "Votre commentaire a été créé"
+
+  # Kaminari
+  views: 
+    pagination:
+      previous: "<"
+      first: "<<"
+      next: ">"
+      last: ">>"
+      truncate: "..."

@@ -1,0 +1,11 @@
+#mapNav.fullwidth
+  #mapSort
+    %form{:id => "map_filters"}
+      - [[:jobs,"jobs"],[:users,"utilisateurs"],[:events,"événements"]].each do |filter|
+        %div.input
+          %label
+            = filter.second
+          %input{:type => 'checkbox', :name => filter.first, :id => "filter_#{filter.first}", :checked => true}
+#mapContainer.fullwidth
+  #theMap
+    %div{:id => "map_canvas"}

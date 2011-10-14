@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+fr:
+  activerecord:
+    models:
+      job: "Job"
+      question : "Question"
+      answer: "Answer"
+    attributes:
+      user:
+        username: "Pseudo"
+        password: "Mot de passe"
+        website: "Site Internet"
+        city: "Ville"
+        postal_code: "Code postal"
+        password_confirmation: "Confirmation mot de passe"
+        current_password: "Mot de passe actuel"
+      job:
+        company: "Nom de votre entreprise"
+        title: "Intitulé du poste"
+        street: "Adresse"
+        city: "Ville"
+        url: "Site internet"
+        postal_code: "Code postal"
+        internship: "Stage"
+        remote: "A distance"
+        part_time: "Temps partiel"
+        full_time: "Temps plein"
+      question:
+        title: "Titre"
+        description: "Votre question"
+        tag_list: "Taguer votre question <span>(5 tag max, séparés par une virgule)</span>"
+        created_at: "Date"
+        up_votes: "Votes"
+        answers_count: "Réponses"
+      answer:
+        description: "Votre réponse"
+      event:
+        title: "Titre"
+        description: "Votre événement"
+        street: "Adresse"
+        city: "Ville"
+        url: "Site internet"
+        postal_code: "Code postal"
+        website: "Site"
+  activemodel:
+    attributes:
+      contact_form:
+        subject: "Sujet du message"
+        body: "Corps du message"

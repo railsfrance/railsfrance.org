@@ -1,0 +1,22 @@
+- set_meta_tags :title => "Toutes les offres d'emplois disponibles en Ruby On Rails"
+
+%article.job.center960
+  .jobSummary
+    %h3
+      = link_to job.title, job_path(job), :class => "jobHyperlink"
+    = image_tag (job.logo_uid.present? ? job.logo.thumb('100x').url : image_path('jobs/job_default.png')), :width => 100
+    .jobDescription
+      = sanitize(job.description).html_safe
+    %aside.jobInformations
+      %div.jobCompany
+        Employeur :
+        %span= link_to_company job
+      %div.jobCity
+        Lieu :
+        %span= job.city
+      %div.jobType
+        Type:
+        %span= format_contracts job.contracts
+  %aside.jobCreationDate
+    = l(job.created_at, :format => :tiny)
+  .clear

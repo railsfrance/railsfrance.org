@@ -1,0 +1,23 @@
+%article.center960
+  .summary
+    %h3
+      = link_to truncate(question.title, :length => 50), question
+    .questionDescription
+      = sanitize(question.description).html_safe
+    = tag_box "tags", question.tags
+    .user
+      %span
+        Posée il y a #{distance_of_time_in_words_to_now(question.created_at)}
+      par #{link_to question.user_username, user_path(question.user), "data-skip-pjax" => true}
+      = image_tag question.user.gravatar_url
+  %aside.stats
+    .votes
+      = question.votes
+      %span= pluralize_word(question.votes, "vote")
+    .views
+      = question.views
+      %span= pluralize_word(question.views, "vue")
+    .answers
+      = question.answers.size
+      %span= pluralize_word(question.answers_count, "réponse")
+  .clear

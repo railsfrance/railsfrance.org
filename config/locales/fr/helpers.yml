@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+fr:
+  helpers:
+    submit:
+      job:
+        create: "Déposer cette offre"
+      question:
+        create: "Poser"
+        update: "Editer"
+      answer:
+        create: "Répondre"
+      event:
+        create: "Créer"
+        update: "Editer"
+      comment:
+        create: "Commenter"
+      contact_form:
+        create: "Envoyer"

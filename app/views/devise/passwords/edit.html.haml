@@ -1,0 +1,18 @@
+%section#connection.fullwidth
+  %hgroup.fullwidth
+    %h1
+      %span#arabesqueLeft &nbsp;
+      %span MOT
+      DE PASSE OUBLIE
+      %span#arabesqueRight &nbsp;
+  %nav#connectionNav.fullwidth
+    = render :partial => "devise/shared/links"
+%aside#connectionAside.fullwidth
+  = simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:id => "newUserPaswword", :method => :put }) do |f|
+    %fieldset
+      %legend Changement de votre mot de passe
+      = f.input :reset_password_token, :as => :hidden
+      = f.input :password, :autofocus => "autofocus"
+      = f.input :password_confirmation
+      = f.button :submit, "Changer mon mot de passe"
+

@@ -1,0 +1,53 @@
+- feed("RailsFrance » Réponses", question_url(@question, :atom))
+- set_meta_tags :title => @question.title, :description => @question.description.truncate(150)
+
+%aside#stationNav.fullwidth
+#theQuestion.fullwidth
+  %aside
+    =link_to image_tag("rss.png", :width => 32, :height => 32), question_url(@question, :atom), "data-skip-pjax" => true, :class => "buttonCurved"
+  %article.center960
+    #theQuestionDescription
+      %h3
+        = @question.title
+      .userMarkdown
+        = markdown @question.description
+      %aside
+        = tag_box "tags", @question.tags
+        %div.userInformations
+          %span
+            - if @question.created_at != @question.updated_at
+              Editée il y a #{distance_of_time_in_words_to_now(@question.updated_at)}
+            - else
+              Posée il y a #{distance_of_time_in_words_to_now(@question.created_at)}
+          par #{link_to @question.user_username, user_path(@question.user)}
+          = image_tag @question.user.gravatar_url
+    #theQuestionVotes
+      %div #{@question.votes}
+      - if user_signed_in?
+        - if can? :vote, @question
+          = link_to "Vote up", vote_question_path(:vote => "up"), :id => "question_vote_up", "data-skip-pjax" => "true"
+          = link_to "Vote down", vote_question_path(:vote => "down"), :id => "question_vote_down", "data-skip-pjax" => "true"
+        -else
+          = link_to "Vote up", "#", :id => "question_vote_up", :class => "disabled"
+          = link_to "Vote down", "#", :id => "question_vote_down", :class => "disabled"
+      -else
+        = link_to "Vote up", "#", :id => "question_vote_up", :class => "disabled"
+        = link_to "Vote down", "#", :id => "question_vote_down", :class => "disabled"
+    %section#anwsers
+      - if @answers.empty?
+        %p.noAnwser
+          = image_tag "flash/warning_mess.png"
+          Aucune réponse
+      - else
+        = render @answers
+        #pagination.center960
+          = paginate @answers
+      #questionAnswer
+        = simple_form_for @answer, :url => question_answers_path(@question), :html => { :method => :post } do |f|
+          = f.input :description, :as => :wysiwyg, :required => false
+          %p La syntaxe #{link_to "Markdown", "http://github.github.com/github-flavored-markdown/","data-skip-pjax" => "true", :target => "_blank", :id => "markdownHelp"} est supportée
+          = f.button :submit
+        = render 'markdown/markdown'
+    = link_to "<span>&nbsp;</span>Retour aux questions".html_safe, questions_path, :class => "buttonSmall", :id => "backToQuestions"
+    - if can? :update, @question
+      = link_to "Editer", edit_question_path(@question), :id => "question_update"

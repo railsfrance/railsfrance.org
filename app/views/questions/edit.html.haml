@@ -1,0 +1,7 @@
+#stationNav.fullwidth
+%div{ :id =>"stationQuestionForm", :class => "fullwidth"}
+  = simple_form_for @question, :html => { :class => "center960", :id => "questionAddForm" } do |form|
+    %fieldset
+      %legend Editez votre question
+      = link_to "<span>&nbsp;</span>Retour aux questions".html_safe, questions_path, :class => "buttonSmall", :id => "backToQuestions"
+      = render 'form', :f => form

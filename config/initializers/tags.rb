@@ -1,0 +1,1 @@
+ActsAsTaggableOn::TagList.delimiter = ','

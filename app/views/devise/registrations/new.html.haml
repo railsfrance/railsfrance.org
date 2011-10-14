@@ -1,0 +1,24 @@
+%section#connection.fullwidth
+  %hgroup.fullwidth
+    %h1
+      %span#arabesqueLeft &nbsp;
+      ENREGISTREMENT
+      %span#arabesqueRight &nbsp;
+  %nav#connectionNav.fullwidth
+    = render :partial => "devise/shared/links"
+%aside#connectionAside.fullwidth
+  = simple_form_for(resource, :url => registration_path(resource),:html => {:id => "newUserForm"}) do |f|
+    %fieldset
+      %legend Inscription
+      #newUserLeft
+        = f.input :username, :autofocus => "autofocus"
+        = f.input :email
+        = f.input :github
+        = f.input :twitter
+        = f.input :website, :placeholder => "http://www.railsfrance.org"
+      #newUserRight
+        = f.input :city
+        = f.input :postal_code
+        = f.input :password, :required => true
+        = f.input :password_confirmation, :required => true
+        = f.button :submit, "S'enregister"

@@ -1,0 +1,22 @@
+div.jquery-checkbox-wrapper {
+  position:relative;
+  top:3px;
+  display:inline-block;
+  width: 39px;
+  height: 38px;
+  z-index: 50;
+  vertical-align: baseline;
+}
+
+.jquery-checkbox-wrapper a.jquery-checkbox {
+  background: transparent image-url('checkbox.png') repeat scroll 0px 0px;
+  display: inline-block;
+  width: 39px;
+  height: 38px;
+  cursor: pointer;
+  outline: none;
+}
+
+.jquery-checkbox-wrapper a.jquery-checkbox-on {
+  background-position: 100% 0;
+}
