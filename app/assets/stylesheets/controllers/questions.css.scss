@@ -156,6 +156,10 @@
     font-size: 0.9em;
     line-height: 1.3em;
     color:#202020;
+  p + p {
+    margin: 0;
+  }
+  margin-bottom:24px;
 }
 
 
