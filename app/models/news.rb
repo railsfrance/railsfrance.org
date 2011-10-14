@@ -9,7 +9,7 @@ class News < ActiveRecord::Base
   friendly_id :title, :use => :slugged
   paginates_per 10
 
-  attr_accessible :title, :description
+  attr_accessible :title, :description, :user_id, :slug
 
   delegate :page, :to => :comments, :prefix => true, :allow_nil => true
   delegate :username, :to => :user, :prefix => true, :allow_nil => true
