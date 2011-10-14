@@ -4,7 +4,7 @@
   .jobSummary
     %h3
       = link_to job.title, job_path(job), :class => "jobHyperlink"
-    = image_tag (job.logo_uid.present? ? job.logo.thumb('100x').url : image_path('jobs/job_default.png')), :width => 100
+    = image_tag (job.logo_uid.present? ? job.logo.thumb('56x').url : image_path('jobs/job_default.png')), :width => 56
     .jobDescription
       = sanitize(job.description).html_safe
     %aside.jobInformations
