@@ -1,50 +1,20 @@
 #event {
-  background: image-url('slider/slider-background.jpg') repeat-x;
-  h1 {
-    position:relative;
-    text-align: center;
-    font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 3em;
-    color: #e7d8c3;
-    text-shadow: 0 2px 5px #000; 
-    padding-top:10px;}
   hgroup {
-    height: 150px; 
-    background: image-url('events/events.png') center bottom no-repeat;}
-  h1 span {
-    color: #66b5be; }}
+    background: image-url('events/events.png') center bottom no-repeat;
+  }
+}
     
 /*--- EVENT SORT NAV ---*/
-
 #eventNav {
-  text-align:center;
-  height: 88px;
-  background: image-url('station/background-separation.jpg') repeat-x;
-  div{
-    display:inline-block;
-    height:64px;
-    margin-top:12px;
-    word-spacing:0;
-    padding:0 15px;
-    background: #901414; /* Old browsers */
-    background: -moz-linear-gradient(top, #901414 0%, #811316 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#901414), color-stop(100%,#811316)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #901414 0%,#811316 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #901414 0%,#811316 100%); /* Opera11.10+ */
-    background: -ms-linear-gradient(top, #901414 0%,#811316 100%); /* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#901414', endColorstr='#811316',GradientType=0 ); /* IE6-9 */
-    background: linear-gradient(top, #901414 0%,#811316 100%); /* W3C */
-  }
   h2 {
-    display:inline-block;
+    top:8px;
     width: 617px;
     height: 41px;
     background: image-url('events/number-of-upcoming-events.png') center bottom no-repeat;
-    text-indent: -9999px;
    }
-   span{
+  span{
     position:relative;
-    top:18px;
+    top:10px;
     display:inline-block;
     color:#DDC8A2;
     font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -55,114 +25,91 @@
 }
     
 /*--- EVENT EVENT LISTING ---*/
-
-#events {
-  font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-  background: image-url('station/background-world-map.png')  center top no-repeat;
-  article:last-of-type{
-    border-bottom: none;
-  }
-}
-
-#eventsAside{
-  text-align:center;
-}
-
-
 .event{
-  border-bottom: dashed 1px #857c6f;
-  padding:30px 0 10px 0;
-}
-
-.eventSummary{
-  float:right;
-  width:869px;
-  padding-left:20px;
-  background: image-url('jobs/separator-date.png') left top no-repeat;
-  h3{
+  .eventSummary{
+    float:right;
+    width:869px;
+    padding-left:20px;
+    background: image-url('jobs/separator-date.png') left top no-repeat;
+    h3{
+      margin-bottom:10px;
+      font-size:1.9em;
+      overflow:hidden;
+    }
+  }
+  .eventHyperLink{
+    text-transform: uppercase;
+    color: #400404;
+    -moz-transition: color 0.8s ease;
+    -webkit-transition: color 0.8s ease;
+    -o-transition: color 0.8s ease;
+    transition: color 0.8s ease;
+      &:hover{
+        text-decoration:none;
+        color:#a51515;
+      } 
+  }
+  .eventAddress{
+    font-size:1.2em;
+    font-family: OswaldRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    line-height:1.7em;
+    color:#8d1414;
     margin-bottom:10px;
-    font-size:1.9em;
+    span{
+      color:#202020;
+    }
+  }
+  .eventDescription{
+    font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
+    font-size: 0.9em;
+    line-height: 1.3em;
+    color:#202020;
+    margin-bottom:10px;
     overflow:hidden;
   }
-}
-
-.eventHyperLink{
-  text-transform: uppercase;
-  color: #400404;
-  -moz-transition: color 0.8s ease;
-  -webkit-transition: color 0.8s ease;
-  -o-transition: color 0.8s ease;
-  transition: color 0.8s ease;
-    &:hover{
-      text-decoration:none;
-      color:#a51515;
-    } 
-}
- 
-.eventAddress{
-  font-size:1.2em;
-  font-family: OswaldRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
-  line-height:1.7em;
-  color:#8d1414;
-  margin-bottom:10px;
-  span{
-    color:#202020;
+  .eventInformations{
+    text-align:left;
+    background:#fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 1px 1px 4px 0px #000;
+    -moz-box-shadow: inset 1px 1px 4px 0px #000;
+    box-shadow: inset 1px 1px 4px 0px #000; 
+    line-height:40px;
+    height:40px;
+    padding: 0 15px;
+    margin:0 0 10px 0;
+    div{
+     display:inline-block;
+     overflow:hidden;
+     width:276px;
+     background: image-url('jobs/separator.png') right center no-repeat;
+     &:last-child{
+      background:none;}}
+    span, a {
+      color:#66b5be;
+    }
+    img{
+      vertical-align:middle;
+      border:2px solid #8B0B0B;
+    }
+  }
+  .eventDate{
+    background: image-url('panneau.png') no-repeat;
+    width:61px;
+    height:62px;
+    color:#fff;
+    text-align:center;
+    float:right;
+    margin:0 10px 0 0;
+    padding-top:20px;
   }
 }
 
-.eventDescription{
-  font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
-  font-size: 0.9em;
-  line-height: 1.3em;
-  color:#202020;
-  margin-bottom:24px;
-  overflow:hidden;
-}
 
-.eventInformations{
-  background:#fff;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: inset 1px 1px 4px 0px #000;
-  -moz-box-shadow: inset 1px 1px 4px 0px #000;
-  box-shadow: inset 1px 1px 4px 0px #000; 
-  line-height:40px;
-   height:40px;
-   padding: 0 15px;
-  div{
-   display:inline-block;
-   overflow:hidden;
-   width:276px;
-   background: image-url('jobs/separator.png') right center no-repeat;
-   &:last-child{
-    background:none;}}
-  span, a {
-    color:#66b5be;
-  }
-  img{
-    vertical-align:middle;
-    border:2px solid #8B0B0B;
-  }
-}
-
-.eventDate{
-  background: image-url('panneau.png') no-repeat;
-  width:61px;
-  height:62px;
-  color:#fff;
-  text-align:center;
-  float:right;
-  margin-right:10px;
-  padding-top:20px;
-}
 
 /*--- ADD EVENT ---*/
-#stationEventForm {
-  background: image-url('station/background-world-map.png')  center top no-repeat;
-  padding:0 0 20px 0;
-}
-
 #eventAddForm {
   border-bottom:none;
   background: image-url('station/here.png') 800px 125px no-repeat;
@@ -202,8 +149,6 @@
 
 /*--- VIEW EVENT AND COMMENTS ---*/
 #theEvent {
-  padding:10px 0 30px 0;
-  background: image-url('station/background-world-map.png')  center top no-repeat;
   h3, h4, h5{
     color:#8d1414;
     text-transform:uppercase;
@@ -260,14 +205,13 @@
 }
 
 .subscribe{
-  background: #63b534; /* Old browsers /
-  background: -moz-linear-gradient(top, #63b534 0%, #1f511e 100%); / FF3.6+ /
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#63b534), color-stop(100%,#1f511e)); / Chrome,Safari4+ /
-  background: -webkit-linear-gradient(top, #63b534 0%,#1f511e 100%); / Chrome10+,Safari5.1+ /
-  background: -o-linear-gradient(top, #63b534 0%,#1f511e 100%); / Opera11.10+ /
-  background: -ms-linear-gradient(top, #63b534 0%,#1f511e 100%); / IE10+ /
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63b534', endColorstr='#1f511e',GradientType=0 ); / IE6-9 /
-  background: linear-gradient(top, #63b534 0%,#1f511e 100%); / W3C */
+  background: #63b534;
+  background: -moz-linear-gradient(top, #63b534 0%, #1f511e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#63b534), color-stop(100%,#1f511e));
+  background: -webkit-linear-gradient(top, #63b534 0%,#1f511e 100%);
+  background: -o-linear-gradient(top, #63b534 0%,#1f511e 100%);
+  background: -ms-linear-gradient(top, #63b534 0%,#1f511e 100%);
+  background: linear-gradient(top, #63b534 0%,#1f511e 100%);
   &:hover{
     background:#114400;
     color:#568335;
@@ -282,31 +226,6 @@
 .attendees{
   border: 2px solid #8d1414
 }
-
-
-
-.theEventComment{
-  color:#8d1414;
-  margin-bottom:10px;
-  span{
-  position:absolute;
-  right:0;
-    color:#66B5BE;
-    background: image-url('events/hourglass.png') center left no-repeat;
-    padding-left:25px;
-  }
-  img{
-    vertical-align:middle;
-  }
-}
-
-.theEventUserInfo{
-  position:relative;
-  padding-bottom:10px;
-  margin-bottom:10px;
-  border-bottom: dashed 1px #857c6f;
-}
-
 
 #eventAnswer{
  background: image-url('events/attendees_separation.png') center top no-repeat;
@@ -342,7 +261,6 @@
     color: #8d1414;
     margin-bottom: 20px;}
 }
-
 
 #eventEdit{
   position: absolute;

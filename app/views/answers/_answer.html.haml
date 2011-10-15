@@ -2,12 +2,11 @@
   %div.questionAnswerDescription
     .userMarkdown
       = markdown answer.description
-    %aside
-      %div.userInformations
-        %span
-          Postée il y a #{distance_of_time_in_words_to_now(answer.created_at)} 
-          par #{link_to answer.user.username, user_path(answer.user)} 
-          = image_tag answer.user.gravatar_url
+    .postHourUser
+      %span
+        Postée il y a #{distance_of_time_in_words_to_now(answer.created_at)} 
+        par #{link_to answer.user.username, user_path(answer.user)} 
+        = image_tag answer.user.gravatar_url
   %div.questionAnswerVotes
     %div #{answer.votes}
     - if user_signed_in?

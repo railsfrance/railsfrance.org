@@ -1,13 +1,13 @@
 - set_meta_tags :title => "Toutes les ressources disponibles sur Railsfrance"
-%nav#resourcesNav.fullwidth
+%nav#resourcesNav.secondaryNav
   %div
     = image_tag "resources/github-icon.png", :width => 72, :height => 57
-    = link_to "Github", "https://github.com/railsfrance",:target => "_blank","data-skip-pjax" => "true"
+    = link_to "Github", "https://github.com/railsfrance",:target => "_blank","data-skip-pjax" => "true", :class=> "buttonBlue"
     = image_tag "resources/twitter-icon.png", :width => 72, :height => 57
-    = link_to "Twitter", "http://twitter.com/railsfrance",:target => "_blank","data-skip-pjax" => "true"
+    = link_to "Twitter", "http://twitter.com/railsfrance",:target => "_blank","data-skip-pjax" => "true", :class=> "buttonBlue"
     = image_tag "resources/mail-icon.png", :width => 72, :height => 57
-    = link_to "Mailing list", "http://groups.google.com/group/railsfrance",:target => "_blank","data-skip-pjax" => "true"
-#theResources.fullwidth
+    = link_to "Mailing list", "http://groups.google.com/group/railsfrance",:target => "_blank","data-skip-pjax" => "true", :class=> "buttonBlue"
+.contentBackground
   %div.center960
     #resourcesTabs
       %ul
@@ -30,7 +30,7 @@
                 = w.name
               %span
                 = w.city
-              = link_to "site<span>&nbsp;</span>".html_safe, w.website, :title => w.name, :target => "_blank", "data-skip-pjax" => true
+              = link_to "site<span>&nbsp;</span>".html_safe, w.website, :title => w.name, :target => "_blank", "data-skip-pjax" => true, :class=> "buttonBlue"
       #guidesTab
         %h2
           Vous trouverez ici 
@@ -42,7 +42,7 @@
         #guidesTabContent
           - @presenter.guides.each do |g|
             %article
-              = link_to "Voir le guide<span>&nbsp;</span>".html_safe, g.website, :title => g.name, :target => "_blank", "data-skip-pjax" => true
+              = link_to "Voir le guide<span>&nbsp;</span>".html_safe, g.website, :title => g.name, :target => "_blank", "data-skip-pjax" => true, :class=> "buttonBlue"
               %h3
                 = g.name
               %div

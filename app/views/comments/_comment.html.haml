@@ -1,8 +1,9 @@
-%aside.theEventComment
-  %div.theEventUserInfo
-    = image_tag comment.user_gravatar_url, :alt => comment.user_username, :title => comment.user_username, :class => "attendees"
-    = comment.user_username
+%article
+  .userMarkdown
+    = comment.description
+  .postHourUser
     %span
       Posté il y a #{distance_of_time_in_words_to_now(comment.created_at)}
-  %div.userMarkdown
-    = comment.description
+      par
+    = comment.user_username
+    = image_tag comment.user_gravatar_url, :alt => comment.user_username, :title => comment.user_username, :class => "attendees"

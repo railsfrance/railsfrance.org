@@ -1,31 +1,9 @@
 #users {
-  background: image-url('slider/slider-background.jpg') repeat-x;
-  h1 {
-    position:relative;
-    text-align: center;
-    text-shadow: #000 5px 3px 5px;
-    font-size: 3em;
-    color: #e7d8c3;
-    text-shadow: 0 2px 5px #000; 
-    padding-top:10px;}
   hgroup {
-    height: 150px; 
-    background: image-url('users/users.png') center bottom no-repeat;}
-  h1 span {
-    color: #66b5be; }}
-    
-#usersListNav {
-  text-align:center;
-  height: 88px;
-  background: image-url('station/background-separation.jpg') repeat-x;
- }
- 
-#theUsersList{
-  font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-  background: image-url('station/background-world-map.png')  center top no-repeat;
-  padding:20px 0;
+    background: image-url('users/users.png') center bottom no-repeat;
+  }
 }
-
+    
 .theUser{
   display:inline-block;
   width:280px;
@@ -38,7 +16,6 @@
   background: -webkit-linear-gradient(top, #901918 0%,#480a0a 100%);
   background: -o-linear-gradient(top, #901918 0%,#480a0a 100%);
   background: -ms-linear-gradient(top, #901918 0%,#480a0a 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#901918', endColorstr='#480a0a',GradientType=0 );
   background: linear-gradient(top, #901918 0%,#480a0a 100%);
   -webkit-border-radius: 15px;
   -khtml-border-radius: 15px;
@@ -52,7 +29,6 @@
     background: -webkit-linear-gradient(top, #67b5bd 0%,#10575f 100%);
     background: -o-linear-gradient(top, #67b5bd 0%,#10575f 100%);
     background: -ms-linear-gradient(top, #67b5bd 0%,#10575f 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67b5bd', endColorstr='#10575f',GradientType=0 ); 
     background: linear-gradient(top, #67b5bd 0%,#10575f 100%);
   }
   img{
@@ -73,13 +49,6 @@
 }
 
 /*--- USER INFORMARTIONS ---*/
-
-#theUserInformation{
-  font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-  background: image-url('station/background-world-map.png')  center top no-repeat;
-  padding: 20px 0;
-}
-
 #theUserName{
   border-bottom:1px solid #410404;
   color:#400404;
@@ -120,13 +89,12 @@
 
 #questionTabLink {
   background: #66b5be; /* Old browsers */
-  background: -moz-linear-gradient(top, #66b5be 0%, #376368 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#66b5be), color-stop(100%,#376368)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #66b5be 0%,#376368 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #66b5be 0%,#376368 100%); /* Opera11.10+ */
-  background: -ms-linear-gradient(top, #66b5be 0%,#376368 100%); /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66b5be', endColorstr='#376368',GradientType=0 ); /* IE6-9 */
-  background: linear-gradient(top, #66b5be 0%,#376368 100%); /* W3C */
+  background: -moz-linear-gradient(top, #66b5be 0%, #376368 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#66b5be), color-stop(100%,#376368));
+  background: -webkit-linear-gradient(top, #66b5be 0%,#376368 100%);
+  background: -o-linear-gradient(top, #66b5be 0%,#376368 100%);
+  background: -ms-linear-gradient(top, #66b5be 0%,#376368 100%);
+  background: linear-gradient(top, #66b5be 0%,#376368 100%);
   a{
     background: image-url('users/question-tab.png') 30px center no-repeat;
   }
@@ -135,7 +103,6 @@
 #eventTabLink a{
     background: image-url('users/event-tab.png') 30px center no-repeat;
 }
-
 
 #questionTabAsk, #questionTabAnswer,#eventTabParticipations, #eventTabcreation {
   word-spacing:normal;

@@ -1,6 +1,6 @@
-%nav#eventNav.fullwidth
-#theEvent.fullwidth
-  %article.center960
+.secondaryNav
+.contentBackground
+  %article#theEvent.center960
     %h3
       = @event.title
       - if can? :update, @event
@@ -49,13 +49,13 @@
             Aucun participant
       %h5
         Commentaires :
-      %div#theEventComments
-      - if @comments.empty?
-        %p.noComment
-          = image_tag "flash/warning_mess.png" 
-          Aucun commentaire
-      - else
-        = render @comments
+      %div.theComments
+        - if @comments.empty?
+          %p.noComment
+            = image_tag "flash/warning_mess.png" 
+            Aucun commentaire
+        - else
+          = render @comments
       #pagination.center960
         = paginate @comments
       #eventAnswer

@@ -1,12 +1,12 @@
-%section#connection.fullwidth
-  %hgroup.fullwidth
+%section#connection.sectionTitle
+  %hgroup
     %h1
       %span#arabesqueLeft &nbsp;
       ENREGISTREMENT
       %span#arabesqueRight &nbsp;
-  %nav#connectionNav.fullwidth
-    = render :partial => "devise/shared/links"
-%aside#connectionAside.fullwidth
+%nav#connectionNav.secondaryNav
+  = render :partial => "devise/shared/links"
+.contentBackground
   = simple_form_for(resource, :url => registration_path(resource),:html => {:id => "newUserForm"}) do |f|
     %fieldset
       %legend Inscription

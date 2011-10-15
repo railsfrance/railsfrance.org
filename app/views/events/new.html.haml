@@ -1,6 +1,6 @@
 - set_meta_tags :title => "Postez votre événement!"
-#eventNav.fullwidth
-#stationEventForm.fullwidth
+.secondaryNav
+.contentBackground
   = simple_form_for @event , :url => events_path, :html => { :class => "center960", :id => "eventAddForm", :method => :post } do |form|
     %fieldset
       %legend Créer votre événement

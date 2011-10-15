@@ -1,8 +1,8 @@
-%nav#stationNav.fullwidth
-  #sort
+%nav#stationNav.secondaryNav
+  %div
     %h2 Trier par
     = link_to "Occurences", "#count", { :id => "tagCount", "data-skip-pjax" => "true" }
     = link_to "Nom", "#name", { :id => "tagName", "data-skip-pjax" => "true" }
-#QuestionsTagsContainer.fullwidth
+.contentBackground
   #Questionstags.center960
     = colorize_tags @tags

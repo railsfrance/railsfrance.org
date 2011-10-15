@@ -1,10 +1,9 @@
 - set_meta_tags :title => "Offre d'emploi : #{@job.title}", :description => @job.description.truncate(150)
-%nav#jobsNav.fullwidth
-%div#theJob.fullwidth
-  %article.center960
+.secondaryNav
+.contentBackground
+  %article#theJob.center960
     %h3
       = @job.title
-    = image_tag (@job.logo_uid.present? ? @job.logo.thumb('100x').url : image_path('jobs/job_default.png')), :width => 100
     %aside.jobInformations
       %div.jobCompany
         Employeur :
@@ -18,6 +17,7 @@
     %div#theJobDate
       = l(@job.created_at, :format => :tiny)
     #theJobDescription.userMarkdown
+      = image_tag (@job.logo_uid.present? ? @job.logo.thumb('100x').url : image_path('jobs/job_default.png')), :width => 100
       = markdown @job.description
     .clear
     - if params[:action] == "preview"

@@ -1,12 +1,123 @@
-nav {
-  ul, li {
-    display: inline; } }
+.buttonCurved,
+#arabesqueLeft,
+#arabesqueRight,
+#logoFooterRailsFrance,
+.col,
+div.jquery-checkbox-wrapper,
+.jquery-checkbox-wrapper a.jquery-checkbox,
+.ui-helper-clearfix,
+.ui-tabs .ui-tabs-nav li,
+.workerButton,
+.tag,
+.theUser,
+#questionTabAsk,
+#questionTabAnswer,
+#eventTabParticipations,
+#eventTabcreation 
+{
+  display:inline;
+}
+
+.secondaryNav{
+  h2,div,a{
+    display:inline;
+  }
+}
+
+header nav {
+  li{
+    display:inline;
+  }
+}
+
+footer{
+  a, ul{
+    display:inline;
+  }
+}
+
+#pagination{
+   .first a, .last a, .next a, .prev a{
+     display:inline;
+   }
+}
+
+.simple_form{
+  div, legend{
+    display:inline;
+  }
+}
+
+/*--- HOME ---*/
+.worker{
+  img,div{
+    display:inline;
+  }
+}
+
+/*--- EVENT ---*/
+#eventNav{
+  span{
+    display:inline;
+  }
+}
+
+.event{
+  .eventInformations{
+    div{
+       display:inline;
+    }
+  }
+}
+
+#theEventDate{
+  div{
+    display:inline;
+  }
+}
+
+/*--- JOBS ---*/
+#jobsNav{
+  .input, form, label{
+    display:inline;
+  }
+}
+
+.job{
+  .jobInformations{
+    div{
+      display:inline;
+    }
+  }
+}
+
+#jobAddForm{
+  input[type=checkbox]{
+    display:inline;
+  }
+}
+
+/*--- MAP ---*/
+#mapNav{
+  .input, form, label{
+    display:inline;
+  }
+}
+
+/*--- RESSOURCES ---*/
+#workersTabContent,#guidesTabContent{
+  h3{
+    display:inline;
+  }
+}
+
+/*--- USERS ---*/
+#theUserAddressAndSocial{
+  p{
+    display:inline;
+  }
+}
 
 .button, .button_small, .bx-next, .bx-prev {
   behavior: url("PIE.htc"); }
 
-.sliderActuDate {
-  margin-top: -10px;
-  line-height: 1em;
-  span {
-    left: 35px; } }

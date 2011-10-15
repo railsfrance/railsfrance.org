@@ -1,13 +1,13 @@
 - feed("RailsFrance » Questions", questions_url(:atom))
 - set_meta_tags :title => "Toutes les questions à propos de Ruby On Rails"
 
-%nav#stationNav.fullwidth
+%nav#stationNav.secondaryNav
   %div
     %h2 Trier par
     = sortable "Date", "created_at"
     = sortable "Votes", "up_votes"
     = sortable "Réponses", "answers_count"
-#questions.fullwidth
+.contentBackground
   %aside
     = link_to "Poser une question", new_question_path, :class => "buttonCurved" 
     = link_to "Tags", tags_path, :class => "buttonCurved"

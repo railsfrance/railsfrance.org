@@ -1,200 +1,117 @@
 #station {
-  background: image-url('slider/slider-background.jpg') repeat-x;
-  h1 {
-    position:relative;
-    text-align: center;
-    font-size: 3em;
-    color: #e7d8c3;
-    text-shadow: 0 2px 5px #000; 
-    padding-top:10px;}
   hgroup {
-    height: 150px; 
-    background: image-url('station/train.png') center bottom no-repeat;}
-  h1 span {
-    color: #66b5be; }}
+    background: image-url('station/train.png') center bottom no-repeat;
+  }
+}
 
 /*--- STATION SORT NAV ---*/
-
 #stationNav {
-  text-align:center;
-  height: 88px;
-  background: image-url('station/background-separation.jpg') repeat-x;
+  div{
+    padding-left:0;
+  }
   h2 {
-    display:inline-block;
     width: 179px;
     height: 64px;
     background: image-url('station/trier-par.png') bottom center no-repeat;
-    text-indent: -9999px;
-    word-spacing:-1em;
     line-height:59px;
   }
-  div{
-    display:inline-block;
-    height:64px;
-    margin-top:12px;
-    word-spacing:0;
-    padding-right:15px;
-    background: #901414; /* Old browsers */
-    background: -moz-linear-gradient(top, #901414 0%, #811316 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#901414), color-stop(100%,#811316)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #901414 0%,#811316 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #901414 0%,#811316 100%); /* Opera11.10+ */
-    background: -ms-linear-gradient(top, #901414 0%,#811316 100%); /* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#901414', endColorstr='#811316',GradientType=0 ); /* IE6-9 */
-    background: linear-gradient(top, #901414 0%,#811316 100%); /* W3C */
-  }
   a {
-    position:relative;
-    top:10px;
-    display:inline-block;
-    cursor: pointer;
-    color:#ddc8a2;
-    font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
+    top:3px;
     font-size: 2.5em;
     background: image-url('station/button-sort.png') right bottom  no-repeat;
-    text-transform: uppercase;
     height: 40px;
     line-height: 40px;
     padding: 0 55px 0 15px;
-    text-shadow: #000 5px 3px 5px;
-    -moz-transition: color 0.8s ease;
-    -webkit-transition: color 0.8s ease;
-    -o-transition: color 0.8s ease;
-    transition: color 0.8s ease;
-    &:hover{
-      text-decoration:none;
-      color:#fff;
-    }}
-    .desc{
+    &.desc{
       background-position:right top;
     }
-    .asc{
+    &.asc{
       background-position:right -40px;
     }
+  }
 }
 
 /*--- SATION QUESTION LISTING ---*/
-
-#questions {
-  font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-  background: image-url('station/background-world-map.png')  center top no-repeat;
-  aside{
-    text-align:center;
-    padding-bottom:30px;
+.question{
+  .stats {
+    float: right;
+    position: relative;
+    background: image-url('station/question-stats.png') top left no-repeat;
+    width: 210px;
+    height: 90px;
+    margin:0;
   }
-  article{
-    border-bottom: dashed 1px #857c6f;
-    margin-bottom:20px;
-    &:last-of-type{
-      border-bottom:none;
-    }
-  }
-}
-
-.stats {
-  float: right;
-  position: relative;
-  background: image-url('station/question-stats.png') top left no-repeat;
-  width: 210px;
-  height: 90px; }
-
-.votes, .views, .answers {
-  position: absolute;
-  overflow: hidden;
-  top: 9px;
-  left: 0;
-  width: 61px;
-  height: 74px;
-  text-align: center;
-  color: #fff;
-  line-height: 45px;
-  font-size: 30px; }
-
-.views {
-  left: 64px; }
-
-.answers {
-  left: 128px; }
-
-.votes span, .views span, .answers span {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 61px;
-  height: 30px;
-  line-height: 1.8em;
-  text-transform: uppercase;
-  font-size: 12px; }
-
-.summary {
-  float: right;
-  position: relative;
-  width: 750px;
-  margin-bottom: 10px;
-  h3 {
-    font-size: 1.9em;
-    margin: 0 0 10px 0; 
-    a{
-      color: #400404;
-      -moz-transition: color 0.8s ease;
-      -webkit-transition: color 0.8s ease;
-      -o-transition: color 0.8s ease;
-      transition: color 0.8s ease;
-      &:hover{
-        text-decoration:none;
-        color:#a51515;
-      } 
-    }
-  }
-  div{
+  .votes, .views, .answers {
+    position: absolute;
     overflow: hidden;
+    top: 9px;
+    left: 0;
+    width: 61px;
+    height: 74px;
+    text-align: center;
+    color: #fff;
+    line-height: 45px;
+    font-size: 30px;
   }
-}
-
-.questionDescription{
-  font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
+  .views {
+    left: 64px;
+  }
+  .answers {
+    left: 128px;
+  }
+  .votes span, .views span, .answers span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 61px;
+    height: 30px;
+    line-height: 1.8em;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .summary {
+    float: right;
+    position: relative;
+    width: 750px;
+    h3 {
+      margin: 0 0 10px 0; 
+      a{
+        color: #400404;
+        -moz-transition: color 0.8s ease;
+        -webkit-transition: color 0.8s ease;
+        -o-transition: color 0.8s ease;
+        transition: color 0.8s ease;
+        &:hover{
+          text-decoration:none;
+          color:#a51515;
+        } 
+      }
+    }
+    div{
+      overflow: hidden;
+    }
+  }
+  .questionDescription{
+    font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
     font-size: 0.9em;
     line-height: 1.3em;
     color:#202020;
-  p + p {
-    margin: 0;
+    margin-bottom:10px;
   }
-  margin-bottom:24px;
+  .tags a {
+   font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
+    float: left;
+    height: 20px;
+    line-height: 18px;
+    color: #fff;
+    font-size: 0.6em;
+    padding: 0 18px 0 8px;
+    background: image-url('station/background-tag.png') center right no-repeat;
+    margin: 0 10px 5px 0;
+  }
 }
 
-
-.tags a {
- font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-  float: left;
-  height: 20px;
-  line-height: 18px;
-  color: #fff;
-  font-size: 0.6em;
-  padding: 0 18px 0 8px;
-  background: image-url('station/background-tag.png') center right no-repeat;
-  margin: 0 10px 5px 0; }
-
-.summary .user {
-  float:right;
-  color: #951515;
-  background: image-url('station/hourglass.png') center left no-repeat;
-  padding-left: 25px;
-  min-width: 100px;
-  span {
-    color: #66b5be; }
-  a {
-    color: #951515; }
-  img{
-    vertical-align:bottom;
-    border:2px solid #8b0b0b;
-  }}
-
 /*--- ASK QUESTION ---*/
-
-#stationQuestionForm {
-  background: image-url('station/background-world-map.png')  center top no-repeat;
-  padding:0 0 20px 0; }
-
 #questionAddForm {
   background: image-url('station/here.png') no-repeat;
   background-position: 800px 125px;
@@ -213,12 +130,12 @@
     width: 24px;
     height: 28px;
     background: image-url('station/double-arrow.png') no-repeat;
-    margin: 8px 10px 0 0; } }
+    margin: 8px 10px 0 0;
+  }
+}
 
 /*--- VIEW QUESTION AND ANSWERS ---*/
-#theQuestion {
-  background: image-url('station/background-world-map.png')  center top no-repeat;
-  padding-bottom:20px;
+#theQuestionDescription, .questionAnswerDescription{
   h3:first-child{
     font-size:2em;
     text-transform:uppercase;
@@ -226,40 +143,24 @@
     width:600px;
     overflow:hidden;
   }
-  aside{
-    text-align:center;
-    padding-bottom:20px;
-  }
-}
-
-#theQuestionDescription, .questionAnswerDescription{
   width:828px;
   float:right;
   border-left:2px solid #a07e70;
   padding:0 10px 0 30px;
   min-height:120px;
-}
-
-.userInformations{
-  font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-  clear:both;
-  text-align:right;
-  color:#951515;
-  span{
-    color:#66B5BE;
-    background: image-url('station/hourglass.png')center left no-repeat;
-    padding-left:25px;
+  aside{
+    margin:0;
   }
-  img{
-    vertical-align:bottom;
-    border:2px solid #8b0b0b;
-  }
-  a{
-    color:#951515;
-    text-decoration:none;
-    &:hover{
-      text-decoration:underline;
-    }
+  .tags a {
+   font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
+    float: left;
+    height: 20px;
+    line-height: 18px;
+    color: #fff;
+    font-size: 0.6em;
+    padding: 0 18px 0 8px;
+    background: image-url('station/background-tag.png') center right no-repeat;
+    margin: 0 10px 5px 0;
   }
 }
 
@@ -360,12 +261,6 @@
 }
 
 /*--- QUESTION TAGS ---*/
-
-#QuestionsTagsContainer{
-  background: image-url('station/background-world-map.png')  center top no-repeat;
-  padding:20px 0 20px 0;
-}
-
 .tag{
   font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
   text-align:center;
@@ -402,7 +297,6 @@
   background: -webkit-linear-gradient(top, #8d1515 0%,#450707 100%); 
   background: -o-linear-gradient(top, #8d1515 0%,#450707 100%);
   background: -ms-linear-gradient(top, #8d1515 0%,#450707 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8d1515', endColorstr='#450707',GradientType=0 ); 
   background: linear-gradient(top, #8d1515 0%,#450707 100%); 
 }
 
@@ -413,7 +307,6 @@
   background: -webkit-linear-gradient(top, #65b2bb 0%,#0d555e 100%); 
   background: -o-linear-gradient(top, #65b2bb 0%,#0d555e 100%); 
   background: -ms-linear-gradient(top, #65b2bb 0%,#0d555e 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65b2bb', endColorstr='#0d555e',GradientType=0 );
   background: linear-gradient(top, #65b2bb 0%,#0d555e 100%); 
 }
 
@@ -424,6 +317,5 @@
   background: -webkit-linear-gradient(top, #755e4e 0%,#3a3027 100%); 
   background: -o-linear-gradient(top, #755e4e 0%,#3a3027 100%);
   background: -ms-linear-gradient(top, #755e4e 0%,#3a3027 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#755e4e', endColorstr='#3a3027',GradientType=0 ); 
   background: linear-gradient(top, #755e4e 0%,#3a3027 100%); 
 }

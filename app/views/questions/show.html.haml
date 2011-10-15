@@ -1,8 +1,8 @@
 - feed("RailsFrance » Réponses", question_url(@question, :atom))
 - set_meta_tags :title => @question.title, :description => @question.description.truncate(150)
 
-%aside#stationNav.fullwidth
-#theQuestion.fullwidth
+%aside#stationNav.secondaryNav
+.contentBackground
   %aside
     =link_to image_tag("rss.png", :width => 32, :height => 32), question_url(@question, :atom), "data-skip-pjax" => true, :class => "buttonCurved"
   %article.center960
@@ -13,7 +13,7 @@
         = markdown @question.description
       %aside
         = tag_box "tags", @question.tags
-        %div.userInformations
+        .postHourUser
           %span
             - if @question.created_at != @question.updated_at
               Editée il y a #{distance_of_time_in_words_to_now(@question.updated_at)}

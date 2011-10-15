@@ -42,19 +42,21 @@
     font: 12px 'Bitstream Vera Sans Mono','Courier',monospace;
 }
 
-
-
-
 .userMarkdown{
   font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
   font-size: 0.9em;
   line-height: 1.3em;
   color:#202020;
   overflow:hidden;
+  margin-bottom:10px;
   h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
+    color:#202020;
+    padding-top:0;
+    text-align:left;
+    text-shadow:none;
   }
   h1 {
     font-size: 1.5em;

@@ -1,11 +1,11 @@
 - set_meta_tags :title => "Tous les événements à venir"
 - feed("RailsFrance » Evénéments", events_url(:atom))
-%nav#eventNav.fullwidth
-  #sort
+%nav#eventNav.secondaryNav
+  %div
     %h2 Nombre d'événements à venir :
     %span= @presenter.incoming_events
-#events.fullwidth
-  %aside#eventsAside
+.contentBackground
+  %aside
     = link_to "Créer un événement", new_event_path, :id => "addEvent", :class => "buttonCurved"
     = link_to image_tag("rss.png", :width => 32, :height => 32), events_url(:atom), :class => "buttonCurved", "data-skip-pjax" => true
   = render @events

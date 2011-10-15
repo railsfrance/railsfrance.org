@@ -1,36 +1,7 @@
 #header404{
-text-align: center;
-background: image-url('slider/slider-background.jpg') repeat-x;
-color:#fff;
-  hgroup {
-    height: 150px; 
+  hgroup { 
     background: image-url('404/404.png') center bottom no-repeat;
   }
-  h1 {
-    position:relative;
-    font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 3em;
-    color: #e7d8c3;
-    text-shadow: 0 2px 5px #000; 
-    padding-top:10px;
-  }
-  h1 span {
-    color: #66b5be; 
-  }
-  p{
-    font-weight:bold;
-  }
-}
-
-#nav404{
-  height: 88px;
-  background: image-url('station/background-separation.jpg') repeat-x;
-  text-align:center;
-}
-
-#content404{
-  font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-  background: image-url('station/background-world-map.png') center top no-repeat; 
 }
 
 #background404{

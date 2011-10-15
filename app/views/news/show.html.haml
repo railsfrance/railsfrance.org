@@ -1,26 +1,26 @@
-%nav#newsNav.fullwidth
-#newsFull.fullwidth
-  %article#Thenews.center960
+.secondaryNav
+.contentBackground
+  %article#theNews.center960
     %h3
       = @news.title
     #theNewsDate
       = l(@news.created_at, :format => :tiny)
-    #theNewsDescription
+    .userMarkdown
       = @news.description
-    #theNewsHourUser
+    .postHourUser
       %span
         Posté il y a #{distance_of_time_in_words_to_now(@news.created_at)}
       par #{link_to @news.user_username, user_path(@news.user), "data-skip-pjax" => true}
       = image_tag @news.user_gravatar_url
     %h5
       Commentaires :
-    %div#theEventComments
-    - if @comments.empty?
-      %p.noComment
-        = image_tag "flash/warning_mess.png"
-        Aucun commentaire
-    - else
-      = render @comments
+    %div.theComments
+      - if @comments.empty?
+        %p.noComment
+          = image_tag "flash/warning_mess.png"
+          Aucun commentaire
+      - else
+        = render @comments
     #pagination.center960
       = paginate @comments
     #eventAnswer
