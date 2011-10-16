@@ -45,14 +45,12 @@
             = link_to(image_tag(a.gravatar_url, :alt => a.username, :title => a.username, :class => "attendees"), user_path(a))
         - else
           %p.noAttendee
-            = image_tag "flash/warning_mess.png"
             Aucun participant
       %h5
         Commentaires :
       %div.theComments
         - if @comments.empty?
           %p.noComment
-            = image_tag "flash/warning_mess.png" 
             Aucun commentaire
         - else
           = render @comments

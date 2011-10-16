@@ -36,7 +36,6 @@
     %section#anwsers
       - if @answers.empty?
         %p.noAnwser
-          = image_tag "flash/warning_mess.png"
           Aucune réponse
       - else
         = render @answers

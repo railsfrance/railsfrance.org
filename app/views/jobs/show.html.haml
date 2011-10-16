@@ -2,22 +2,21 @@
 .secondaryNav
 .contentBackground
   %article#theJob.center960
+    #theJobDate
+      = l(@job.created_at, :format => :tiny)
     %h3
       = @job.title
     %aside.jobInformations
-      %div.jobCompany
+      .jobCompany
         Employeur :
         %span= @job.company
-      %div.jobCity
+      .jobCity
         Lieu :
         %span= @job.city
-      %div.jobType
+      .jobType
         Type:
         %span= format_contracts @job.contracts
-    %div#theJobDate
-      = l(@job.created_at, :format => :tiny)
     #theJobDescription.userMarkdown
-      = image_tag (@job.logo_uid.present? ? @job.logo.thumb('100x').url : image_path('jobs/job_default.png')), :width => 100
       = markdown @job.description
     .clear
     - if params[:action] == "preview"

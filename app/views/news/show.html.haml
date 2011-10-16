@@ -1,10 +1,10 @@
 .secondaryNav
 .contentBackground
   %article#theNews.center960
-    %h3
-      = @news.title
     #theNewsDate
       = l(@news.created_at, :format => :tiny)
+    %h3
+      = @news.title
     .userMarkdown
       = @news.description
     .postHourUser
@@ -17,7 +17,6 @@
     %div.theComments
       - if @comments.empty?
         %p.noComment
-          = image_tag "flash/warning_mess.png"
           Aucun commentaire
       - else
         = render @comments
