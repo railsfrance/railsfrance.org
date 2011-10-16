@@ -19,8 +19,11 @@
     display:inline-block;
   }
   label{
+    position:relative;
+    top:-2px;
     font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size:2.5em;
+    font-size:2.2em;
+    line-height:40px;
     color:#ddc8a2;
     text-transform:uppercase;
     display:inline-block;

@@ -28,3 +28,4 @@
         = f.input :description, :as => :wysiwyg, :label => "Ajouter un commentaire", :required => false
         = f.button :submit
       = render 'markdown/markdown'
+    = link_to "<span>&nbsp;</span>Retour aux news".html_safe, news_index_path, :class => "buttonSmall backButton"

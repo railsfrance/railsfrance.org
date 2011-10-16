@@ -3,7 +3,7 @@
   = simple_form_for @job , :html => {:multipart => true, :class => "center960", :id => "jobAddForm"} do |f|
     %fieldset
       %legend= "Poster votre annonce"
-      = link_to "<span>&nbsp;</span>Retour aux annonces".html_safe, jobs_path, :class => "buttonSmall", :id => "backToJobs"
+      = link_to "<span>&nbsp;</span>Retour aux annonces".html_safe, jobs_path, :class => "buttonSmall backButton"
       #newJobLeft
         = f.input :company, :autofocus => "autofocus"
         = f.input :email, :label => "Email <span style='font-size:11px;'>(sera utilisé pour gérer votre annonce et vous faire contacter par un candidat)</span>".html_safe unless action_name == 'edit'

@@ -23,4 +23,4 @@
     - if params[:action] == "preview"
       <br/>
       = link_to "Confirmer", confirm_jobs_path, "data-skip-pjax" => true, :class => "buttonSmall", :id =>"theJobConfirm"
-    = link_to "<span>&nbsp;</span>Retour aux annonces".html_safe, jobs_path, :class => "buttonSmall", :id => "backToJobs"
+    = link_to "<span>&nbsp;</span>Retour aux annonces".html_safe, jobs_path, :class => "buttonSmall backButton"

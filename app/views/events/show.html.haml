@@ -5,7 +5,7 @@
       = @event.title
       - if can? :update, @event
         = link_to "Editer", edit_event_path(@event), :id => "eventEdit", :title => "Editer cet événement"
-    = link_to "<span>&nbsp;</span>Retour aux événements".html_safe, events_path, :class => "buttonSmall", :id => "backToEvents"
+    = link_to "<span>&nbsp;</span>Retour aux événements".html_safe, events_path, :class => "buttonSmall backButton"
     %p#theEventAddress
       %span
         Adresse :

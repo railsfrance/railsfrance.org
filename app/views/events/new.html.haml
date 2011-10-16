@@ -4,6 +4,6 @@
   = simple_form_for @event , :url => events_path, :html => { :class => "center960", :id => "eventAddForm", :method => :post } do |form|
     %fieldset
       %legend Créer votre événement
-      = link_to "<span>&nbsp;</span>Retour aux événements".html_safe, events_path, :class => "buttonSmall", :id => "backToEvents"
+      = link_to "<span>&nbsp;</span>Retour aux événements".html_safe, events_path, :class => "buttonSmall backButton"
       = render 'form', :f => form
       = render 'markdown/markdown'

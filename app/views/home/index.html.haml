@@ -8,11 +8,11 @@
         #homeMapContainer
           #homeMap
             #map_canvas.home{:style => "width:198px;height:240px;"}
-        = link_to "Voir la carte", map_index_path , :class => "sliderButton button", "data-skip-pjax" => true
+        = link_to "VOIR LA CARTE", map_index_path , :class => "sliderButton buttonSmall", "data-skip-pjax" => true
       - else
         = image_tag "home/locomotive.png", :width => "230", :height => "187"
         #embarquementImmediat Embarquement Immédiat
-        = link_to "J'EMBARQUE !", new_user_registration_path, :class => "sliderButton button", "data-skip-pjax" => true
+        = link_to "J'EMBARQUE !", new_user_registration_path, :class => "sliderButton buttonSmall", "data-skip-pjax" => true
     %article#slideMiddle
       = image_tag "home/news-man.png", :width => "130", :height => "187"
       - @presenter.recent_news.each do |news|
@@ -23,7 +23,7 @@
           %h2
             = link_to truncate(news.title,:length => 30)
           .clear
-      = link_to "TOUTE L'ACTU", news_index_path,:class => "sliderButton button", "data-skip-pjax" => true
+      = link_to "TOUTE L'ACTU", news_index_path,:class => "sliderButton buttonSmall", "data-skip-pjax" => true
     %article
       = image_tag "home/bottle-and-whisky.png", :width => "248", :height => "187"
       - @presenter.recent_questions.each do |question|
@@ -34,7 +34,7 @@
             POSTÉ PAR -
             = link_to question.user_username, user_path(question.user)
           %p
-      = link_to "LES QUESTIONS", questions_path, :class => "sliderButton button", 'data-skip-pjax' => true
+      = link_to "LES QUESTIONS", questions_path, :class => "sliderButton buttonSmall", 'data-skip-pjax' => true
     .clear.glow
 
 %section#workersTweets.fullwidth
@@ -49,7 +49,7 @@
             %div
               %h2= job.title
               = truncate(sanitize(job.description),:length =>150).html_safe
-            = link_to "<span class=\"goLink\">VOIR</span>".html_safe, "#", :class => "workerButton button"
+            = link_to "<span class=\"goLink\">VOIR</span>".html_safe, "#", :class => "workerButton buttonSmall"
         .clear
     %article#tweetsContainer
       %hgroup

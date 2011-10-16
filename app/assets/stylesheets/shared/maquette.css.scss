@@ -128,31 +128,31 @@ a {
   clear: both;
 }
 
-.button {
+.button, .buttonSmall {
   display: block;
+  height: 45px;
+  line-height: 43px;
+  text-align: center;
   background: #a51515;
+  font-size: 2em;
+  font-family: SteelfishRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
+  text-shadow: #000 3px 3px 10px;
+  color: #f4e3c5;
+  cursor:pointer;
+  border: none;
+  text-transform: uppercase;
   background: -moz-linear-gradient(top, #a51515 0%, #821314 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a51515), color-stop(100%,#821314));
   background: -webkit-linear-gradient(top, #a51515 0%,#821314 100%);
   background: -o-linear-gradient(top, #a51515 0%,#821314 100%);
   background: -ms-linear-gradient(top, #a51515 0%,#821314 100%);
   background: linear-gradient(top, #a51515 0%,#821314 100%);
-  text-align: center;
-  color: #f4e3c5;
-  cursor:pointer;
-  border: none;
-  text-transform: uppercase;
-  height: 56px;
-  line-height: 54px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   -webkit-box-shadow: 0 0 10px #000;
   -moz-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;
-  font-family: SteelfishRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 2.3em;
-  text-shadow: #000 3px 3px 10px;
   -moz-transition: all 0.8s ease;
   -webkit-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
@@ -168,37 +168,11 @@ a {
 }
 
 .buttonSmall {
-  display: block;
-  text-align: center;
-  color: #f4e3c5;
   height: 40px;
   line-height: 40px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
   padding: 0 10px;
-  background: #a51515;
-  background: -moz-linear-gradient(top, #a51515 0%, #821314 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a51515), color-stop(100%,#821314));
-  background: -webkit-linear-gradient(top, #a51515 0%,#821314 100%);
-  background: -o-linear-gradient(top, #a51515 0%,#821314 100%);
-  background: -ms-linear-gradient(top, #a51515 0%,#821314 100%);
-  background: linear-gradient(top, #a51515 0%,#821314 100%);
-  font-family: SteelfishRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
   font-size: 1.5em;
-  text-shadow: #000 3px 3px 10px;
-  -moz-transition: all 0.8s ease;
-  -webkit-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease;
-  &:hover, &.selected{
-    text-decoration:none;
-    background:#4d0505;
-    color:#920a0a;
-    -webkit-box-shadow: inset 3px 3px 10px 0 #000;
-    -moz-box-shadow: inset 3px 3px 10px 0 #000;
-    box-shadow: inset 3px 3px 10px 0 #000;
-  }
+  text-transform:inherit;
 }
     
 .buttonCurved{
@@ -214,8 +188,8 @@ a {
   border-bottom-left-radius: 8px;
   text-align: center;
   color: #f4e3c5;
-  height: 40px;
-  line-height: 40px;
+  height: 30px;
+  line-height: 30px;
   padding: 5px 20px;
   background: #a51515;
   background: -moz-linear-gradient(top, #a51515 0%, #821314 100%);
@@ -225,7 +199,7 @@ a {
   background: -ms-linear-gradient(top, #a51515 0%,#821314 100%);
   background: linear-gradient(top, #a51515 0%,#821314 100%);
   font-family: SteelfishRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 2.0em;
+  font-size: 1.8em;
   text-shadow: #000 3px 3px 10px;
   -moz-transition: all 0.8s ease;
   -webkit-transition: all 0.8s ease;
@@ -275,6 +249,20 @@ a {
     box-shadow: inset 3px 3px 10px 0 #000; 
   }
 }
+
+.backButton {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  span {
+    float: left;
+    width: 24px;
+    height: 28px;
+    background: image-url('station/double-arrow.png') no-repeat;
+    margin: 8px 10px 0 0;
+  }
+}
+
 
 .postHourUser{
   font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -713,7 +701,7 @@ footer {
   }
   input[type=submit] {
     margin-top: 20px;
-    padding:0 40px;
+    padding:0 20px;
   }  
 }
 

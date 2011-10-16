@@ -4,7 +4,6 @@
   }
 }
 
-
 /*--- JOBS SORT NAV ---*/
 #jobsNav{
   div{
@@ -21,8 +20,11 @@
     display:inline-block;
   }
   label{
+    position:relative;
+    top:-2px;
     font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size:2.5em;
+    font-size:2.2em;
+    line-height:40px;
     color:#ddc8a2;
     text-transform:uppercase;
     display:inline-block;
@@ -108,12 +110,9 @@
   }
 }
 
-
-
 /*--- ADD JOB ---*/
 #jobAddForm {
   border-bottom:none;
-  padding-top:20px;
   input[type=text], input[type=url], input[type=email]{
     width:435px;
   }
@@ -136,25 +135,10 @@
   float:left;
 }
 
-
 #newJobRight{
  margin-left:30px;
 }
-
-
-#backToJobs {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  span {
-    float: left;
-    width: 24px;
-    height: 28px;
-    background: image-url('station/double-arrow.png') no-repeat;
-    margin: 8px 10px 0 0;
-  } 
-}
-    
+  
 /*--- JOB DETAILS ---*/
 #theJob{
   h3{
@@ -200,7 +184,6 @@ font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
   margin-right:20px;
   padding-top:20px;
 }
-
 
 #theJobDescription{
   text-align:justify;

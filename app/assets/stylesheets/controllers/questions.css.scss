@@ -17,10 +17,10 @@
   }
   a {
     top:3px;
-    font-size: 2.5em;
+    font-size: 2.2em;
     background: image-url('station/button-sort.png') right bottom  no-repeat;
     height: 40px;
-    line-height: 40px;
+    line-height: 35px;
     padding: 0 55px 0 15px;
     &.desc{
       background-position:right top;
@@ -115,22 +115,8 @@
 #questionAddForm {
   background: image-url('station/here.png') no-repeat;
   background-position: 800px 125px;
-  padding-top:20px;
   input[type=text]{
     width:435px;
-  }
-}
-
-#backToQuestions {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  span {
-    float: left;
-    width: 24px;
-    height: 28px;
-    background: image-url('station/double-arrow.png') no-repeat;
-    margin: 8px 10px 0 0;
   }
 }
 
@@ -211,7 +197,6 @@
   background-position:bottom left;
 }
 
-
 #question_vote_down.disabled, .answer_vote_down.disabled{
   background-position:-61px -40px;
 }
@@ -249,10 +234,9 @@
   border-top: 2px solid #946d6d;
 }
 
-
 #question_update{
   position: absolute;
-  top: 15px;
+  top: 3px;
   right: 200px;
   background: image-url('user_actions/ico-edit.png') no-repeat;
   width:28px;

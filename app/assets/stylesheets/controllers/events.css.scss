@@ -107,13 +107,10 @@
   }
 }
 
-
-
 /*--- ADD EVENT ---*/
 #eventAddForm {
   border-bottom:none;
   background: image-url('station/here.png') 800px 125px no-repeat;
-  padding-top:20px;
   input[type=text]{
     width:435px;
   }
@@ -123,21 +120,6 @@
   }
 }
 
-#backToEvents {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  span {
-    float: left;
-    width: 24px;
-    height: 28px;
-    background: image-url('station/double-arrow.png') no-repeat;
-    margin: 8px 10px 0 0; 
-  }
-}
- 
-
-    
 #newEventLeft, #newEventRight{
   width:460px;
 }
@@ -146,7 +128,6 @@
  margin-left:30px;
 }
 
-
 /*--- VIEW EVENT AND COMMENTS ---*/
 #theEvent {
   h3, h4, h5{
@@ -154,7 +135,9 @@
     text-transform:uppercase;
     margin-bottom:10px;
     font-size:2em;
-  }}
+  }
+}
+
 #theEventAddress{
   font-size:1.2em;
   font-family: OswaldRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -164,7 +147,8 @@
   margin-bottom:10px;
   span{
     color:#202020;
-  }}
+  }
+}
 
 #theEventDate{
  font-size:1.2em;
@@ -264,7 +248,7 @@
 
 #eventEdit{
   position: absolute;
-  top: 5px;
+  top: 3px;
   right: 200px;
   background: image-url('user_actions/ico-edit.png') no-repeat;
   width:28px;

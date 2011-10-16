@@ -7,7 +7,7 @@
 .contentBackground
   %aside
     = link_to "Créer un événement", new_event_path, :id => "addEvent", :class => "buttonCurved"
-    = link_to image_tag("rss.png", :width => 32, :height => 32), events_url(:atom), :class => "buttonCurved", "data-skip-pjax" => true
+    = link_to image_tag("rss.png", :width => 26, :height => 26), events_url(:atom), :class => "buttonCurved", "data-skip-pjax" => true
   = render @events
   #pagination.center960
     = paginate @events
