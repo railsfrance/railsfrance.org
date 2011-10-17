@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   :remember_me, :username, :website, :github, :twitter, :street, :city, :postal_code
 
   validates_presence_of :email
-  validates :username, :presence => true, :uniqueness => true, :length => { :within => 4..12 }
+  validates :username, :presence => true, :uniqueness => true, :length => { :within => 3..12 }
   validates :github, :uniqueness => true, :allow_blank => true, :length => { :within => 0..40 }
   validates :twitter, :uniqueness => true, :allow_blank => true, :length => { :within => 0..15 }
   validates :postal_code, :allow_blank => true, :format => { :with => /^[0-9]{5}$/ }
