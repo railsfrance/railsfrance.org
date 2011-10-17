@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   friendly_id :username, :use => :slugged
 
+  before_validation :website_prefix
+
   geocoded_by :address
   after_validation :geocode
 
@@ -37,5 +39,14 @@ class User < ActiveRecord::Base
   def role?(base_role)
     return false unless (!role.empty? || role)
     ROLES.index(base_role.to_s) <= ROLES.index(role)
+  end
+
+  protected
+
+  def website_prefix
+    Rails.logger.info "WEBSITE PREFIX ! #{website.inspect}"
+    unless website.blank? || website =~ %r{^https?://}
+      self.website = "http://#{website}"
+    end
   end
 end
