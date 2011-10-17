@@ -19,7 +19,7 @@
     = link_to "Déposer une offre", new_job_path, :id => "addJob", :class => "buttonCurved"
     = link_to image_tag("rss.png", :width => 26, :height => 26), jobs_url(:atom), "data-skip-pjax" => true, :class => "buttonCurved"
   - if @jobs.empty?
-    %p Aucune offre d'emploi pour le moment
+    %p.noComment Aucune offre d'emploi pour le moment
   - else
     = render @jobs
   #pagination.center960
