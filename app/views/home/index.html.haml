@@ -49,7 +49,7 @@
             %div
               %h2= job.title
               = truncate(sanitize(job.description),:length =>150).html_safe
-            = link_to "<span class=\"goLink\">VOIR</span>".html_safe, "#", :class => "workerButton buttonSmall"
+            = link_to "<span class=\"goLink\">VOIR</span>".html_safe, job_path(job), :class => "workerButton buttonSmall", "data-skip-pjax" => true
         .clear
     %article#tweetsContainer
       %hgroup
