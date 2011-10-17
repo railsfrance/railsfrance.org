@@ -9,9 +9,7 @@
     %p#theEventAddress
       %span
         Adresse :
-      = @event.street
-      = @event.postal_code
-      = @event.city
+      = link_to "#{@event.street} #{@event.postal_code} #{@event.city}", "http://maps.google.com/maps?q=#{@event.street} #{@event.postal_code} #{@event.city}"
     #theEventDate
       %div
         Date :
