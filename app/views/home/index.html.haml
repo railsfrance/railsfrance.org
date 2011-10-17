@@ -21,7 +21,7 @@
             = news.created_at.day
             %span= l(news.created_at, :format => :month).upcase
           %h2
-            = link_to truncate(news.title,:length => 30)
+            = link_to truncate(news.title,:length => 30), news, "data-skip-pjax" => true
           .clear
       = link_to "TOUTE L'ACTU", news_index_path,:class => "sliderButton buttonSmall", "data-skip-pjax" => true
     %article
@@ -29,7 +29,7 @@
       - @presenter.recent_questions.each do |question|
         .sliderConvers
           %h2
-            = link_to truncate(question.title,:length => 30), question
+            = link_to truncate(question.title,:length => 30), question, "data-skip-pjax" => true
           %p
             POSTÉ PAR -
             = link_to question.user_username, user_path(question.user)
