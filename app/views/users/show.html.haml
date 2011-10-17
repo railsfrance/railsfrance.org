@@ -8,7 +8,7 @@
     #theUserAddressAndSocial
       %p
         Site :
-        %a(href="#{@user.website}") #{@user.website}
+        %a(href="#{@user.website}" target="_blank" data-skip-pjax="true") #{@user.website}
         %br
         Github :
         = link_to @user.github, "https://github.com/#{@user.github}", :target => "_blank","data-skip-pjax" => true
