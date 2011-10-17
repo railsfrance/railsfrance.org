@@ -38,4 +38,22 @@ class UserTest < ActiveSupport::TestCase
     assert @user.latitude
     assert @user.longitude
   end
+
+  test 'should accept website without http prefix' do
+    @user.website = 'www.example.com'
+    assert @user.valid?
+    assert_equal 'http://www.example.com', @user.website
+  end
+
+  test 'should not http prefix an empty website' do
+    @user.website = ''
+    assert @user.valid?
+    assert_equal '', @user.website
+  end
+
+  test 'should not double http prefix website' do
+    @user.website = 'http://www.example.com'
+    assert @user.valid?
+    assert_equal 'http://www.example.com', @user.website
+  end
 end
