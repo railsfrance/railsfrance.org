@@ -65,6 +65,13 @@ class EventTest < ActiveSupport::TestCase
   test 'should not be attendeable if user already attented' do
     user = Factory.create :user
     @event.attendees << user
-    assert !@event.attendable_by?(user)
+    refute @event.attendable_by?(user)
+  end
+
+  test 'should not be attendeable if date is past' do
+    user = Factory.create :user
+    @event.date = Time.now
+    @event.save
+    refute @event.attendable_by?(user)
   end
 end

@@ -32,7 +32,7 @@ class Event < ActiveRecord::Base
   validates :date, :date => { :after => Time.now, :message => I18n.t('event.error.date') }, :presence => true
 
   def attendable_by?(user)
-    (!self.attendees.include? user) && (!user.id.nil?) && (user != self.user)
+    (!self.attendees.include? user) && (!user.id.nil?) && (user != self.user) && (self.date > Time.now)
   end
 
   def unattendable_by?(user)
