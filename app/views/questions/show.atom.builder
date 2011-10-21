@@ -1,7 +1,7 @@
 atom_feed :language => 'fr' do |feed|
-  first_answer = @answers.first
-  feed.title "#{first_answer.question_title} - RailsFrance"
-  feed.updated first_answer.created_at
+  feed.title "#{@question.title} - RailsFrance"
+  last_answer = @answers.last
+  feed.updated(last_answer.created_at) if last_answer
 
   @answers.each do |item|
     feed.entry(item, :url => item.question) do |entry|
