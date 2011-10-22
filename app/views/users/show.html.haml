@@ -35,7 +35,7 @@
               = @user.questions_count
           - @presenter.recent_questions.each do |q|
             %div
-              = link_to q.title, question_path(q)
+              = link_to q.title, question_path(q), "data-skip-pjax" => true
               %p
                 %span
                   &nbsp; 
@@ -48,7 +48,7 @@
               = @user.answers_count
           - @presenter.recent_answers.each do |a|
             %div
-              = link_to truncate(a.description, :length => 50), question_path(a.question)
+              = link_to truncate(a.description, :length => 50), question_path(a.question), "data-skip-pjax" => true
               %p
                 %span
                   &nbsp;
@@ -62,7 +62,7 @@
               = @user.event_attendee.size
           - @presenter.recent_attended_events.each do |e|
             %div
-              = link_to e.title, event_path(e)
+              = link_to e.title, event_path(e), "data-skip-pjax" => true 
               %p
                 %span
                   &nbsp;
@@ -76,7 +76,7 @@
               = @user.events_count
           - @presenter.recent_created_events.each do |e|
             %div
-              = link_to e.title, event_path(e)
+              = link_to e.title, event_path(e), "data-skip-pjax" => true 
               %p
                 %span
                   &nbsp;
