@@ -63,7 +63,7 @@ class JobsController < ApplicationController
   end
 
   def validate
-    redirect_to :root unless @job = Job.with_state(:confirmed).where(:token => params[:token]).first
+    redirect_to :root and return unless @job = Job.with_state(:confirmed).where(:token => params[:token]).first
     @job.activate!
     ContactMailer.valid_job(@job).deliver
     notice(:job_validated) and redirect_to job_path(@job)
