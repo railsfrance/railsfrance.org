@@ -18,7 +18,7 @@
     font-size:1.9em;
     color:#202020;
     text-transform:uppercase;
-    text-shadow: 0px 2px 1px #fff;
+    text-shadow: 0 2px 1px #fff;
     filter: dropshadow(color=#fff, offx=0, offy=2);
     height:97px;
     line-height:97px;
@@ -36,9 +36,9 @@
   -khtml-border-radius:10px;
   -moz-border-radius:10px;
   border-radius:10px;
-  -webkit-box-shadow: inset 1px 1px 3px 0px #7b7b7b;
-  -moz-box-shadow: inset 1px 1px 3px 0px #7b7b7b;
-  box-shadow: inset 1px 1px 3px 0px #7b7b7b;
+  -webkit-box-shadow: inset 1px 1px 3px 0 #7b7b7b;
+  -moz-box-shadow: inset 1px 1px 3px 0 #7b7b7b;
+  box-shadow: inset 1px 1px 3px 0 #7b7b7b;
   article{
     position:relative;
     padding:15px 0;
