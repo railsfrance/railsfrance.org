@@ -16,3 +16,8 @@ redis:
 recaptcha:
   public_key: ""
   private_key: ""
+adapter:
+  meetup:
+    key: ""
+    paris:
+      name: "parisrb"
