@@ -12,7 +12,7 @@ gem 'friendly_id',			'~> 4.0.0.beta14'
 gem 'redis',				'~> 2.2'
 gem 'date_validator',			'~> 0.6'
 gem 'recaptcha',			'~> 0.3', :require => 'recaptcha/rails'
-
+gem 'httparty'
 # Abilities / Authorization
 gem 'cancan',				'~> 1.6'
 gem 'devise',				'~> 1.1'
