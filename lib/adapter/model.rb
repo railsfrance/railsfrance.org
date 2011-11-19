@@ -1,8 +1,8 @@
 module Adapter
   module Model
     extend ActiveSupport::Concern
-    autoload :Event, "event"
-    
+    autoload :Event, "model_event"
+
     def adapter
       check_adapter_name!
       @adapter ||= adapter_name_to_constant.new(self)
