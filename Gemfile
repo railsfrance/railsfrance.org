@@ -24,7 +24,7 @@ gem 'pjax_rails',			:git => 'git://github.com/Sush/pjax_rails.git'
 gem 'rails3-jquery-autocomplete',	'~> 1.0'
 
 # Geocoding solution
-gem 'geocoder',	:git => 'git://github.com/Sush/geocoder.git'			#'~> 1.0'
+gem 'geocoder',				'~> 1.0'
 
 # State Machine
 gem 'state_machine',			'~> 1.0'

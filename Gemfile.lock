@@ -1,10 +1,4 @@
 GIT
-  remote: git://github.com/Sush/geocoder.git
-  revision: a67571f73c58f5542217f1589ac450511a796c1d
-  specs:
-    geocoder (1.0.4)
-
-GIT
   remote: git://github.com/Sush/pjax_rails.git
   revision: 749aa53ccabc6d69dec992648b9afd60d75b6a37
   specs:
@@ -119,6 +113,7 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.1.8)
       ruby-progressbar (~> 0.0.10)
+    geocoder (1.0.5)
     gravtastic (3.2.6)
     haml (3.1.3)
     haml-rails (0.3.4)
@@ -295,7 +290,7 @@ DEPENDENCIES
   factory_girl_rails (~> 1.2)
   friendly_id (~> 4.0.0.beta14)
   fuubar
-  geocoder!
+  geocoder (~> 1.0)
   gravtastic (~> 3.2)
   haml-rails (~> 0.3)
   jquery-rails (~> 1.0)
