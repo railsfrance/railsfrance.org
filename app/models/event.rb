@@ -1,6 +1,7 @@
 class Event < ActiveRecord::Base
   extend FriendlyId
   include Addresseable
+  include Adapter::Model
 
   default_scope :order => 'date DESC'
   belongs_to :user, :counter_cache => :events_count
