@@ -1,7 +1,6 @@
 class Event < ActiveRecord::Base
   extend FriendlyId
   include Addresseable
-  include Adapter::Model
 
   default_scope :order => 'date DESC'
   belongs_to :user, :counter_cache => :events_count
@@ -19,7 +18,7 @@ class Event < ActiveRecord::Base
   after_validation :geocode
 
   attr_accessible :title, :description, :city, :postal_code,
-  :street, :date, :website
+  :street, :date, :website, :latitude, :longitude
 
   delegate :page, :to => :comments, :prefix => true, :allow_nil => true
   delegate :username, :to => :user, :prefix => true, :allow_nil => true

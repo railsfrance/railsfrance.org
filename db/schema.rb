@@ -75,7 +75,8 @@ ActiveRecord::Schema.define(:version => 20111209171523) do
     t.integer  "attendees_count", :default => 0
     t.string   "slug"
     t.integer  "comments_count",  :default => 0
-    t.string   "adapter_name"
+    t.integer  "api_id"
+    t.string   "api_name"
   end
 
   add_index "events", ["slug"], :name => "index_events_on_slug", :unique => true

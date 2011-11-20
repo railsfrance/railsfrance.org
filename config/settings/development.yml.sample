@@ -19,5 +19,3 @@ recaptcha:
 adapter:
   meetup:
     key: ""
-    paris:
-      name: "parisrb"
