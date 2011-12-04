@@ -1,8 +1,18 @@
-#stationNav.secondaryNav
-.contentBackground
-  = simple_form_for @question, :html => { :class => "center960", :id => "questionAddForm" } do |form|
-    %fieldset
-      %legend Editez votre question
-      = link_to "<span>&nbsp;</span>Retour aux questions".html_safe, questions_path, :class => "buttonSmall backButton"
-      = render 'form', :f => form
-      = render 'markdown/markdown'
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          Les
+        Questions
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      %ul
+        %li
+          = link_to "Retour aux questions", questions_path, :class => "navButton"
+  .theContent
+    = simple_form_for @question, :html => { :class => "questionForm" } do |form|
+      %fieldset
+        %legend Editez votre question
+        = render 'form', :f => form
+        = render 'markdown/markdown'

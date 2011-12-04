@@ -1,25 +1,47 @@
 - set_meta_tags :title => "Offre d'emploi : #{@job.title}", :description => @job.description.truncate(150)
-.secondaryNav
-.contentBackground
-  %article#theJob.center960
-    #theJobDate
-      = l(@job.created_at, :format => :tiny)
-    %h3
-      = @job.title
-    %aside.jobInformations
-      .jobCompany
-        Employeur :
-        %span= @job.company
-      .jobCity
-        Lieu :
-        %span= @job.city
-      .jobType
-        Type:
-        %span= format_contracts @job.contracts
-    #theJobDescription.userMarkdown
-      = markdown @job.description
-    .clear
-    - if params[:action] == "preview"
-      <br/>
-      = link_to "Confirmer", confirm_jobs_path, "data-skip-pjax" => true, :class => "buttonSmall", :id =>"theJobConfirm"
-    = link_to "<span>&nbsp;</span>Retour aux annonces".html_safe, jobs_path, :class => "buttonSmall backButton"
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          Les
+        JOBS
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      %ul
+        %li
+          = link_to "Retour aux annonces", jobs_path, :class => "navButton"
+        - if params[:action] == "preview"
+          %li
+          = link_to "Confirmer", confirm_jobs_path, "data-skip-pjax" => true, :class => "navButton"
+  .theContent
+    %article#theJob
+      = image_tag (@job.logo_uid.present? ? @job.logo.thumb('56x').url : image_path('jobs/job_default.png')), :width => 56
+      #theJobDate
+        = l(@job.created_at, :format => :tiny)
+      %hgroup
+        %h1
+          = @job.title
+      #theJobInformations
+        .jobCompany
+          Employeur :
+          %span
+            = link_to_company @job
+        .jobCity
+          Lieu :
+          %span
+            = @job.city
+        .jobType
+          Type:
+          %span
+            = format_contracts @job.contracts
+      #theJobDescription.userMarkdown
+        = markdown @job.description
+      #theJobApply
+        Apply for this job
+        %br
+        Email your resume to
+        = link_to @job.email, "mailto:@job.email", "data-skip-pjax" => true
+        
+      
+    

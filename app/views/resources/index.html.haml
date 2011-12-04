@@ -1,49 +1,89 @@
 - set_meta_tags :title => "Toutes les ressources disponibles sur Railsfrance"
-%nav#resourcesNav.secondaryNav
-  %div
-    = image_tag "resources/github-icon.png", :width => 72, :height => 57
-    = link_to "Github", "https://github.com/railsfrance",:target => "_blank","data-skip-pjax" => "true", :class=> "buttonBlue"
-    = image_tag "resources/twitter-icon.png", :width => 72, :height => 57
-    = link_to "Twitter", "http://twitter.com/railsfrance",:target => "_blank","data-skip-pjax" => "true", :class=> "buttonBlue"
-    = image_tag "resources/mail-icon.png", :width => 72, :height => 57
-    = link_to "Mailing list", "http://groups.google.com/group/railsfrance",:target => "_blank","data-skip-pjax" => "true", :class=> "buttonBlue"
-.contentBackground
-  %div.center960
-    #resourcesTabs
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          Les
+        RESSOURCES
+  %nav#secondaryNav
+    %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Les entreprises", "#workersTab", "data-skip-pjax" => true
+          =link_to "Découvrir", "#discover", :class => "navLink"
+        %li.shadow
+          =link_to "Télécharger", "#download", :class => "navLink"
+        %li.shadow
+          =link_to "Apprendre", "#learn", :class => "navLink"
+        %li.shadow
+          =link_to "Communauté", "#community", :class => "navLink"
+  .theContent
+    #discover
+      %aside
+        %h2
+          Decouvrir
+      %ul.resourcesList
         %li
-          = link_to "Les guides", "#guidesTab", "data-skip-pjax" => true
-      #workersTab
+          %article
+            %h1
+              titre-1
+            %h2
+              titre-2
+            %h3
+              titre-3
+            %h4
+              titre-4
+            %h5
+              titre-5
+            %h6
+              titre-6
+            %p
+              paragraphe de texte
+            %ul
+              %li
+                liste1
+              %li
+                liste2
+            %ol
+              %li
+                list-1
+              %li
+                list-2
+            =link_to "google", "http://www.google.fr", :target => "_bank","data-skip-pjax" => "true"
+        %li
+          %article
+            artile
+    #download
+      %aside
         %h2
-          Vous trouverez ici
-          %span
-            les entreprises 
-          évoluant avec 
-          %span
-            ruby on rails
-        #workersTabContent
-          - @presenter.workers.each do |w|
-            %article
-              %h3
-                = w.name
-              %span
-                = w.city
-              = link_to "site<span>&nbsp;</span>".html_safe, w.website, :title => w.name, :target => "_blank", "data-skip-pjax" => true, :class=> "buttonBlue"
-      #guidesTab
+          Telecharger
+      %ul.resourcesList
+        %li
+          %article
+            article
+        %li
+          %article
+            artile
+    #learn
+      %aside
         %h2
-          Vous trouverez ici 
-          %span
-            les guides
-          pour bien débuter 
-          %span
-            ruby on rails
-        #guidesTabContent
-          - @presenter.guides.each do |g|
-            %article
-              = link_to "Voir le guide<span>&nbsp;</span>".html_safe, g.website, :title => g.name, :target => "_blank", "data-skip-pjax" => true, :class=> "buttonBlue"
-              %h3
-                = g.name
-              %div
-                = g.description
+          Apprendre
+      %ul.resourcesList
+        %li
+          %article
+            article
+        %li
+          %article
+            artile
+    #community
+      %aside
+        %h2
+          Communaute
+      %ul.resourcesList
+        %li
+          %article
+            article
+        %li
+          %article
+            artile
+      

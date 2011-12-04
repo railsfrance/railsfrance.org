@@ -1,8 +1,19 @@
-%nav#stationNav.secondaryNav
-  %div
-    %h2 Trier par
-    = link_to "Occurences", "#count", { :id => "tagCount", "data-skip-pjax" => "true" }
-    = link_to "Nom", "#name", { :id => "tagName", "data-skip-pjax" => "true" }
-.contentBackground
-  #Questionstags.center960
-    = colorize_tags @tags
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          Les
+        Questions
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      %h2
+        Trier par
+      %ul
+        %li.shadow
+          = link_to "Occurences", "#count", { :id => "tagCount", "data-skip-pjax" => "true", :class => "sort" }
+        %li.shadow
+          = link_to "Nom", "#name", { :id => "tagName", "data-skip-pjax" => "true", :class => "sort" }
+  .theContent
+    #Questionstags
+      = colorize_tags @tags

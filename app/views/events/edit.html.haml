@@ -1,7 +1,17 @@
-.secondaryNav
-.contentBackground
-  = simple_form_for @event, :html => { :class => "center960", :id => "eventAddForm" } do |form|
-    %fieldset
-      %legend Editez votre événement
-      = link_to "<span>&nbsp;</span>Retour aux événements".html_safe, events_path, :class => "buttonSmall backButton"
-      = render 'form', :f => form
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          LES
+        ÉVÉNEMENTS
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      %ul
+        %li
+          = link_to "Retour aux événements", events_path, :class => "navButton"
+  .theContent
+    = simple_form_for @event, :html => { :class => "eventForm"} do |form|
+      %fieldset
+        %legend Editez votre événement
+        = render 'form', :f => form

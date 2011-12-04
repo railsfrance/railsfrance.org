@@ -5,5 +5,5 @@ $ ->
     moveSlideQty: 1
     auto: true
     autoHover: true
-    nextText: '<span class="arrow right">Suivant</span>'
-    prevText: '<span class="arrow left">Précédent</span>'
+    nextText: '&#187;'
+    prevText: '&#171;'

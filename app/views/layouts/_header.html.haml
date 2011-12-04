@@ -1,16 +1,21 @@
-%header.fullwidth
-  %h1= link_to @meta_tags[:title], root_path, :class => "fullwith", :id => "logoRailsFrance", "data-skip-pjax" => "true"
-  %nav.fullwidth
+%header#header
+  %nav#primaryNav
     %ul
+      %li
+        = link_to @meta_tags[:title], root_path, :id => "homeRailsFrance", "data-skip-pjax" => true
       %li{class_for_tab(:questions)}= link_to "QUESTIONS", questions_path, "data-skip-pjax" => true
       %li{class_for_tab(:resources)}= link_to "RESSOURCES", resources_path, "data-skip-pjax" => true
       %li{class_for_tab(:events)}= link_to "EVENEMENTS", events_path, "data-skip-pjax" => true
       %li{class_for_tab(:jobs)}= link_to "JOBS", jobs_path, "data-skip-pjax" => true
-      %li{class_for_tab(:news)}= link_to "NEWS", news_index_path, "data-skip-pjax" => true
       %li{class_for_tab(:users)}= link_to "MEMBRES", users_path, "data-skip-pjax" => true
-    .center960
+      %li
+        = link_to "LA CARTE", map_index_path, "data-skip-pjax" => true
       - if user_signed_in?
-        = link_to "MON COMPTE", edit_user_registration_path, :class => "connectionButton connected", "data-skip-pjax" => true, :title => "Accès à votre profil Rails France"
-      - else
-        = link_to "CONNEXION", new_user_session_path, :class => "connectionButton", "data-skip-pjax" => true, :title => "Connexion à votre compte Rails France"
+        %li
+          = link_to "DECONNEXION", destroy_user_session_path, :method => :delete, "data-skip-pjax" => "true"
+      %li
+        - if user_signed_in?
+          = link_to "MON COMPTE", edit_user_registration_path, :class => "connectionButton connected", "data-skip-pjax" => true, :title => "Accès à votre profil Rails France"
+        - else
+          = link_to "CONNEXION", new_user_session_path, :class => "connectionButton", "data-skip-pjax" => true, :title => "Connexion à votre compte Rails France"
 

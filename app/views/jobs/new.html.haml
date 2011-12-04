@@ -1,3 +1,16 @@
 - set_meta_tags :title => "Poster votre annonce/offre d'emploi sur Railsfrance.org"
-= render 'form'
-= render 'markdown/markdown'
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          Les
+        JOBS
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      %ul
+        %li
+          = link_to "Retour aux annonces", jobs_path, :class => "navButton"
+  .theContent
+    = render 'form'
+    = render 'markdown/markdown'

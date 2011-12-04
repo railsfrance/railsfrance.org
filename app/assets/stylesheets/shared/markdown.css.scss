@@ -1,88 +1,55 @@
-#markdownHelp{
-  color:#951515;
+/* =============================================================================
+   IMPORT GLOBAL VAR
+   ========================================================================== */
+@import "variables";
+
+
+/* =============================================================================
+   MARKDOWN WYSIWYG
+   ========================================================================== */
+.wysiwyg_preview{
+  width:960px;
+  font-family: $font-times;
 }
 
+/* =============================================================================
+   MARKDOWN WINDOW
+   ========================================================================== */
 #dialogMarkdownHelp{
   display:none;
 }
 
-#markdowncontent{
+#dialogMarkdownContent{
   h3{
     font-family: Arial,sans-serif; 
-    color: #000000;
-    font-size: 14px;
     margin-bottom:5px;
   }
   p{
     color: #888888;
-    font-size: 12px;
-    margin-bottom:5px;
   }
   a{
-    color:#951515;
+    color:$red;
   }
-}
-
-.wysiwyg_preview{
-  width: 936px;
-  min-height: 200px;
-}
-.col{
+  .col{
     vertical-align:top;
     display:inline-block;
     margin-right: 10px;
     padding: 0 0 10px;
     width: 260px;
-}
-
-.col pre {
+  }
+  .col pre {
     border: 1px solid #DDDDDD;
     margin: 0 0 20px;
     padding: 5px;
     font: 12px 'Bitstream Vera Sans Mono','Courier',monospace;
+  }
 }
 
+
+/* =============================================================================
+   MARKDOWN SYNTAX COlORATION
+   ========================================================================== */
 .userMarkdown{
-  font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
-  font-size: 0.9em;
-  line-height: 1.3em;
-  color:#202020;
-  overflow:hidden;
-  margin-bottom:10px;
-  h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
-    color:#202020;
-    padding-top:0;
-    text-align:left;
-    text-shadow:none;
-  }
-  h1 {
-    font-size: 1.5em;
-    line-height: 1em;
-  }
-  h2 {
-    font-size: 1.375em;
-    line-height: 1.0909em;
-  }
-  
-  h3 {
-    font-size: 1.25em;
-    line-height: 1.2em;
-  }
-  
-  h4 {
-    font-size: 1.125em;
-    line-height: 1.333em;
-  } 
-  h5, h6 {
-    font-size: 1em;
-    line-height: 1.5em;
-  }
-  ul,ol{
-   list-style-position:inside;  
-  }
   em{
     font-style:italic;
   }

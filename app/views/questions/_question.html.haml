@@ -1,23 +1,25 @@
-%article.question.center960
-  .summary
-    %h3
-      = link_to truncate(question.title, :length => 50), question
-    .questionDescription
-      = sanitize(question.description).html_safe
-    = tag_box "tags", question.tags
-    .postHourUser
-      %span
-        Posée il y a #{distance_of_time_in_words_to_now(question.created_at)}
-      par #{link_to question.user_username, user_path(question.user), "data-skip-pjax" => true}
-      = image_tag question.user.gravatar_url
-  %aside.stats
+%li.theContentListLi
+  %aside
     .votes
       = question.votes
+      %br
       %span= pluralize_word(question.votes, "vote")
     .views
       = question.views
+      %br
       %span= pluralize_word(question.views, "vue")
     .answers
       = question.answers.size
+      %br
       %span= pluralize_word(question.answers_count, "réponse")
-  .clear
+  %article
+    %h2.theContentListTitle
+      = link_to truncate(question.title, :length => 50), question, :class => "theContentListTitle"
+    .questionDescription
+      = sanitize(question.description).html_safe
+    = tag_box question.tags
+    .postHourUser
+      %span
+        Postée il y a #{distance_of_time_in_words_to_now(question.created_at)}
+      par #{link_to question.user_username, user_path(question.user), "data-skip-pjax" => true}
+      = image_tag question.user.gravatar_url

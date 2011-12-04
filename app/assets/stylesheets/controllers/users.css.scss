@@ -1,58 +1,74 @@
-#users {
-  hgroup {
-    background: image-url('users/users.png') center bottom no-repeat;
+/* =============================================================================
+   IMPORT GLOBAL VAR
+   ========================================================================== */
+@import "variables";
+/* =============================================================================
+   THE CONTENT: USER LISTING
+   ========================================================================== */
+.userList{
+  text-align:center;
+  font-family:$font-oswald;
+  margin:0;
+  padding:0;
+  li{
+    display:inline-block;
   }
-}
-    
-.theUser{
-  display:inline-block;
-  width:280px;
-  height:78px;
-  margin:0 10px 20px 10px;
-  padding:7px 0 0 8px;
-  background: #901918;
-  background: -moz-linear-gradient(top, #901918 0%, #480a0a 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#901918), color-stop(100%,#480a0a));
-  background: -webkit-linear-gradient(top, #901918 0%,#480a0a 100%);
-  background: -o-linear-gradient(top, #901918 0%,#480a0a 100%);
-  background: -ms-linear-gradient(top, #901918 0%,#480a0a 100%); 
-  background: linear-gradient(top, #901918 0%,#480a0a 100%);
-  -webkit-border-radius: 15px;
-  -khtml-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  color:#ddc8a2;
-  &:hover{
-    background: #67b5bd;
-    background: -moz-linear-gradient(top, #67b5bd 0%, #10575f 100%); 
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#67b5bd), color-stop(100%,#10575f));
-    background: -webkit-linear-gradient(top, #67b5bd 0%,#10575f 100%);
-    background: -o-linear-gradient(top, #67b5bd 0%,#10575f 100%);
-    background: -ms-linear-gradient(top, #67b5bd 0%,#10575f 100%);
-    background: linear-gradient(top, #67b5bd 0%,#10575f 100%);
+  a{
+    text-align:left;
+    display:inline-block;
+    vertical-align:top;
+    width:190px;
+    height:70px;
+    margin:10px;
+    padding:5px;
+    color:#ddc8a2;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #901918;
+    background: -moz-linear-gradient(top, #901918 0%, #480a0a 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#901918), color-stop(100%,#480a0a));
+    background: -webkit-linear-gradient(top, #901918 0%,#480a0a 100%);
+    background: -o-linear-gradient(top, #901918 0%,#480a0a 100%);
+    background: -ms-linear-gradient(top, #901918 0%,#480a0a 100%);
+    background: linear-gradient(top, #901918 0%,#480a0a 100%);
+    &:hover{
+      background: #67b5bd;
+      background: -moz-linear-gradient(top, #67b5bd 0%, #10575f 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#67b5bd), color-stop(100%,#10575f));
+      background: -webkit-linear-gradient(top, #67b5bd 0%,#10575f 100%);
+      background: -o-linear-gradient(top, #67b5bd 0%,#10575f 100%);
+      background: -ms-linear-gradient(top, #67b5bd 0%,#10575f 100%);
+      background: linear-gradient(top, #67b5bd 0%,#10575f 100%);
+    }
   }
   img{
-    width:67px;
-    height:67px;
-    border:2px solid #400404;
+    display:inline-block;
+    vertical-align:top;
   }
-  div{
-   float:right;
-   width:189px;
-   padding:0 10px;
-   margin-top:-2px;
-   &:first-child{
-    padding-bottom:3px;
-    border-bottom:1px dashed #000;
-   }
+  .userInformations{
+    display:inline-block;
+    width:135px;
+    padding-left:5px;
+  }
+  .UserName{
+    display:block;
+    border-bottom: 1px dashed #000000;
+    padding-bottom:5px;
+    margin-bottom:5px;
+  }
+  .UserCreation{
+    padding-bottom:5px;
   }
 }
-
-/*--- USER INFORMARTIONS ---*/
+/* =============================================================================
+   THE CONTENT: USER DASHBOARD
+   ========================================================================== */
 #theUserName{
   border-bottom:1px solid #410404;
-  color:#400404;
-  font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color:$darkestRed;
+  font-family: $font-steel;
   font-size:3em;
   line-height:42px;
   padding-bottom:5px;
@@ -63,10 +79,12 @@
 }
 
 #theUserAddressAndSocial{
+  font-family:$font-oswald;
+  font-size:1.2em;
   margin:20px 0;
   width:920px;
   padding:10px 20px;
-  background: #fff;
+  background: $white;
   -webkit-border-radius:10px;
   -khtml-border-radius:10px;
   -moz-border-radius:10px;
@@ -74,16 +92,15 @@
   -webkit-box-shadow: inset 1px 1px 3px 0 #7b7b7b;
   -moz-box-shadow: inset 1px 1px 3px 0 #7b7b7b;
   box-shadow: inset 1px 1px 3px 0 #7b7b7b;
-  color:#410404;
+  color:#000;
   p{
     display:inline-block;
     width:450px;
-    margin:0;
-    line-height:2em;
     vertical-align:top;
+    line-height:1.5em;
   }
   span, a{
-    color:#8f1414;
+    color:$red;
   }
 }
 
@@ -107,7 +124,7 @@
 #questionTabAsk, #questionTabAnswer,#eventTabParticipations, #eventTabcreation {
   word-spacing:normal;
   vertical-align:top;
-  background:#fff;
+  background:$white;
   display:inline-block;
   width:420px;
   padding:10px 20px;
@@ -120,8 +137,9 @@
   box-shadow: inset 1px 1px 3px 0 #7b7b7b;
   color:#410404;
   h2{
+    font-family:$font-steel;
     position:relative;
-    font-size:1.9em;
+    font-size:1.8em;
     background: image-url('users/title-separation.png') center bottom no-repeat;
     padding-bottom:25px;
     margin-bottom:10px;
@@ -140,13 +158,13 @@
     }
   }
   p{
-    font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-family: $font-oswald;
     text-align:right;
     color:#66b5be;
     margin:0;
     font-size:1rem;
     span{
-      background: image-url('users/hourglass.png') left center no-repeat;
+      background: image-url('hourglass.png') left center no-repeat;
       width:17px;
       height:22px;
       padding-right:15px;
@@ -154,7 +172,7 @@
   }
   a{
     color:#8F1414;
-    font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-family: $font-steel;
     font-size:1.3em;
   }
 }

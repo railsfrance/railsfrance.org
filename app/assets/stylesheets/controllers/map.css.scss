@@ -1,37 +1,3 @@
-#map {
-  hgroup {
-    background: image-url('map/map.png') center bottom no-repeat;
-  }
-}
-
-#mapNav{
-  div{
-    padding-left:0;
-  }
-  .input{
-    display:inline-block;
-    background:none;
-    height:inherit;
-    margin:0;
-    padding:0;
-  }
-  form{
-    display:inline-block;
-  }
-  label{
-    position:relative;
-    top:-2px;
-    font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size:2.2em;
-    line-height:40px;
-    color:#ddc8a2;
-    text-transform:uppercase;
-    display:inline-block;
-    margin:0 15px;
-    text-shadow: #000 5px 3px 5px;
-  }
-}
-
 #theMap{
   width:891px;
   height:663px;

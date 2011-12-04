@@ -1,13 +1,20 @@
+/* =============================================================================
+   IMPORT GLOBAL VAR
+   ========================================================================== */
+@import "variables";
+/* =============================================================================
+   FLASH
+   ========================================================================== */
 #flash {
   position: fixed;
   top: 0;
   left: 0;
   display: none;
   width: 100%;
-  z-index: 500;
-  font-family: SteelfishRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
+  z-index: 10000;
+  font-family: $font-steel;
   text-transform:uppercase;
-  font-size:2em;
+  font-size:1.8em;
   color:#dec8a3;
   text-shadow: 1px 1px 2px #000;
   -webkit-box-shadow: 0 3px 5px 0 #000;
@@ -19,6 +26,8 @@
   img{
     vertical-align:middle;
     margin-right:20px;
+    width:30px;
+    height:30px;
   }
 }
 .flashNotice{

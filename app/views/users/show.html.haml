@@ -1,8 +1,15 @@
 - set_meta_tags :title => @user.username
-.secondaryNav
-.contentBackground
-  %div.center960
-    #theUserName.fullwidth
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span
+          Mon
+        profil
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+  .theContent
+    #theUserName
       = image_tag @user.gravatar_url(:size => 42)
       = @user.username
     #theUserAddressAndSocial

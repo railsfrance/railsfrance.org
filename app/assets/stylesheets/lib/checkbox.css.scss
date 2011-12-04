@@ -1,9 +1,8 @@
 div.jquery-checkbox-wrapper {
   position:relative;
-  top:3px;
   display:inline-block;
-  width: 39px;
-  height: 38px;
+  width: 22px;
+  height: 21px;
   z-index: 50;
   vertical-align: baseline;
   padding:0;
@@ -12,8 +11,8 @@ div.jquery-checkbox-wrapper {
 .jquery-checkbox-wrapper a.jquery-checkbox {
   background: transparent image-url('checkbox.png') repeat scroll 0px 0px;
   display: inline-block;
-  width: 39px;
-  height: 38px;
+  width: 22px;
+  height: 21px;
   cursor: pointer;
   outline: none;
 }

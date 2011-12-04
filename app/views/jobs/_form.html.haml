@@ -1,38 +1,37 @@
-#jobsNav.secondaryNav
-.contentBackground
-  = simple_form_for @job , :html => {:multipart => true, :class => "center960", :id => "jobAddForm"} do |f|
-    %fieldset
-      %legend= "Poster votre annonce"
-      = link_to "<span>&nbsp;</span>Retour aux annonces".html_safe, jobs_path, :class => "buttonSmall backButton"
-      #newJobLeft
-        = f.input :company, :autofocus => "autofocus"
-        = f.input :email, :label => "Email <span style='font-size:11px;'>(sera utilisé pour gérer votre annonce et vous faire contacter par un candidat)</span>".html_safe unless action_name == 'edit'
-        = f.input :url, :placeholder => "http://www.railsfrance.org"
+= simple_form_for @job , :html => {:multipart => true, :class => "eventForm"} do |f|
+  %fieldset
+    %legend= "Poster votre annonce"
+    #jobFormLeft
+      = f.input :company, :autofocus => "autofocus"
+      = f.input :email, :label => "Email <span style='font-size:11px;'>(sera utilisé pour gérer votre annonce et vous faire contacter par un candidat)</span>".html_safe unless action_name == 'edit'
+      = f.input :url, :placeholder => "http://www.railsfrance.org"
+      %label
+        Logo de votre entreprise
+        %span{:style => 'font-size:11px;'}
+          (sera redimensionné en 200x100px)
+      %div
+        Envoyer un fichier
+      = f.input :logo, :as => :file, :label => false
+      %div
         %label
-          Logo de votre entreprise
-          %span{:style => 'font-size:11px;'}
-            (sera redimensionné en 200x100px)
-        %span
-          Envoyer un fichier
-        = f.input :logo, :as => :file, :label => false
-        %span
           Ou renseigner une url
-        = f.text_field :logo_url
+      = f.text_field :logo_url
 
-        = image_tag @job.logo.thumb('200x100').url if @job.logo_uid
-        = f.hidden_field :retained_logo
-      #newJobRight
-        = f.input :title
-        = f.input :street
-        = f.input :city
-        = f.input :postal_code
-      = f.input :description, :as => :wysiwyg, :wrapper_html => { :class => "clear" }
-      %p La syntaxe #{link_to "Markdown", "http://github.github.com/github-flavored-markdown/","data-skip-pjax" => "true", :target => "_blank", :id => "markdownHelp"} est supportée
-      #newJobType
-        = f.input :cdi
-        = f.input :cdd
-        = f.input :freelance
-        = f.input :internship
-      - unless @job.errors[:contracts_error].empty?
-        %span.error= @job.errors[:contracts_error].first
+      = image_tag @job.logo.thumb('200x100').url if @job.logo_uid
+      = f.hidden_field :retained_logo
+    #jobFormRight
+      = f.input :title
+      = f.input :street
+      = f.input :city
+      = f.input :postal_code
+    = f.input :description, :as => :wysiwyg, :wrapper_html => { :class => "clear" }
+    %p.markdownLink La syntaxe #{link_to "Markdown", "http://github.github.com/github-flavored-markdown/","data-skip-pjax" => "true", :target => "_blank", :id => "markdownHelp"} est supportée
+    #jobFormType
+      = f.input :cdi
+      = f.input :cdd
+      = f.input :freelance
+      = f.input :internship
+    - unless @job.errors[:contracts_error].empty?
+      %span.error= @job.errors[:contracts_error].first
+    .block
       = f.button :submit

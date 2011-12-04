@@ -1,15 +1,16 @@
-%section#connection.sectionTitle
-  %hgroup
-    %h1
-      %span#arabesqueLeft &nbsp;
-      %span MOT
-      DE PASSE OUBLIE
-      %span#arabesqueRight &nbsp;
-%nav#connectionNav.secondaryNav
-  = render :partial => "devise/shared/links"
-.contentBackground
-  = simple_form_for(resource, :url => password_path(resource), :html => { :id=>'newPasswordForm' }) do |f|
-    %fieldset
-      %legend Mot de passe oublié ?
-      = f.input :email, :autofocus => "autofocus"
-      = f.button :submit, "Envoyer"
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span
+          Mot
+        de passe oublie
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      = render :partial => "devise/shared/links"
+  .theContent
+    = simple_form_for(resource, :url => password_path(resource), :html => { :class => "woodForm smallForm" }) do |f|
+      %fieldset
+        %legend Mot de passe oublié ?
+        = f.input :email, :autofocus => "autofocus"
+        = f.button :submit, "Envoyer"

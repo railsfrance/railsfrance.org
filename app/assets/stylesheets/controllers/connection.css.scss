@@ -1,61 +1,82 @@
-#connection {
-  hgroup {
-    background: image-url('connection/keys.png') center bottom no-repeat;
-  }
-}
+/* =============================================================================
+   IMPORT GLOBAL VAR
+   ========================================================================== */
+@import "variables";
 
-#connectionNav{
-  a{
-    width:178px;
-    height:37px;
-  }
-}  
-
-#connectionForm, #newUserForm, #newPasswordForm, #myAccount, #newUserPaswword{
-  width:346px;
-  padding:30px 33px;
-  margin:-20px auto 0 auto;
-  background: #e7d8c3 image-url('slider/slider-background.jpg');
-  -moz-border-radius:0 0 10px 10px; 
-  -webkit-border-radius:0 0 10px 10px; 
+/* =============================================================================
+   THE CONTENT: FORMS
+   ========================================================================== */
+.woodForm{
+  background:image-url('section-header.jpg');
+  margin:-19px auto 0 auto;
+  padding:20px;
+  moz-border-radius:0 0 10px 10px;
+  -webkit-border-radius:0 0 10px 10px;
   border-radius: 0 0 10px 10px; 
-  box-shadow:0 2px 7px #333333;
   legend{
     display:none;
   }
   label{
-    color:#fff;
+    color:$white;
     text-transform:uppercase;
     text-shadow: 5px 3px 5px #000;
   }
-  input[type=text], input[type=password], input[type=email]{
-    width:332px;
+  input[type=submit]{
+    color:$white;
   }
   input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
-    -webkit-box-shadow: 0 0 5px #fff;
-    -moz-box-shadow: 0 0 5px #fff;
-    box-shadow: 0 0 5px #fff;
+    -webkit-box-shadow: 0 0 5px $white;
+    -moz-box-shadow: 0 0 5 $white;
+    box-shadow: 0 0 5px $white;
   }
-  input[type=submit]{
-    width:358px;
-    margin-top:30px;
-  }
-  input[type=checkbox]{
-    float:left;
-    margin:-1px 10px 0 0;
-  }
-  .field_with_errors .error{
-    left:300px;
-  }
-}
-    
-#newUserForm, #myAccount{
-  width:734px;
 }
 
-#newUserLeft, #newUserRight{
-  width:346px;
+.smallForm{
+  width:300px;
+  input[type=text], input[type=password], input[type=email]{
+    width:290px;
+  }
+  input[type=submit]{
+    width:300px;
+    margin-top:10px;
+  }
+  .error{
+    left:260px;
+  }
 }
+
+.normalForm{
+  width:600px;
+  input[type=text], input[type=password], input[type=email]{
+    width:280px;
+  }
+  input[type=submit]{
+    width:290px;
+    margin-top:10px;
+  }
+  .error{
+    left:250px;
+  }
+}
+
+/* =============================================================================
+   THE CONTENT: NEW USER
+   ========================================================================== */
+#new_user{
+  label{
+    display:inline-block;
+  }
+  input[type=checkbox]{
+    display:inline;
+  }
+}
+
+#newUserLeft{
+  display:inline-block;
+  width:290px;
+}
+
 #newUserRight{
-  margin-left:20px;
+  @extend #newUserLeft;
+  margin-left:10px;
 }

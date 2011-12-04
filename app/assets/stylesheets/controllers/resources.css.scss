@@ -1,96 +1,136 @@
-#resources {
-  hgroup {
-    background: image-url('resources/resources.png') center bottom no-repeat;
-  }
-}
+/* =============================================================================
+   IMPORT GLOBAL VAR
+   ========================================================================== */
+@import "variables";
 
-#resourcesNav {
-  img{
-    position:relative;
-    top:5px;
-    vertical-align:top;
-  }
-}
-
-#workersTab, #guidesTab{
-  background: image-url('resources/here.png') 20px 10px no-repeat;
-  h2{
-    font-size:1.9em;
-    color:#202020;
-    text-transform:uppercase;
-    text-shadow: 0 2px 1px #fff;
-    filter: dropshadow(color=#fff, offx=0, offy=2);
-    height:97px;
-    line-height:97px;
-    padding-left:170px;
-    span{
-      color:#851514;
-    }
-  }
-}
-
-#workersTabContent,#guidesTabContent{
-  background:#fff;
-  padding:10px 20px;
-  -webkit-border-radius:10px;
-  -khtml-border-radius:10px;
-  -moz-border-radius:10px;
-  border-radius:10px;
-  -webkit-box-shadow: inset 1px 1px 3px 0 #7b7b7b;
-  -moz-box-shadow: inset 1px 1px 3px 0 #7b7b7b;
-  box-shadow: inset 1px 1px 3px 0 #7b7b7b;
-  article{
-    position:relative;
-    padding:15px 0;
-    margin:0;
-    &:last-child{
-      border:none;
-    }
-    div{
-    font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
-    font-size: 0.9em;
-    line-height: 1.3em;
-    color:#202020;
-    }
-  }
-  span{
-    text-transform:capitalize;
-    &:before{
-      content:"-";
-    }
-  }
-  h3{
-    color:#851514;
-    text-transform:uppercase;
+/* =============================================================================
+   THE CONTENT: RESOURCES
+   ========================================================================== */
+#discover{
+  background: image-url('resources/resources-separation.png') bottom center no-repeat;
+  padding-bottom:30px;
+  margin-bottom:20px;
+  aside{
+    width:248px;
     display:inline-block;
-    margin:0;
-  }
-  a{
-    color:#fff;
-    position:absolute;
-    top:10px;
-    right:0;
     text-transform:uppercase;
-    padding:0 15px 0 40px;
-    span{
-      position:absolute;
-      left:5px;
-      top:6px;
-      width:28px;
-      height:26px;
-      background: image-url('resources/chain-icon.png') no-repeat;
+    text-align:center;
+    text-shadow: 1px 1px 1px #000;
+    filter: dropshadow(color=#000, offx=1, offy=1); 
+    &:before{
+      content:"";
+      display:block;
+      background: image-url('resources/ressources.png') top center no-repeat;
+      width:248px;
+      height:91px;
+    }
+    h2{
+      color:$red;
       &:before{
-        content:"";
+        content:"Decouvrir";
+        display:block;
+        color:$brown;
+      }
+      &:after{
+        content:"Decouvrir";
+        display:block;
+        color:$blue;
       }
     }
   }
 }
-  
-#guidesTabContent{
-  h3{
-    background: image-url('resources/guide-separation.png') left bottom no-repeat;
-    min-width:720px;
-    padding-bottom:5px;
-    margin-bottom:15px;
+
+#download
+{
+  @extend #discover;
+  aside{
+    &:before{
+      background-position:center -91px;
+      height:113px;
+    }
+    h2{
+      &:before{
+        content: "Telecharger";
+      }
+      &:after{
+        content: "Telecharger";
+      }
+    }
+  }
+}
+
+#learn
+{
+  @extend #discover;
+  aside{
+    &:before{
+      background-position:center -204px;
+      height:123px;
+    }
+    h2{
+      &:before{
+        content: "Apprendre";
+      }
+      &:after{text-shadow: 1px 1px 1px #000;
+        filter: dropshadow(color=#000, offx=1, offy=1); 
+        content: "Apprendre";
+      }
+    }
+  }
+}
+
+#community
+{
+  @extend #discover;
+  background:none;
+  padding:0;
+  margin:0;
+  aside{
+    &:before{
+      background-position:center -327px;
+      height:96px;
+    }
+    h2{
+      &:before{
+        content: "Communaute";
+      }
+      &:after{
+        content: "Communaute";
+      }
+    }
+  }
+}
+
+.resourcesList{
+  display:inline-block;
+  vertical-align:top;
+  width:700px;
+  padding:0 0 10px 0;
+  margin:0;
+  list-style-type:none;
+  border-left:2px dashed #78665d;
+  min-height:250px;
+  article{
+    position:relative;
+    overflow:hidden;
+    width:680px;
+    padding-left:20px;
+    :after{
+      content:"";
+      clear:both;
+    }
+  }
+  h1{
+    font-size:1.7em;
+  }
+  h1,h2,h3,h4,h5,h6{
+    color:$red;
+  }
+  a{
+    color:$red;
+    &:hover{
+      color:#78665d;
+      text-decoration:underline;
+    }
   }
 }

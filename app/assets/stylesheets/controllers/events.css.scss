@@ -1,260 +1,116 @@
-#event {
-  hgroup {
-    background: image-url('events/events.png') center bottom no-repeat;
-  }
-}
-    
-/*--- EVENT SORT NAV ---*/
-#eventNav {
-  h2 {
-    top:8px;
-    width: 617px;
-    height: 41px;
-    background: image-url('events/number-of-upcoming-events.png') center bottom no-repeat;
-   }
-  span{
-    position:relative;
-    top:10px;
+/* =============================================================================
+   IMPORT GLOBAL VAR
+   ========================================================================== */
+@import "variables";
+/* =============================================================================
+   THE CONTENT: EVENT LISTING
+   ========================================================================== */
+#eventNumber{
+    font-family: $font-steel;
+    font-size:2.3em;
+    color: #DDC8A2;
+    text-shadow: 0 2px 5px #000000;
+    margin:0 10px;
     display:inline-block;
-    color:#DDC8A2;
-    font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 2.3em;
-    margin-left:10px;
-    text-shadow: 0 2px 5px #000;
-  }
+    vertical-align:top;
+    position:relative;
+    top:5px;
 }
-    
-/*--- EVENT EVENT LISTING ---*/
-.event{
-  .eventSummary{
-    float:right;
-    width:869px;
-    padding-left:20px;
-    background: image-url('jobs/separator-date.png') left top no-repeat;
-    h3{
-      margin-bottom:10px;
-      font-size:1.9em;
-      overflow:hidden;
-    }
-  }
-  .eventHyperLink{
-    text-transform: uppercase;
-    color: #400404;
-    -moz-transition: color 0.8s ease;
-    -webkit-transition: color 0.8s ease;
-    -o-transition: color 0.8s ease;
-    transition: color 0.8s ease;
-      &:hover{
-        text-decoration:none;
-        color:#a51515;
-      } 
-  }
-  .eventAddress{
+
+.eventList{
+  aside{
+    font-family:$font-oswald;
     font-size:1.2em;
-    font-family: OswaldRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
-    line-height:1.7em;
-    color:#8d1414;
-    margin-bottom:10px;
-    span{
-      color:#202020;
-    }
+    color:$white;
+    text-align:center;
+    vertical-align:top;
+    background: image-url('panels-sprite.png') top left no-repeat;
+    display:inline-block;
+    padding-top:18px;
+    width:50px;
+    height:49px;
   }
-  .eventDescription{
-    font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
-    font-size: 0.9em;
-    line-height: 1.3em;
-    color:#202020;
-    margin-bottom:15px;
+  article{
+    display:inline-block;
+    width:880px;
+    margin-left:20px;
     overflow:hidden;
   }
+  .eventDescription{
+    margin-bottom:20px;
+  }
   .eventInformations{
-    text-align:left;
-    background:#fff;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: inset 1px 1px 4px 0 #000;
-    -moz-box-shadow: inset 1px 1px 4px 0 #000;
-    box-shadow: inset 1px 1px 4px 0 #000; 
-    line-height:40px;
-    height:40px;
+    font-family:$font-oswald;
+    background:$white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px 0 #000 inset;
+    height: 30px;
+    line-height: 30px;
     padding: 0 15px;
-    margin:0 0 10px 0;
+    text-align: left;
     div{
-     display:inline-block;
-     overflow:hidden;
-     width:276px;
-     background: image-url('jobs/separator.png') right center no-repeat;
-     &:last-child{
-      background:none;}}
-    span, a {
-      color:#66b5be;
+      display:inline-block;
+      vertical-align:top;
+      padding-right:20px;
     }
-    img{
-      vertical-align:middle;
-      border:2px solid #8B0B0B;
+    span{
+      color:$blue;
     }
   }
-  .eventDate{
-    background: image-url('panneau.png') no-repeat;
-    width:61px;
-    height:62px;
-    color:#fff;
-    text-align:center;
-    float:right;
-    margin:0 10px 0 0;
-    padding-top:20px;
-  }
 }
-
-/*--- ADD EVENT ---*/
-#eventAddForm {
-  border-bottom:none;
-  background: image-url('station/here.png') 800px 105px no-repeat;
-  input[type=text]{
-    width:435px;
-  }
-  input[type=submit]{
-    width: 200px;
-    margin:30px auto 0 auto;
-  }
-}
-
-#newEventLeft, #newEventRight{
-  width:460px;
-}
-
-#newEventRight{
- margin-left:30px;
-}
-
-/*--- VIEW EVENT AND COMMENTS ---*/
-#theEvent {
-  h3, h4, h5{
-    color:#8d1414;
+/* =============================================================================
+   THE CONTENT: EVENT SHOW
+   ========================================================================== */
+#theEvent{
+  hgroup h1{
+    font-family: $font-steel;
+    color:$darkRed;
     text-transform:uppercase;
-    margin-bottom:10px;
     font-size:2em;
+    margin-top:0;
+  }
+}
+
+#theEventInformation{
+  font-family:$font-oswald;
+  font-size:1.3em;
+  span{
+    color:$blue;
   }
 }
 
 #theEventAddress{
-  font-size:1.2em;
-  font-family: OswaldRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
-  line-height:1.7em;
-  a {
-    color:#8d1414;
-  }
-  color:#8d1414;
-  border-bottom: dashed 1px #857c6f;
-  margin-bottom:10px;
-  span{
-    color:#202020;
+  border-bottom: 1px dashed #857C6F;
+  padding-bottom:10px;
+  a{
+    color:$red;
   }
 }
 
 #theEventDate{
- font-size:1.2em;
-  font-family: OswaldRegular, Verdana, Geneva, Arial, Helvetica, sans-serif;
-  line-height:1.7em;
-  color:#202020;
-  margin-bottom:10px;
-  div{
-    display:inline-block;
-    width:300px;
-  }
-  span, a{
-    color:#66b5be;
-  }
-  img{
-    vertical-align:middle;
-    border:2px solid #8B0B0B;
-  }
+  display:inline-block;
+  padding:10px 50px 0 0;
+}
+
+#theEventHour{
+  @extend #theEventDate;
 }
 
 #theEventDescription{
-  text-align:justify;
-  margin-bottom:20px;
+  font-family:$font-times;
 }
 
-#theEventWebSite{
-  color:#8d1414;
+
+/* =============================================================================
+   THE CONTENT: EVENT FORM
+   ========================================================================== */
+#eventFormLeft{
+  display:inline-block;
+  width:450px;
 }
 
-#theEventInscription{
-  position:relative;
-}
-
-#theEventSubscribe a{
-  position:absolute;
-  top:0;
-  right:0;
-}
-
-.subscribe{
-  background: #63b534;
-  background: -moz-linear-gradient(top, #63b534 0%, #1f511e 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#63b534), color-stop(100%,#1f511e));
-  background: -webkit-linear-gradient(top, #63b534 0%,#1f511e 100%);
-  background: -o-linear-gradient(top, #63b534 0%,#1f511e 100%);
-  background: -ms-linear-gradient(top, #63b534 0%,#1f511e 100%);
-  background: linear-gradient(top, #63b534 0%,#1f511e 100%);
-  &:hover{
-    background:#114400;
-    color:#568335;
-  }
-}
-
-#theEventAttendees{
-  background: image-url('events/attendees_separation.png') center bottom no-repeat;
-  padding-bottom:30px;
-}
-
-.attendees{
-  border: 2px solid #8d1414
-}
-
-#eventAnswer{
- background: image-url('events/attendees_separation.png') center top no-repeat;
-  padding-top:30px;
-  textarea {
-    width: 936px;
-    height: 200px;
-    padding: 0 10px;
-    background: #fff;
-    display: block;
-    color: #666;
-    line-height: 30px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    border: 2px solid #400404;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    outline: none;
-    margin-bottom: 10px; }
-  textarea:focus {
-    color: #000;
-    -webkit-box-shadow: 0 0 5px red;
-    -moz-box-shadow: 0 0 5px red;
-    box-shadow: 0 0 5px red; }
-  label {
-    font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
-    text-transform:uppercase;
-    display: block;
-    color: #8d1414;
-    margin-bottom: 20px;}
-}
-
-#eventEdit{
-  position: absolute;
-  top: 3px;
-  right: 200px;
-  background: image-url('user_actions/ico-edit.png') no-repeat;
-  width:28px;
-  height:31px;
-  text-indent:-9999px;
+#eventFormRight
+{
+  @extend #eventFormLeft;
+  margin-left:55px;
 }

@@ -1,14 +1,13 @@
-%footer.fullwidth
-  %ul#footerLeft
+%footer
+  %ul
     %li
-      = link_to "Crédits", root_path, "data-skip-pjax" => "true"
+      = link_to "Crédits", root_path, "data-skip-pjax" => "true", :class => "footerLeft"
+      %br<
+      = link_to "Twitter", "http://twitter.com/railsfrance", "data-skip-pjax" => "true", :class => "footerLeft", :target=>"_blank"
     %li
-      = link_to "Twitter", "http://twitter.com/railsfrance", "data-skip-pjax" => "true"
-  = link_to "Rails France", root_path, :id => "logoFooterRailsFrance", "data-skip-pjax" => "true"
-  %ul#footerRight
+      = link_to "dotCloud", "https://www.dotcloud.com/", :id => "logoDotCloud", "data-skip-pjax" => "true", :target=>"_blank"
     %li
-      = link_to "Contact", new_contact_path,"data-skip-pjax" => "true"
-    %li
-      = link_to "Github", "https://github.com/railsfrance","data-skip-pjax" => "true"
-  #footerBottom.fullwidth
-    = link_to "Mentions legales".html_safe, root_path,"data-skip-pjax" => "true"
+      = link_to "Contact", new_contact_path, "data-skip-pjax" => "true", :class => "footerRight"
+      %br<
+      = link_to "Github", "https://github.com/railsfrance","data-skip-pjax" => "true", :class => "footerRight", :target=>"_blank"
+  #footerBottom

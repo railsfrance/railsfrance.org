@@ -1,9 +1,19 @@
 - set_meta_tags :title => "Postez votre événement!"
-.secondaryNav
-.contentBackground
-  = simple_form_for @event , :url => events_path, :html => { :class => "center960", :id => "eventAddForm", :method => :post } do |form|
-    %fieldset
-      %legend Créer votre événement
-      = link_to "<span>&nbsp;</span>Retour aux événements".html_safe, events_path, :class => "buttonSmall backButton"
-      = render 'form', :f => form
-      = render 'markdown/markdown'
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          LES
+        ÉVÉNEMENTS
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      %ul
+        %li
+          = link_to "Retour aux événements", events_path, :class => "navButton"
+  .theContent
+    = simple_form_for @event , :url => events_path, :html => { :class => "eventForm", :method => :post } do |form|
+      %fieldset
+        %legend Créer votre événement
+        = render 'form', :f => form
+        = render 'markdown/markdown'

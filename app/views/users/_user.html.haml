@@ -1,11 +1,14 @@
-%a.theUser{:href => user_path(user)}
-  .theUserName
-    = user.username
-  .theUserCreation
-    Inscription :
-    = l(user.created_at, :format => :tiny)
-  .theUserCity
-    Ville :
-    = user.city
-  = image_tag user.gravatar_url(:size => 67)
+%li
+  %a{:href => user_path(user)}
+    = image_tag user.gravatar_url(:size => 40)
+    .userInformations
+      .UserName
+        = user.username
+      .UserCreation
+        Inscription :
+        = l(user.created_at, :format => :tiny)
+      .UserCity
+        Ville :
+        = user.city
+    
  

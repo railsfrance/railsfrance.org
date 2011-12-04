@@ -1,13 +1,25 @@
 - set_meta_tags :title => "Tous les événements à venir"
 - feed("RailsFrance » Evénéments", events_url(:atom))
-%nav#eventNav.secondaryNav
-  %div
-    %h2 Nombre d'événements à venir :
-    %span= @presenter.incoming_events
-.contentBackground
-  %aside
-    = link_to "Créer un événement", new_event_path, :id => "addEvent", :class => "buttonCurved"
-    = link_to image_tag("rss.png", :width => 26, :height => 26), events_url(:atom), :class => "buttonCurved", "data-skip-pjax" => true
-  = render @events
-  #pagination.center960
-    = paginate @events
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          LES
+        ÉVÉNEMENTS
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      %h2 
+        Nombre d'événements à venir :
+      %div#eventNumber
+        = @presenter.incoming_events
+      %ul
+        %li
+          = link_to "Créer un événement", new_event_path, :id => "addEvent", :class => "navButton add"
+        %li
+          = link_to "RSS", events_url(:atom), "data-skip-pjax" => true, :class => "navButton rss"
+  .theContent
+    %ul.eventList.theContentList
+      = render @events
+    .pagination
+      = paginate @events

@@ -1,17 +1,31 @@
 - feed("RailsFrance » Questions", questions_url(:atom))
 - set_meta_tags :title => "Toutes les questions à propos de Ruby On Rails"
-
-%nav#stationNav.secondaryNav
-  %div
-    %h2 Trier par
-    = sortable "Date", "created_at"
-    = sortable "Votes", "up_votes"
-    = sortable "Réponses", "answers_count"
-.contentBackground
-  %aside
-    = link_to "Poser une question", new_question_path, :class => "buttonCurved" 
-    = link_to "Tags", tags_path, :class => "buttonCurved"
-    = link_to image_tag("rss.png", :width => 26, :height => 26), questions_url(:atom), "data-skip-pjax" => true, :class => "buttonCurved"
-  = render @questions
-  #pagination.center960
-    = paginate @questions
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          Les
+        Questions
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      %h2
+        Trier par
+      %ul
+        %li.shadow
+          = sortable "Date", "created_at"
+        %li.shadow
+          = sortable "Votes", "up_votes"
+        %li.shadow
+          = sortable "Réponses", "answers_count"
+        %li.shadow
+          = link_to "Poser une question", new_question_path, :class => "navButton add"
+        %li
+          = link_to "Tags", tags_path, :class => "navButton"
+        %li
+          = link_to "RSS", questions_url(:atom), "data-skip-pjax" => true, :class => "navButton rss"
+  .theContent
+    %ul.questionList.theContentList
+      = render @questions
+    .pagination
+      = paginate @questions

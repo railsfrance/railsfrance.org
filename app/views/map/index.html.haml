@@ -1,11 +1,19 @@
-#mapNav.secondaryNav
-  %div
-    %form{:id => "map_filters"}
-      - [[:jobs,"jobs"],[:users,"utilisateurs"],[:events,"événements"]].each do |filter|
-        %div.input
-          %label
-            = filter.second
-          %input{:type => 'checkbox', :name => filter.first, :id => "filter_#{filter.first}", :checked => true}
-.contentBackground
-  #theMap
-    %div{:id => "map_canvas"}
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          Les
+        JOBS
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+      %form{:id => "map_filters"}
+        %ul
+          - [[:jobs,"jobs"],[:users,"utilisateurs"],[:events,"événements"]].each do |filter|
+            %li
+              %label
+                = filter.second
+              %input{:type => 'checkbox', :name => filter.first, :id => "filter_#{filter.first}", :checked => true}
+  .theContent
+    #theMap
+      %div{:id => "map_canvas"}

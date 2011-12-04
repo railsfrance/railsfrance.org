@@ -1,6 +1,13 @@
 - set_meta_tags :title => "Les développeurs Ruby On Rails français"
-
-.secondaryNav
-.contentBackground
-  #theUsersList.center960
-    = render @users
+%section.worldMap
+  %header#sectionHeader
+    %hgroup
+      %h1
+        %span 
+          LES
+        COW BOYS
+  %nav#secondaryNav
+    %div#secondaryNavContainer
+  .theContent
+    %ul.userList.theContentList
+      = render @users

@@ -1,197 +1,126 @@
-#job {
-  hgroup {
-    background: image-url('jobs/jobs.png') center bottom no-repeat;
-  }
-}
-
-/*--- JOBS SORT NAV ---*/
-#jobsNav{
-  div{
-    padding-left:0;
-  }
-  .input{
+/* =============================================================================
+   IMPORT GLOBAL VAR
+   ========================================================================== */
+@import "variables";
+/* =============================================================================
+   THE CONTENT: JOB LISTING
+   ========================================================================== */
+.jobList{
+  aside{
+    vertical-align:top;
     display:inline-block;
-    background:none;
-    height:inherit;
-    margin:0;
-    padding:0;
+    text-align:center;
+    font-family:$font-oswald;
+    font-size:1.1em;
+    color:$white;
+    background:image-url('panels-sprite.png') -100px top no-repeat;
+    padding-top:20px;
+    width:50px;
+    height:47px;
   }
-  form{
-    display:inline-block;
-  }
-  label{
+  article{
     position:relative;
-    top:-2px;
-    font-family: SteelfishRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size:2.2em;
-    line-height:40px;
-    color:#ddc8a2;
-    text-transform:uppercase;
     display:inline-block;
-    position:relative;
-    margin:0 15px;
-    text-shadow: #000 5px 3px 5px;
-  }
-}
-
-/*--- JOB LISTING ---*/
-.job{
-  .jobSummary{
-    float:right;
-    width:869px;
-    padding-left:20px;
-    background: image-url('jobs/separator-date.png') left top no-repeat;
-    min-height:143px;
-    h3:first-child{
-      margin-bottom:10px;
-      font-size:1.9em;
-    }
+    overflow:hidden;
+    width:890px;
+    padding-left:10px;
+    text-align:justify;
     img{
       float:right;
-      margin:0 0 5px 20px;
     }
-    a{
-        color: #400404;
-        -moz-transition: color 0.8s ease;
-        -webkit-transition: color 0.8s ease;
-        -o-transition: color 0.8s ease;
-        transition: color 0.8s ease;
-      &:hover{
-        text-decoration:none;
-        color:#a51515;
-      }
-    } 
   }
   .jobDescription{
-      font-family: Times, "Times New Roman", "Liberation Serif", FreeSerif, serif;
-      font-size: 0.9em;
-      line-height: 1.3em;
-      color:#202020;
-      margin-bottom:15px;
-  }
-  .jobInformations{
-    font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-    clear:both;
-    background:#fff;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: inset 1px 1px 4px 0px #000;
-    -moz-box-shadow: inset 1px 1px 4px 0px #000;
-    box-shadow: inset 1px 1px 4px 0px #000; 
-    line-height:40px;
-    height:40px;
-    padding: 0 15px;
-    margin:0 0 10px 0;
-    div{
-     display:inline-block;
-     overflow:hidden;
-     width:275px;
-     background: image-url('jobs/separator.png') right center no-repeat;
-     &:last-child{
-      background:none;}}
-    span, a {
-      color:#66b5be;
-    }
-    img{
-      vertical-align:middle;
-      border:2px solid #8B0B0B;
-    }
-  }
-  .jobCreationDate{
-    background: image-url('panneau.png') top right no-repeat;
-    width:61px;
-    height:62px;
-    color:#fff;
-    text-align:center;
-    float:right;
-    margin:0 10px 0 0;
-    padding-top:20px;
+    font-family:$font-times;
   }
 }
-
-/*--- ADD JOB ---*/
-#jobAddForm {
-  border-bottom:none;
-  input[type=text], input[type=url], input[type=email]{
-    width:435px;
-  }
-  input[type=submit]{
-    clear:left;
-    margin-top:20px;
-  }
-  input[type=checkbox]{
-    display:inline-block;
-    height:inherit;
-    margin:0 20px 0px 10px;
-  }
-}
-
-#newJobLeft, #newJobRight{
-  width:460px;
-}
-
-#newJobType div, #newJobType label{
-  float:left;
-}
-
-#newJobRight{
- margin-left:30px;
-}
-  
-/*--- JOB DETAILS ---*/
+/* =============================================================================
+   THE CONTENT: JOB SHOW
+   ========================================================================== */
 #theJob{
-  h3{
-    font-size:2em;
-    color: #400404;
-    width:760px;
-    line-height:82px;
-   }
-  .jobInformations{
-    font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-    clear:both;
-    background:#fff;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: inset 1px 1px 4px 0px #000;
-    -moz-box-shadow: inset 1px 1px 4px 0px #000;
-    box-shadow: inset 1px 1px 4px 0px #000; 
-    line-height:40px;
-    height:40px;
-    padding: 0 15px;
-    margin:0 0 10px 0;
-    div{
-     display:inline-block;
-     overflow:hidden;
-     width:275px;
-     background: image-url('jobs/separator.png') right center no-repeat;
-     &:last-child{
-      background:none;}}
-    span, a {
-      color:#66b5be;
+  overflow:hidden;
+  img{
+    margin-top:10px;
+    float:right;
+  }
+  hgroup{
+    display:inline-block;
+    h1{
+      font-family: $font-steel;
+      color:$darkRed;
+      text-transform:uppercase;
+      font-size:2em;
+      margin-top:20px;
+      padding-left:10px;
+      display:inline-block;
     }
   }
 }
 
 #theJobDate{
-  font-family: OswaldRegular,Verdana, Geneva, Arial, Helvetica, sans-serif;
-  background: image-url('panneau.png') top right no-repeat;
-  width:61px;
-  height:62px;
-  color:#fff;
+  vertical-align:top;
+  display:inline-block;
   text-align:center;
-  float:left;
-  margin:0 20px 10px 0;
+  font-family:$font-oswald;
+  font-size:1.1em;
+  color:$white;
+  background:image-url('panels-sprite.png') -100px top no-repeat;
   padding-top:20px;
+  width:50px;
+  height:47px;
+}
+
+#theJobInformations{
+  font-family:$font-oswald;
+  font-size:1.2em;
+  border-bottom: 1px dashed #857C6F;
+  padding-bottom:10px;
+  div{
+    display:inline-block;
+    text-align:left;
+    width:33%;
+  }
+  span{
+    color:$blue;
+  }
+  a{
+    color:$blue;
+    -webkit-transition: color 0.8s ease 0s;
+    -moz-transition: color 0.8s ease 0s;
+    -o-transition: color 0.8s ease 0s;
+    -ms-transition: color 0.8s ease 0s;
+    transition: color 0.8s ease 0s;
+    &:hover{
+      color:$red;
+    }
+  }
 }
 
 #theJobDescription{
+  font-family:$font-times;
   text-align:justify;
 }
 
-#theJobConfirm{
-  clear:both;
-  margin:0 auto;
-  width:100px;
+#theJobApply{
+  display:table;
+  background:$blue;
+  padding:10px 20px;
+  border-radius:5px;
+  a{
+    color:$red;
+    &:hover{
+      text-decoration:underline;
+    }
+  }
+}
+/* =============================================================================
+   THE CONTENT: JOB FORM
+   ========================================================================== */
+#jobFormLeft{
+  display:inline-block;
+  width:450px;
+}
+
+#jobFormRight{
+  @extend #jobFormLeft;
+  margin-left:55px;
 }
