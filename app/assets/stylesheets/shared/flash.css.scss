@@ -16,10 +16,10 @@
   text-transform:uppercase;
   font-size:1.8em;
   color:#dec8a3;
-  text-shadow: 1px 1px 2px #000;
-  -webkit-box-shadow: 0 3px 5px 0 #000;
-  -moz-box-shadow: 0 3px 5px 0 #000;
-  box-shadow: 0 3px 5px 0 #000;
+  text-shadow: 1px 1px 2px $black;
+  -webkit-box-shadow: 0 3px 5px 0 $black;
+  -moz-box-shadow: 0 3px 5px 0 $black;
+  box-shadow: 0 3px 5px 0 $black;
   div{
     padding:10px 0 10px 0;
   }

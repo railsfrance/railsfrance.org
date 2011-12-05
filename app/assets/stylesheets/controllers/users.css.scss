@@ -54,7 +54,7 @@
   }
   .UserName{
     display:block;
-    border-bottom: 1px dashed #000000;
+    border-bottom: 1px dashed $black;
     padding-bottom:5px;
     margin-bottom:5px;
   }
@@ -92,7 +92,7 @@
   -webkit-box-shadow: inset 1px 1px 3px 0 #7b7b7b;
   -moz-box-shadow: inset 1px 1px 3px 0 #7b7b7b;
   box-shadow: inset 1px 1px 3px 0 #7b7b7b;
-  color:#000;
+  color:$black;
   p{
     display:inline-block;
     width:450px;

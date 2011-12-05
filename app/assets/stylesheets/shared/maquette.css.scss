@@ -121,9 +121,9 @@ footer{
     background: -o-linear-gradient(top,  #8c0909 0%,#5e0b09 100%);
     background: -ms-linear-gradient(top,  #8c0909 0%,#5e0b09 100%);
     background: linear-gradient(top,  #8c0909 0%,#5e0b09 100%);
-    -webkit-box-shadow: 0px 2px 5px 0px #000000;
-    -moz-box-shadow: 0px 2px 5px 0px #000000;
-    box-shadow: 0px 2px 5px 0px #000000;
+    -webkit-box-shadow: 0 2px 5px 0 $black;
+    -moz-box-shadow: 0 2px 5px 0 $black;
+    box-shadow: 0 2px 5px 0 $black;
   }
   ul{
     position:relative;
@@ -143,7 +143,7 @@ footer{
     font-family: $font-steel;
     letter-spacing:1px;
     font-size:2em;
-    text-shadow: 0px 2px 3px #000000;
+    text-shadow: 0 2px 3px $black;
     color:$link;
     display:inline-block;
     padding:0 10px; 
@@ -183,23 +183,23 @@ footer{
         width:3px;
         background:#1c1c1c;
         border-radius:3px;
-        -webkit-box-shadow: 2px 0px 1px 0px #8d2f30;
-        -moz-box-shadow: 2px 0px 1px 0px #8d2f30;
-        box-shadow: 2px 0px 1px 0px #8d2f30; 
+        -webkit-box-shadow: 2px 0 1px 0 #8d2f30;
+        -moz-box-shadow: 2px 0 1px 0 #8d2f30;
+        box-shadow: 2px 0 1px 0 #8d2f30; 
       }
       &:before{
         position:absolute;
         z-index:10;
         top:4px;
-        right:0px;
+        right:0;
         content: "";
         display: block;
         height:40px;
         width:3px;
         background:transparent;
-        -webkit-box-shadow: -1px 0px 5px 1px #000000;
-        -moz-box-shadow: -1px 0px 5px 1px #000000;
-        box-shadow: -1px 0px 5px 1px #000000;
+        -webkit-box-shadow: -1px 0 5px 1px $black;
+        -moz-box-shadow: -1px 0 5px 1px $black;
+        box-shadow: -1px 0 5px 1px $black;
       }
       &:hover{
         width:162px;
@@ -229,18 +229,17 @@ footer{
     }
   }
   a{
-    filter: dropshadow(color=#000000, offx=0, offy=2); 
+    filter: dropshadow(color=$black, offx=0, offy=2); 
   }
 }
 /* =============================================================================
    SECTION HEADER
    ========================================================================== */
 #sectionHeader{
-  height: 100px;
-  left: 0;
   overflow: visible;
   position: fixed;
   right: 0;
+  left: 0;
   top: 53px;
   z-index: 10000;
   text-align:center;
@@ -256,7 +255,7 @@ footer{
     position:relative;
     font-family:$font-steel;
     font-size: 3em;
-    text-shadow: 0 2px 5px #000000;
+    text-shadow: 0 2px 5px $black;
     text-transform: uppercase;
     color:$white;
     margin:0;
@@ -286,18 +285,17 @@ footer{
   }
   span{
     color:$blue;
-    text-shadow:0 2px 5px #000000;
+    text-shadow:0 2px 5px $black;
   }
 }
 /* =============================================================================
    SECONDARY NAV
    ========================================================================== */
 #secondaryNav{
-  height: 46px;
-  left: 0;
   overflow: visible;
   position: fixed;
   right: 0;
+  left: 0;
   top: 153px;
   z-index: 10000;
   display: block;
@@ -318,7 +316,6 @@ footer{
   background: -ms-linear-gradient(top,  #8e1115 0%,#7d1313 100%);
   background: linear-gradient(top,  #8e1115 0%,#7d1313 100%);
   h2{
-    vertical-align:top;
     position:relative;
     top:-5px;
     font-family:$font-sedona;
@@ -353,7 +350,7 @@ footer{
     font-family: $font-steel;
     font-size:2em;
     letter-spacing:1px;
-    text-shadow: 0px 2px 3px #000000;
+    text-shadow: 0 2px 3px $black;
     color:$link;
   }
   .simple_form{
@@ -438,7 +435,7 @@ footer{
   font-family: $font-steel;
   font-size:2em;
   letter-spacing:1px;
-  text-shadow: 0px 2px 3px #000000;
+  text-shadow: 0 2px 3px $black;
   color:$link;
   &:hover{
     color:$link;
@@ -483,9 +480,9 @@ footer{
   -webkit-border-radius:2px;
   -moz-border-radius:2px;
   border-radius:2px;      
-  -webkit-box-shadow: 1px 2px 5px 0px #000000;
-  -moz-box-shadow: 1px 2px 5px 0px #000000;
-  box-shadow: 1px 2px 5px 0px #000000; 
+  -webkit-box-shadow: 1px 2px 5px 0 $black;
+  -moz-box-shadow: 1px 2px 5px 0 $black;
+  box-shadow: 1px 2px 5px 0 $black; 
   -moz-transition: all 0.8s ease;
   -webkit-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
@@ -493,9 +490,9 @@ footer{
   &:hover, &.selected{
     color:$darkRed;
     background:#4d0505;
-    -webkit-box-shadow: inset 3px 3px 10px 0 #000;
-    -moz-box-shadow: inset 3px 3px 10px 0 #000;
-    box-shadow: inset 3px 3px 10px 0 #000;
+    -webkit-box-shadow: inset 3px 3px 10px 0 $black;
+    -moz-box-shadow: inset 3px 3px 10px 0 $black;
+    box-shadow: inset 3px 3px 10px 0 $black;
   }
 }
 
@@ -571,11 +568,11 @@ footer{
   font-size:1.5em;
   color:#400404;
   margin-top:0;
-  -webkit-transition: color 0.8s ease 0s;
-  -moz-transition: color 0.8s ease 0s;
-  -o-transition: color 0.8s ease 0s;
-  -ms-transition: color 0.8s ease 0s;
-  transition: color 0.8s ease 0s;
+  -webkit-transition: color 0.8s ease 0;
+  -moz-transition: color 0.8s ease 0;
+  -o-transition: color 0.8s ease 0;
+  -ms-transition: color 0.8s ease 0;
+  transition: color 0.8s ease 0;
   &:hover{
     color:#a51515;
   }
@@ -592,9 +589,9 @@ footer{
   -moz-border-radius: 5px;
   border-radius: 5px; 
   border:none;
-  -webkit-box-shadow: 1px 2px 5px 0px #000000;
-  -moz-box-shadow: 1px 2px 5px 0px #000000;
-  box-shadow: 1px 2px 5px 0px #000000; 
+  -webkit-box-shadow: 1px 2px 5px 0 $black;
+  -moz-box-shadow: 1px 2px 5px 0 $black;
+  box-shadow: 1px 2px 5px 0 $black; 
   -moz-transition: all 0.8s ease;
   -webkit-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
@@ -612,9 +609,9 @@ footer{
   &:hover{
     color:$darkRed;
     background:#4d0505;
-    -webkit-box-shadow: inset 3px 3px 10px 0 #000;
-    -moz-box-shadow: inset 3px 3px 10px 0 #000;
-    box-shadow: inset 3px 3px 10px 0 #000;
+    -webkit-box-shadow: inset 3px 3px 10px 0 $black;
+    -moz-box-shadow: inset 3px 3px 10px 0 $black;
+    box-shadow: inset 3px 3px 10px 0 $black;
   }
 }
 
@@ -634,7 +631,7 @@ footer{
   font-size:1.1em;
   background:$white;
   border-radius: 5px;
-  box-shadow: 1px 1px 4px 0 #000 inset;
+  box-shadow: 1px 1px 4px 0 $black inset;
   height: 30px;
   line-height: 30px;
   padding: 0 15px;
@@ -648,17 +645,16 @@ footer{
   }
   a{
     color:$blue;
-    -webkit-transition: color 0.8s ease 0s;
-    -moz-transition: color 0.8s ease 0s;
-    -o-transition: color 0.8s ease 0s;
-    -ms-transition: color 0.8s ease 0s;
-    transition: color 0.8s ease 0s;
+    -webkit-transition: color 0.8s ease 0;
+    -moz-transition: color 0.8s ease 0;
+    -o-transition: color 0.8s ease 0;
+    -ms-transition: color 0.8s ease 0;
+    transition: color 0.8s ease 0;
     &:hover{
       color:$red;
     }
   }
 }
-
 
 .noAnwser{
   font-family:$font-oswald;
@@ -667,7 +663,6 @@ footer{
   color:$blue;
   text-align:center;
 }
-
 /* =============================================================================
    PAGINATION
    ========================================================================== */
@@ -675,7 +670,7 @@ footer{
   text-align:center;
   line-height:26px;
   .page a{
-    color:#000;
+    color:$black;
   }
   .current{
     color: #a01616;
@@ -770,7 +765,7 @@ footer{
     outline: none;
     margin-bottom: 10px;
     &:focus{
-      color: #000;
+      color: $black;
       -webkit-box-shadow: 0 0 5px #ff0000;
       -moz-box-shadow: 0 0 5px #ff0000;
       box-shadow: 0 0 5px #ff0000;
@@ -796,7 +791,7 @@ footer{
     font-size:1em;
     color:#fff;
     text-align:center;
-    box-shadow: 0 0 4px #000;
+    box-shadow: 0 0 4px $black;
     position:absolute;
     z-index:200;
     min-width:150px;

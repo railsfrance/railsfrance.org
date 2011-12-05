@@ -30,11 +30,11 @@
   .questionsListTitle{
     margin-top:0;
     color:#400404;
-    -webkit-transition: color 0.8s ease 0s;
-    -moz-transition: color 0.8s ease 0s;
-    -o-transition: color 0.8s ease 0s;
-    -ms-transition: color 0.8s ease 0s;
-    transition: color 0.8s ease 0s;
+    -webkit-transition: color 0.8s ease 0;
+    -moz-transition: color 0.8s ease 0;
+    -o-transition: color 0.8s ease 0;
+    -ms-transition: color 0.8s ease 0;
+    transition: color 0.8s ease 0;
     &:hover{
       color:#a51515;
     }
@@ -155,9 +155,9 @@
   text-align:center;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  -webkit-box-shadow: 1px 1px 2px 0 #000000 inset;
-  -moz-box-shadow: 1px 1px 2px 0 #000000 inset;
-  box-shadow: 1px 1px 2px 0 #000000 inset;
+  -webkit-box-shadow: 1px 1px 2px 0 $black inset;
+  -moz-box-shadow: 1px 1px 2px 0 $black inset;
+  box-shadow: 1px 1px 2px 0 $black inset;
   border-radius: 4px;
   margin:5px 0;
 }

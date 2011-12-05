@@ -84,11 +84,11 @@
   }
   a{
     color:$blue;
-    -webkit-transition: color 0.8s ease 0s;
-    -moz-transition: color 0.8s ease 0s;
-    -o-transition: color 0.8s ease 0s;
-    -ms-transition: color 0.8s ease 0s;
-    transition: color 0.8s ease 0s;
+    -webkit-transition: color 0.8s ease 0;
+    -moz-transition: color 0.8s ease 0;
+    -o-transition: color 0.8s ease 0;
+    -ms-transition: color 0.8s ease 0;
+    transition: color 0.8s ease 0;
     &:hover{
       color:$red;
     }

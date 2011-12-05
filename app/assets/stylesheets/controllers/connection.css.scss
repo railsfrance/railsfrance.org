@@ -10,7 +10,7 @@
   background:image-url('section-header.jpg');
   margin:-19px auto 0 auto;
   padding:20px;
-  moz-border-radius:0 0 10px 10px;
+  -moz-border-radius:0 0 10px 10px;
   -webkit-border-radius:0 0 10px 10px;
   border-radius: 0 0 10px 10px; 
   legend{
@@ -19,7 +19,7 @@
   label{
     color:$white;
     text-transform:uppercase;
-    text-shadow: 5px 3px 5px #000;
+    text-shadow: 5px 3px 5px $black;
   }
   input[type=submit]{
     color:$white;

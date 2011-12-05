@@ -9,7 +9,7 @@
     font-family: $font-steel;
     font-size:2.3em;
     color: #DDC8A2;
-    text-shadow: 0 2px 5px #000000;
+    text-shadow: 0 2px 5px $black;
     margin:0 10px;
     display:inline-block;
     vertical-align:top;
@@ -43,7 +43,7 @@
     font-family:$font-oswald;
     background:$white;
     border-radius: 5px;
-    box-shadow: 1px 1px 4px 0 #000 inset;
+    box-shadow: 1px 1px 4px 0 $black inset;
     height: 30px;
     line-height: 30px;
     padding: 0 15px;
