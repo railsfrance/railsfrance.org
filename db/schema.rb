@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111119230740) do
+ActiveRecord::Schema.define(:version => 20111209170054) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -79,14 +79,6 @@ ActiveRecord::Schema.define(:version => 20111119230740) do
 
   add_index "events", ["slug"], :name => "index_events_on_slug", :unique => true
   add_index "events", ["user_id"], :name => "index_events_on_user_id"
-
-  create_table "guides", :force => true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "website"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "jobs", :force => true do |t|
     t.string   "company"
