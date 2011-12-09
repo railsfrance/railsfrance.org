@@ -27,7 +27,7 @@
           %span
             Contribuer
           %br
-          A la communauté
+          à la communauté
   #homeHgroup
     = link_to "Rails", "http://rubyonrails.org/","data-skip-pjax" => true, :target => "_blank"
     %div
@@ -40,41 +40,25 @@
       %h2
         Les évènements Rails
       %ul
-        %li
-          %article
-            %h3
-              = link_to "Envylabs", "#"
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....
-        %li
-          %article
-            %h3
-              = link_to "Envylabs", "#"
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....
-        %li
-          %article
-            %h3
-              = link_to "Envylabs", "#"
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....
+        - @presenter.recent_events.each do |event|
+          %li
+            %article
+              %h3
+                = link_to event.title, event_path(event), "data-skip-pjax" => true
+              %p
+                = truncate(sanitize(event.description), length: 35).html_safe
       = link_to "Voir tous les évènements", events_path, "data-skip-pjax" => true, :class => "smallButton"
     #homeJobs.homeContent
       %h2
         Les Jobs Rails
       %ul
-        %li
-          %article
-            %h3
-              = link_to "Envylabs", "#"
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....
-        %li
-          %article
-            %h3
-              = link_to "Envylabs", "#"
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....
+        - @presenter.recent_jobs.each do |job|
+          %li
+            %article
+              %h3
+                = link_to job.title, job_path(job), "data-skip-pjax" => true
+              %p
+                = truncate(sanitize(job.description),length: 35).html_safe 
       = link_to "Voir tous les Jobs", jobs_path, "data-skip-pjax" => true, :class => "smallButton"
     #homeTweets.homeContent
       %h2

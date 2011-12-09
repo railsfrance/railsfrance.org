@@ -9,7 +9,7 @@
       %li{class_for_tab(:jobs)}= link_to "JOBS", jobs_path, "data-skip-pjax" => true
       %li{class_for_tab(:users)}= link_to "MEMBRES", users_path, "data-skip-pjax" => true
       %li
-        = link_to "LA CARTE", map_index_path, "data-skip-pjax" => true
+        = link_to "CARTE", map_index_path, "data-skip-pjax" => true
       - if user_signed_in?
         %li
           = link_to "DECONNEXION", destroy_user_session_path, :method => :delete, "data-skip-pjax" => "true"

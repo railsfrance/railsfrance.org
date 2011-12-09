@@ -10,7 +10,11 @@ class Home::IndexPresenter
   end
 
   def recent_jobs
-    Job.where(:state => 'activated').order('created_at DESC').limit(3)
+    Job.where(:state => 'activated').limit(3)
+  end
+
+  def recent_events
+    Event.limit(3)
   end
 
   def rails_projects
@@ -27,5 +31,5 @@ class Home::IndexPresenter
     ]
   end
 
-  memoize :recent_questions
+  memoize :recent_questions, :recent_jobs, :recent_events
 end
