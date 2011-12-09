@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111209170054) do
+ActiveRecord::Schema.define(:version => 20111209171523) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -196,17 +196,5 @@ ActiveRecord::Schema.define(:version => 20111209170054) do
   add_index "votings", ["voteable_type", "voteable_id", "voter_type", "voter_id"], :name => "unique_voters", :unique => true
   add_index "votings", ["voteable_type", "voteable_id"], :name => "index_votings_on_voteable_type_and_voteable_id"
   add_index "votings", ["voter_type", "voter_id"], :name => "index_votings_on_voter_type_and_voter_id"
-
-  create_table "workers", :force => true do |t|
-    t.string   "name"
-    t.string   "website"
-    t.string   "street"
-    t.string   "postal_code"
-    t.string   "city"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.float    "latitude"
-    t.float    "longitude"
-  end
 
 end

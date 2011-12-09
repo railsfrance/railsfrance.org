@@ -11,7 +11,6 @@ class AdminAbility
       can :manage, Answer
       can :manage, Event
       can :manage, Job
-      can :manage, Worker
     end
 
     # Administrator
