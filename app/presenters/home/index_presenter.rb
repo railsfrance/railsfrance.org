@@ -9,10 +9,6 @@ class Home::IndexPresenter
     Question.order('created_at DESC').limit(3)
   end
 
-  def recent_news
-    News.order('created_at DESC').limit(3)
-  end
-
   def recent_jobs
     Job.where(:state => 'activated').order('created_at DESC').limit(3)
   end
@@ -31,5 +27,5 @@ class Home::IndexPresenter
     ]
   end
 
-  memoize :recent_questions, :recent_news
+  memoize :recent_questions
 end

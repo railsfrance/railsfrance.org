@@ -19,7 +19,6 @@ class User < ActiveRecord::Base
   has_many :answers
 
   has_many :events
-  has_many :news
   has_many :comments
   has_many :event_attendee
 

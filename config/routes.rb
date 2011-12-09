@@ -59,11 +59,6 @@ RailsFrance::Application.routes.draw do
   # Resources
   resources :ressources, :controller => :resources, :as => :resources, :only => [:index]
 
-  # News
-  resources :news, :only => [:index, :show] do
-    resources :comments, :only => [:create]
-  end
-
   # Contacts
   resources :contacts do
     post :send_email, :on => :collection

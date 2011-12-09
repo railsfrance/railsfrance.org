@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111006191718) do
+ActiveRecord::Schema.define(:version => 20111119230740) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -116,18 +116,6 @@ ActiveRecord::Schema.define(:version => 20111006191718) do
   end
 
   add_index "jobs", ["slug"], :name => "index_jobs_on_slug", :unique => true
-
-  create_table "news", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "title"
-    t.text     "description"
-    t.string   "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "comments_count", :default => 0
-  end
-
-  add_index "news", ["user_id"], :name => "index_news_on_user_id"
 
   create_table "questions", :force => true do |t|
     t.integer  "user_id"

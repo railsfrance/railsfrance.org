@@ -13,7 +13,6 @@ class AdminAbility
       can :manage, Job
       can :manage, Worker
       can :manage, Guide
-      can :manage, News
     end
 
     # Administrator
