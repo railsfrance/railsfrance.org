@@ -252,7 +252,31 @@ footer{
   box-shadow:none;
   hgroup{
     height:100px;
-    background:image-url('questions/locomotives.png') bottom center no-repeat;
+    background:image-url('sprite-header.png') top center no-repeat;
+    &.resourcesHeader{
+      background-position:center -100px;
+    }
+    &.connexionHeader{
+      background-position:center -200px;
+    }
+    &.eventHeader{
+      background-position:center -300px;
+    }
+    &.jobsHeader{
+      background-position:center -400px;
+    }
+    &.contactHeader{
+      background-position:center -500px;
+    }
+    &.mapHeader{
+      background-position:center -600px;
+    }
+    &.userHeader{
+      background-position:center -700px;
+    }
+    &.error404Header{
+      background-position:center -800px;
+    }
   }
   h1{
     position:relative;

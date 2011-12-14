@@ -2,7 +2,6 @@
    IMPORT GLOBAL VAR
    ========================================================================== */
 @import "variables";
-
 /* =============================================================================
    THE CONTENT: RESOURCES
    ========================================================================== */
@@ -26,15 +25,18 @@
     }
     h2{
       color:$red;
+      margin-top:10px;
       &:before{
         content:"Decouvrir";
         display:block;
         color:$brown;
+        margin-bottom:-5px;
       }
       &:after{
         content:"Decouvrir";
         display:block;
         color:$blue;
+        margin-top:-5px;
       }
     }
   }
