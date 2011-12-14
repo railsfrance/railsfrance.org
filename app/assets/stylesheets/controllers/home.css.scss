@@ -50,14 +50,6 @@
         color: $link;
       }
     }
-    &:after{
-      content:"";
-      display:inline-block;;
-      width:230px;
-      height:13px;
-      margin-top:10px;
-      background: image-url('home/arabesque.png') center bottom no-repeat;
-    }
   }
   span{
     font-size:1.5em;
