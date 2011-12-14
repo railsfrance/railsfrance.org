@@ -1,5 +1,5 @@
 %li.theContentListLi
-  %aside
+  %aside{:class => event.date > Time.now ? "blue" : "red"}
     = l(event.date, :format => :tiny)
   %article
     %h2.theContentListTitle
