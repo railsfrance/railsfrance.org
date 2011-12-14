@@ -16,6 +16,6 @@ redis:
 recaptcha:
   public_key: ""
   private_key: ""
-adapter:
+api:
   meetup:
     key: ""
