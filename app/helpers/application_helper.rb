@@ -25,7 +25,7 @@ module ApplicationHelper
   end
   
   def class_for_tab(name)
-    name.to_s == controller.controller_name ? {class: "selected"} : {class: ""}
+    name.to_s == controller.controller_name ? "selected" : ""
   end
   
   private

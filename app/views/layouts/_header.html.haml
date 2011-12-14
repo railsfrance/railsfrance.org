@@ -3,12 +3,18 @@
     %ul
       %li
         = link_to @meta_tags[:title], root_path, :id => "homeRailsFrance", "data-skip-pjax" => true
-      %li{class_for_tab(:questions)}= link_to "QUESTIONS", questions_path, "data-skip-pjax" => true
-      %li{class_for_tab(:resources)}= link_to "RESSOURCES", resources_path, "data-skip-pjax" => true
-      %li{class_for_tab(:events)}= link_to "EVENEMENTS", events_path, "data-skip-pjax" => true
-      %li{class_for_tab(:jobs)}= link_to "JOBS", jobs_path, "data-skip-pjax" => true
-      %li{class_for_tab(:users)}= link_to "MEMBRES", users_path, "data-skip-pjax" => true
-      %li{class_for_tab(:map)}= link_to "CARTE", map_index_path, "data-skip-pjax" => true
+      %li
+        = link_to "QUESTIONS", questions_path, "data-skip-pjax" => true, :class => class_for_tab(:questions)
+      %li
+        = link_to "RESSOURCES", resources_path, "data-skip-pjax" => true, :class => class_for_tab(:resources)
+      %li
+        = link_to "EVENEMENTS", events_path, "data-skip-pjax" => true, :class => class_for_tab(:events)
+      %li
+        = link_to "JOBS", jobs_path, "data-skip-pjax" => true, :class => class_for_tab(:jobs)
+      %li
+        = link_to "MEMBRES", users_path, "data-skip-pjax" => true, :class => class_for_tab(:users)
+      %li
+        = link_to "CARTE", map_index_path, "data-skip-pjax" => true, :class => class_for_tab(:map)
       - if user_signed_in?
         %li
           = link_to "DECONNEXION", destroy_user_session_path, :method => :delete, "data-skip-pjax" => "true"
