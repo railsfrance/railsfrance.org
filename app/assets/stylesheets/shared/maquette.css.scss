@@ -217,6 +217,9 @@ footer{
     text-indent:-9999px;
     padding:0;
     outline:none;
+    &:hover{
+      background-position:0 100%;
+    }
   }
   
 }
@@ -409,11 +412,14 @@ footer{
 }
 
 #logoDotCloud{
-  background: image-url('footer/dotcloud.png') center center no-repeat;
+  background: image-url('footer/dotcloud.png') top center no-repeat;
   width:150px;
   height:35px;
   text-indent:-9999px;
   outline:none;
+  &:hover{
+    background-position:center 100%;
+  }
 }
 
 #footerBottom{
