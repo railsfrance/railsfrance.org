@@ -39,7 +39,7 @@
       %hgroup
         %h1
           = @question.title
-      %div.theQuestionContent
+      %div.theQuestionContent.userMarkdown
         = markdown @question.description
         = tag_box @question.tags
         .postHourUser
