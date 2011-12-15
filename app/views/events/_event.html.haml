@@ -5,7 +5,7 @@
     %h2.theContentListTitle
       = link_to truncate(event.title, :length => 50), event, :class => "theContentListTitle"
     .eventDescription
-      = event.description
+      = sanitize(event.description).html_safe
     .informationsBlock
       .eventCity
         Ville:
