@@ -15,7 +15,6 @@
     text-transform:uppercase;
     text-align:center;
     text-shadow: 1px 1px 1px $black;
-    filter: dropshadow(color=$black, offx=1, offy=1); 
     &:before{
       content:"";
       display:block;
@@ -73,8 +72,8 @@
       &:before{
         content: "Apprendre";
       }
-      &:after{text-shadow: 1px 1px 1px $black;
-        filter: dropshadow(color=$black, offx=1, offy=1); 
+      &:after{
+        text-shadow: 1px 1px 1px $black; 
         content: "Apprendre";
       }
     }
