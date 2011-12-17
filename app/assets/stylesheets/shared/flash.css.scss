@@ -31,6 +31,7 @@
   }
 }
 .flashNotice{
+  background:#3a7612
   background: -moz-linear-gradient(top, #3a7612 0%, #4ea516 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a7612), color-stop(100%,#4ea516));
   background: -webkit-linear-gradient(top, #3a7612 0%,#4ea516 100%);
@@ -39,6 +40,7 @@
   background: linear-gradient(top, #3a7612 0%,#4ea516 100%);
 }
 .flashError{
+  background: #821415;
   background: -moz-linear-gradient(top, #821415 0%, #901416 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#821415), color-stop(100%,#901416));
   background: -webkit-linear-gradient(top, #821415 0%,#901416 100%);
@@ -47,6 +49,7 @@
   background: linear-gradient(top, #821415 0%,#901416 100%);
 }
 .flashAlert{
+  background: #355c61;
   background: -moz-linear-gradient(top, #355c61 0%, #64b1bb 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#355c61), color-stop(100%,#64b1bb));
   background: -webkit-linear-gradient(top, #355c61 0%,#64b1bb 100%);
