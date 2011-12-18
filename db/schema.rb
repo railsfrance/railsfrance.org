@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111209171523) do
+ActiveRecord::Schema.define(:version => 20111218131804) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -39,25 +39,6 @@ ActiveRecord::Schema.define(:version => 20111209171523) do
   end
 
   add_index "answers", ["user_id", "question_id"], :name => "index_answers_on_user_id_and_question_id"
-
-  create_table "comments", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "commentable_id"
-    t.string   "commentable_type"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "comments", ["commentable_id", "commentable_type"], :name => "index_comments_on_commentable_id_and_commentable_type"
-  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
-
-  create_table "event_attendees", :force => true do |t|
-    t.integer "user_id"
-    t.integer "event_id"
-  end
-
-  add_index "event_attendees", ["user_id", "event_id"], :name => "index_event_attendees_on_user_id_and_event_id"
 
   create_table "events", :force => true do |t|
     t.integer  "user_id"

@@ -56,40 +56,4 @@ class EventsControllerTest < ActionController::TestCase
     assert_redirected_to @event
     assert_equal I18n.t('event.flash.updated'), flash[:notice]
   end
-
-  test 'should attend' do
-    user = Factory.create :user
-    sign_in user
-    assert_equal@event.event_attendees.count, 0
-    get :attend, :id => @event.id
-    assert_equal @event.event_attendees.count, 1
-    assert_redirected_to @event
-    assert_equal I18n.t('event.flash.attended'), flash[:notice]
-  end
-
-  test 'should not attend' do
-    sign_in @event.user
-    assert_equal @event.event_attendees.count, 0
-    assert_raise(CanCan::AccessDenied) { get :attend, :id => @event.id }
-    assert_equal @event.event_attendees.count, 0
-  end
-
-  test 'should unattend' do
-    user = Factory.create :user
-    sign_in user
-    get :attend, :id => @event.id
-    assert_equal @event.event_attendees.count, 1
-    assert_redirected_to @event
-    get :unattend, :id => @event.id
-    assert_equal @event.event_attendees.count, 0
-    assert_redirected_to @event
-    assert_equal I18n.t('event.flash.unattended'), flash[:notice]
-  end
-
-  test 'should not unattend' do
-    sign_in @event.user
-    attendees = @event.event_attendees.count
-    assert_raise(CanCan::AccessDenied) { get :unattend, :id => @event.id }
-    assert_equal @event.event_attendees.count, attendees
-  end
 end

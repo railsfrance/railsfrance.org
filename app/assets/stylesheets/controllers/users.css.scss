@@ -117,11 +117,7 @@
   }
 }
 
-#eventTabLink a{
-    background: image-url('users/event-tab.png') 30px center no-repeat;
-}
-
-#questionTabAsk, #questionTabAnswer,#eventTabParticipations, #eventTabcreation {
+#questionTabAsk, #questionTabAnswer {
   word-spacing:normal;
   vertical-align:top;
   background:$white;

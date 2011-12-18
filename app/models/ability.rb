@@ -15,11 +15,5 @@ class Ability
     can :accept, :all do |i|
       i.accepteable_by? user
     end
-    can :attend, :all do |i|
-      i.attendable_by? user
-      end
-    can :unattend, :all do |i|
-      i.unattendable_by? user
-    end
   end
 end

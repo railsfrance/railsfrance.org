@@ -29,11 +29,6 @@
         Date d'inscription :
         %span= l(@user.created_at, :format => :tiny)
     #questionsEventsTabs
-      %ul
-        %li#questionTabLink
-          = link_to "QUESTIONS", "#questionTab", "data-skip-pjax" => true
-        %li#eventTabLink
-          = link_to "EVENEMENTS", "#eventsTab", "data-skip-pjax" => true
       #questionTab
         #questionTabAsk
           %h2 
@@ -61,32 +56,3 @@
                   &nbsp;
                 Postée il y a 
                 = distance_of_time_in_words(a.created_at, Time.now) 
-      #eventsTab
-        #eventTabParticipations
-          %h2 
-            Participations à un événement : 
-            %span
-              = @user.event_attendee.size
-          - @presenter.recent_attended_events.each do |e|
-            %div
-              = link_to e.title, event_path(e), "data-skip-pjax" => true 
-              %p
-                %span
-                  &nbsp;
-                Le
-                = l(e.date, :format => :default)
-                = l(e.date, :format => :short)
-        #eventTabcreation
-          %h2 
-            Evénements créés : 
-            %span
-              = @user.events_count
-          - @presenter.recent_created_events.each do |e|
-            %div
-              = link_to e.title, event_path(e), "data-skip-pjax" => true 
-              %p
-                %span
-                  &nbsp;
-                Le
-                = l(e.date, :format => :default)
-                = l(e.date, :format => :short)

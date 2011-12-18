@@ -3,21 +3,16 @@ class EventsController < ApplicationController
 
   keep_params :event, :only => [:create]
   load_params :event, :only => [:new]
-  load_params :comment, :only => [:show]
 
-  load_and_authorize_resource :event, :only => [:show, :edit, :attend, :unattend]
+  load_and_authorize_resource :event, :only => [:show, :edit]
   load_and_authorize_resource :through => :current_user, :only => [:create, :update]
 
   respond_to :html, :atom
 
   def index
     @presenter = Events::IndexPresenter.new
-    @events = Event.includes(:user).page params[:page]
+    @events = Event.page params[:page]
     respond_with @events
-  end
-
-  def show
-    @comments = @event.comments_page params[:page]
   end
 
   def create
@@ -34,17 +29,5 @@ class EventsController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def attend
-    @event.attendees << current_user
-    flash[:notice] = t('event.flash.attended') if @event.save
-    redirect_to @event
-  end
-
-  def unattend
-    @event.attendees.destroy current_user
-    flash[:notice] = t('event.flash.unattended') if @event.save
-    redirect_to @event
   end
 end

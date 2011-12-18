@@ -9,11 +9,6 @@ class EventTest < ActiveSupport::TestCase
     assert @event.valid?
   end
 
-  test 'should not be valid without user' do
-    @event.user = nil
-    assert @event.invalid?
-  end
-
   test 'should not be valid without title' do
     @event.title = nil
     assert @event.invalid?
@@ -60,18 +55,5 @@ class EventTest < ActiveSupport::TestCase
     @event.save
     assert @event.latitude
     assert @event.longitude
-  end
-
-  test 'should not be attendeable if user already attented' do
-    user = Factory.create :user
-    @event.attendees << user
-    refute @event.attendable_by?(user)
-  end
-
-  test 'should not be attendeable if date is past' do
-    user = Factory.create :user
-    @event.date = Time.now
-    @event.save
-    refute @event.attendable_by?(user)
   end
 end

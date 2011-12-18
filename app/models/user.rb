@@ -19,9 +19,6 @@ class User < ActiveRecord::Base
   has_many :answers
 
   has_many :events
-  has_many :comments
-  has_many :event_attendee
-
 
   attr_accessible :email, :password, :password_confirmation,
   :remember_me, :username, :website, :github, :twitter, :street, :city, :postal_code
