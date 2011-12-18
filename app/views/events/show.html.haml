@@ -22,7 +22,7 @@
         #theEventAddress
           Adresse :
           %span
-            = link_to "#{@event.street} #{@event.postal_code} #{@event.city}", "http://maps.google.com/maps?q=#{@event.street} #{@event.postal_code} #{@event.city}","data-skip-pjax" => true, :target => "_blank"
+            = link_to "#{@event.street} #{@event.postal_code} #{@event.city}", "http://maps.google.com/maps?q=#{CGI::escape([@event.street, @event.postal_code, @event.city].compact.join(' '))}","data-skip-pjax" => true, :target => "_blank"
         #theEventDate
           Date :
           %span
