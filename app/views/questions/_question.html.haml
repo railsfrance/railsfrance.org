@@ -16,7 +16,7 @@
     %h2.theContentListTitle
       = link_to truncate(question.title, :length => 50), question, :class => "theContentListTitle"
     .questionDescription
-      = sanitize(question.description).html_safe
+      = truncate(sanitize(question.description), length: 200).html_safe
     = tag_box question.tags
     .postHourUser
       %span

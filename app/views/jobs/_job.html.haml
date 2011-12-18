@@ -7,7 +7,7 @@
     %h2.theContentListTitle
       = link_to job.title, job_path(job), :class => "theContentListTitle"
     .jobDescription
-      = sanitize(job.description).html_safe
+      = truncate(sanitize(job.description), length: 200).html_safe
     .informationsBlock
       .jobCompany
         Employeur :
@@ -21,4 +21,3 @@
         Type:
         %span
           = format_contracts job.contracts
-
