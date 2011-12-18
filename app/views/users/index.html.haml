@@ -11,7 +11,7 @@
       %h2
         Nombre de membres inscris :
       %div#userNumber
-        = @users.size
+        = @presenter.members_count
   .theContent
     %ul.userList.theContentList
       = render @users
