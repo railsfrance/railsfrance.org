@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
   extend FriendlyId
   include Addresseable
   include Gravtastic
+
+  default_scope :order => 'username ASC'
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
@@ -9,6 +12,7 @@ class User < ActiveRecord::Base
   gravtastic :secure => true,:size => 22
 
   friendly_id :username, :use => :slugged
+  paginates_per 20
 
   before_validation :website_prefix
 

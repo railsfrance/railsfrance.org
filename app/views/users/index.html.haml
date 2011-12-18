@@ -8,6 +8,12 @@
         COW BOYS
   %nav#secondaryNav
     %div#secondaryNavContainer
+      %h2
+        Nombre de membres inscris :
+      %div#userNumber
+        = @users.size
   .theContent
     %ul.userList.theContentList
       = render @users
+    .pagination
+      = paginate @users
