@@ -1,21 +1,19 @@
-#header404{
-  hgroup { 
-    background: image-url('404/404.png') center bottom no-repeat;
-  }
+.content404{
+  width:100%;
 }
 
-#background404{
-  height:500px;
+.background404{
+  height:261px;
   background: image-url('404/bg-404.png') right top repeat-x; 
 }
 
-#chuckNorris{
+.chuckNorris{
   position:absolute;
-  top:-175px;
+  top:130px;
   left:50%;
-  margin-left:-530px;
-  width:925px;
-  height:653px;
+  margin-left:-400px;
+  width:745px;
+  height:475px;
   background: image-url('404/chuck.png') left top no-repeat;
   text-indent:-9999px;
 }
