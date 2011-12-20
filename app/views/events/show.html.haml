@@ -33,7 +33,7 @@
             = l(@event.date, :format => :short)
     #theEventDescription.userMarkdown
       = markdown @event.description
-      %br
-      = link_to @event.website, @event.website, :id => "theEventWebSite","data-skip-pjax" => true, :target => "_blank"
+      %p
+        = link_to @event.website, @event.website,"data-skip-pjax" => true, :target => "_blank"
    
       
