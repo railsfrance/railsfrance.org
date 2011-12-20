@@ -227,12 +227,7 @@ footer{
    SECTION HEADER
    ========================================================================== */
 #sectionHeader{
-  overflow: visible;
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 53px;
-  z-index: 10000;
+  padding-top:53px;
   text-align:center;
   background:  image-url('section-header.jpg');
   height:100px;
@@ -307,13 +302,6 @@ footer{
    SECONDARY NAV
    ========================================================================== */
 #secondaryNav{
-  overflow: visible;
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 153px;
-  z-index: 10000;
-  display: block;
   height:46px;
   background: image-url('secondary-nav.jpg') repeat-x;
   padding:12px 0 10px 0;
@@ -557,7 +545,7 @@ footer{
 .theContent{
   width:960px;
   margin:0 auto;
-  padding-top:240px;
+  padding-top:30px;
   min-height:400px;
 }
 
