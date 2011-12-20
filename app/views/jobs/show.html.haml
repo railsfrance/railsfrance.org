@@ -38,10 +38,11 @@
       #theJobDescription.userMarkdown
         = markdown @job.description
       #theJobApply
-        Apply for this job
-        %br
-        Email your resume to
-        = link_to @job.email, "mailto:@job.email", "data-skip-pjax" => true
+        %p
+          Apply for this job
+        %p
+          Email your resume to
+          = link_to @job.email, "mailto:@job.email", "data-skip-pjax" => true
         
       
     
