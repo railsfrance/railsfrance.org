@@ -10,7 +10,7 @@
     %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Retour aux annonces", jobs_path, :class => "navButton"
+          = link_to "Retour aux annonces", jobs_path, :class => "navButton back"
         - if params[:action] == "preview"
           %li
           = link_to "Confirmer", confirm_jobs_path, "data-skip-pjax" => true, :class => "navButton"

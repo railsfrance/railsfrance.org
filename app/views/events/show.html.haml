@@ -9,7 +9,7 @@
     %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Retour aux événements", events_path, :class => "navButton"
+          = link_to "Retour aux événements", events_path, :class => "navButton back"
         - if can? :update, @event
           %li
             = link_to "Editer", edit_event_path(@event), :class => "navButton"

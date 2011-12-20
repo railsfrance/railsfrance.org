@@ -10,7 +10,7 @@
     %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Retour aux événements", events_path, :class => "navButton"
+          = link_to "Retour aux événements", events_path, :class => "navButton back"
   .theContent
     = simple_form_for @event , :url => events_path, :html => { :class => "eventForm", :method => :post } do |form|
       %fieldset

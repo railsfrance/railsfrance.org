@@ -527,7 +527,7 @@ footer{
   vertical-align:top;
   width:12px;
   height:25px;
-  background: image-url('button-sprite.png') right 3px no-repeat;
+  background: image-url('button-sprite.png') -17px 3px no-repeat;
   margin-right:5px;
 }
 
@@ -538,6 +538,16 @@ footer{
   display:inline-block;
   vertical-align:top;
   background: image-url('button-sprite.png') left center no-repeat;
+  margin-right:5px;
+}
+
+.back:before{
+  content:"";
+  width:18px;
+  height:25px;
+  display:inline-block;
+  vertical-align:top;
+  background: image-url('button-sprite.png') right center no-repeat;
   margin-right:5px;
 }
 

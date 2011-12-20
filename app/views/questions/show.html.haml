@@ -13,7 +13,7 @@
         %li
           =link_to "RSS", question_url(@question, :atom), "data-skip-pjax" => true, :class => "navButton rss", :target => "_blank"
         %li
-          = link_to "Retour aux questions", questions_path, :class => "navButton"
+          = link_to "Retour aux questions", questions_path, :class => "navButton back"
         - if can? :update, @question
           %li
             = link_to "Editer", edit_question_path(@question), :class => "navButton"

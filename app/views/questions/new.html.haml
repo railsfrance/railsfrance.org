@@ -10,7 +10,7 @@
     %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Retour aux questions", questions_path, :class => "navButton"
+          = link_to "Retour aux questions", questions_path, :class => "navButton back"
   .theContent
     = simple_form_for @question, :url => questions_path, :html => {:class => "questionForm", :method => :post } do |form|
       %fieldset
