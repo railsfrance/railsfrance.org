@@ -12,7 +12,7 @@
           = link_to "Retour aux événements", events_path, :class => "navButton"
         - if can? :update, @event
           %li
-            = link_to "Editer", edit_event_path(@event), :title => "navButton"
+            = link_to "Editer", edit_event_path(@event), :class => "navButton"
   .theContent
     %article#theEvent
       %hgroup
