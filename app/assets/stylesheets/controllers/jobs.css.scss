@@ -30,7 +30,7 @@
     }
   }
   .jobDescription{
-    font-family:$font-times;
+    font-family:$font-verdana;
   }
 }
 /* =============================================================================
@@ -96,12 +96,12 @@
 }
 
 #theJobDescription{
-  font-family:$font-times;
+  font-family:$font-verdana;
   text-align:justify;
 }
 
 #theJobApply{
-    font-family:$font-times;
+  font-family:$font-verdana;
   position:relative;
   display:inline-block;
   -webkit-border-radius: 5px;

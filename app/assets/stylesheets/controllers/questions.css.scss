@@ -65,7 +65,7 @@
 }
 
 .questionDescription{
-  font-family:$font-times
+  font-family:$font-verdana;
 }
 
 .postHourUser{
@@ -169,7 +169,7 @@
   border-left: 2px solid #A07E70;
   overflow:hidden;
   min-height:100px;
-  font-family:$font-times;
+  font-family:$font-verdana;
   hgroup h1{
     font-family: $font-steel;
     color:$darkRed;
@@ -189,7 +189,7 @@
 
 .answersList{
   article{
-    font-family:$font-times;
+    font-family:$font-verdana;
     display:inline-block;
     width:870px;
     padding-left:20px;
