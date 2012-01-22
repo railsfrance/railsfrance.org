@@ -25,7 +25,10 @@
         %li
           = link_to "RSS", questions_url(:atom), "data-skip-pjax" => true, :class => "navButton rss"
   .theContent
-    %ul.questionList.theContentList
-      = render @questions
-    .pagination
-      = paginate @questions
+    - if @questions.empty?
+      %p.noAnwser Aucune question pour le moment
+    - else
+      %ul.questionList.theContentList
+        = render @questions
+      .pagination
+        = paginate @questions
