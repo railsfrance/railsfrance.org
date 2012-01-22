@@ -13,11 +13,10 @@
       = render "layouts/header"
       #main{:role => "main", "data-pjax-container" => true}
         = yield
-        %div.center960
-          %center
-            Vous avez envie d'ajouter du contenu ? Vous avez trouvé une erreur ? Merci 
-            = link_to "d\'ouvrir un ticket sur github", "https://github.com/railsfrance/railsfrance.org/issues/new"
-            !
+        #addContentBug.center960
+          Vous avez envie d'ajouter du contenu ? Vous avez trouvé une erreur ? Merci 
+          = link_to "d\'ouvrir un ticket sur github", "https://github.com/railsfrance/railsfrance.org/issues/new"
+          !
     = render "layouts/footer"
     - if flash.present?
       - if flash[:notice].present?

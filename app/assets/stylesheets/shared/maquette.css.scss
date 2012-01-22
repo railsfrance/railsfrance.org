@@ -372,6 +372,16 @@ footer{
 /* =============================================================================
    FOOTER
    ========================================================================== */
+#addContentBug{
+  padding-top:15px;
+  text-align:center;
+  font-family:$font-oswald;
+  font-size:1.0em;  
+  a{
+    color:$red;
+  }
+}  
+  
 footer{
   position:relative;
   z-index:50;
