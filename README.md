@@ -1,6 +1,6 @@
 # railsfrance.org [![Build Status](https://secure.travis-ci.org/railsfrance/railsfrance.org.png)](http://travis-ci.org/railsfrance/railsfrance.org)
 
-[railsfrance.org](http://wwww.railsfrance.org) is the French Ruby on Rails community website.
+[railsfrance.org](http://www.railsfrance.org) is the French Ruby on Rails community website.
 
 This Git repository is the the current Rails application of railsfrance.org.
 
