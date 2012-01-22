@@ -66,7 +66,7 @@ end
 gem 'activeadmin',			'~> 0.3'
 
 group :development, :test do
-  gem 'ruby-debug19'
+  gem 'ruby-debug19' unless ENV["CI"]
   gem 'awesome_print'
   gem 'capybara',			'~> 1.1'
   gem 'factory_girl_rails',		'~> 1.2'
