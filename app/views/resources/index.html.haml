@@ -10,60 +10,93 @@
     %div#secondaryNavContainer
       %ul
         %li
-          =link_to "Découvrir", "#discover", :class => "navLink"
+          = link_to "Découvrir", "#discover", :class => "navLink"
         %li.shadow
-          =link_to "Télécharger", "#download", :class => "navLink"
+          = link_to "Télécharger", "#download", :class => "navLink"
         %li.shadow
-          =link_to "Apprendre", "#learn", :class => "navLink"
+          = link_to "Apprendre", "#learn", :class => "navLink"
         %li.shadow
-          =link_to "Communauté", "#community", :class => "navLink"
+          = link_to "Communauté", "#community", :class => "navLink"
   .theContent
     #discover
       %aside
         %h2
-          Decouvrir
+          Découvrir
       %ul.resourcesList
         %li
           %article
-            %h1
-              titre-1
-            %h2
-              titre-2
-            %h3
-              titre-3
-            %h4
-              titre-4
-            %h5
-              titre-5
-            %h6
-              titre-6
-            %p
-              paragraphe de texte
-            %ul
-              %li
-                liste1
-              %li
-                liste2
-            %ol
-              %li
-                list-1
-              %li
-                list-2
-            =link_to "google", "http://www.google.fr", :target => "_blank","data-skip-pjax" => "true"
-        %li
-          %article
-            artile
+            todo
     #download
       %aside
         %h2
-          Telecharger
+          Télécharger
       %ul.resourcesList
         %li
           %article
-            article
+            %h1 Utiliser Ruby On Rails le plus rapidement possible
+            Pour commencer avec Rails, il suffit d'installer Ruby et RubyGems.
         %li
           %article
-            artile
+            %h2
+              Installer Ruby
+            %p
+              Nous recommandons l'utilisation de
+              %strong Ruby 1.9.3
+              avec Rails.
+              Rails 3.2 est la dernière version à supporter Ruby 1.8.
+              %br/
+              Ruby 1.8.6, ses versions précédentes ainsi que la 1.9.1 ne sont plus supportées.
+            %p
+              %ul
+                %li 
+                  Depuis un gestionnaire de version de ruby :
+                  = link_to "rbenv", "https://github.com/sstephenson/rbenv"
+                  \/
+                  = link_to "rvm", "http://beginrescueend.com/"
+                %li
+                  Depuis les sources :
+                  = link_to "Compilez le vous-même", "ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p0.tar.gz"
+                %li
+                  Pour windows : 
+                  = link_to "Ruby installer", "http://rubyforge.org/frs/?group_id=167"
+                  ,
+                  = link_to "Rails installer", "http://railsinstaller.org/"
+                %li
+                  %strong OS X 10.5+:
+                  Inclu avec 'developer tools'
+          %article
+            %h2
+              Installer RubyGems
+            %p
+              = link_to "RubyGems", "http://docs.rubygems.org/"
+              est le gestionnaire de paquet standard de Ruby.
+              Il peut-être comparé à apt-get, emerge et d'autres gestionnaires de paquets.
+              Pour le télécharger,  
+              = link_to "cliquez ici", "http://rubygems.org/pages/download"
+          %article
+            %h2 Installer Rails
+            %p
+              Une fois RubyGems installé et fonctionnel, vous pouvez installer Rails et ses dépendances par la ligne commande suivante :
+            %pre
+              gem install rails
+            %p
+              Les nouvelles versions de rails s'installent de la même façon.
+            
+          %article
+            %h2
+              Votre première application
+            %p
+              Créez votre première application et démarrez un serveur :
+            %pre
+              rails new /chemin/vers/mon/application
+            %pre
+              cd /chemin/vers/mon/application
+            %pre
+              rails server
+            %p
+              Vous avez créé votre première application Rails ! Pour continuer, suivez les instructions présentes à 
+              = link_to "http://localhost:3000", "http://localhost:3000"
+
     #learn
       %aside
         %h2
@@ -71,19 +104,42 @@
       %ul.resourcesList
         %li
           %article
-            article
-        %li
-          %article
-            artile
+            todo
+
     #community
       %aside
         %h2
-          Communaute
+          Communauté
       %ul.resourcesList
         %li
           %article
-            article
-        %li
+            %h1 Rejoignez la communauté Ruby On Rails !
           %article
-            artile
-      
+            %h2 Mailing lists
+            %ul
+              %li
+                = link_to "Railsfrance", "http://groups.google.com/group/railsfrance"
+              %li
+                = link_to "Paris.rb", "http://groups.google.com/group/parisrb"
+              %li
+                = link_to "Ruby On Rails Talk", "http://groups.google.com/group/rubyonrails-talk"
+              %li
+                = link_to "Ruby On Rails Core", "http://groups.google.com/group/rubyonrails-core"
+          %article
+            %h2
+              = link_to "Twitter", "http://twitter.com/#!/search/rails?q=rails"
+          %article
+            %h2
+              Irc
+            Sur irc.freenode.net :
+            %ul
+              %li
+                \#rubyonrails.fr
+              %li
+                \#ruby.fr
+              %li
+                \#rubyonrails
+              %li
+                \#ruby
+              %li
+                \#rails-contrib
