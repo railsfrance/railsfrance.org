@@ -23,7 +23,7 @@ RailsFrance::Application.configure do
   config.assets.digest = true
 
   config.assets.version = '1.0'
-  config.assets.precompile += ['ie/ie7.css', 'ie/ie8.css', 'active_admin.css', 'active_admin.js']
+  config.assets.precompile += ['ie/ie7.css', 'ie/ie8.css']
   config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :scss
 

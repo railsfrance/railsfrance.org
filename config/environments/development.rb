@@ -32,9 +32,3 @@ RailsFrance::Application.configure do
   #Devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
-module ActiveAdmin
-  class Reloader
-      def attach!
-    end
-  end
-end

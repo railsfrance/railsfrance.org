@@ -18,11 +18,6 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def authenticate_admin_user! 
-    render_not_allowed and return if user_signed_in? && (!current_user.role || current_user.role.empty?)
-    authenticate_user! 
-  end 
-
   def after_sign_in_path_for(resource)
     request.session[:pre_login_path] || super
   end
