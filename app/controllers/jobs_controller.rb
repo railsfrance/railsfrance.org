@@ -37,7 +37,8 @@ class JobsController < ApplicationController
   end
 
   def edit
-    redirect_to :root unless @job = Job.with_state(:activated).where(:token => params[:token]).first
+    redirect_to :root and return unless
+      @job = Job.with_state(:activated).where(:token => params[:token]).first
     render :new
   end
 
