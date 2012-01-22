@@ -1,3 +1,4 @@
+cd /home/dotcloud/current && bundle exec whenever -c && \
 echo "Symlink creation" && \
 ln -s /home/dotcloud/shared/config/production.yml /home/dotcloud/current/config/settings/production.yml && \
 ln -s /home/dotcloud/shared/config/exceptional.yml /home/dotcloud/current/config/exceptional.yml && \
@@ -9,4 +10,5 @@ ln -nfs /home/dotcloud/shared/tmp/dragonfly /home/dotcloud/current/tmp/dragonfly
 ln -nfs /home/dotcloud/shared/public/system /home/dotcloud/current/public/system && \
 echo "Rake" && \
 cd /home/dotcloud/current && bundle exec rake db:migrate  && \
-cd /home/dotcloud/current && bundle exec rake assets:precompile
+cd /home/dotcloud/current && bundle exec rake assets:precompile && \
+cd /home/dotcloud/current && bundle exec whenever -i

@@ -55,6 +55,8 @@ gem 'rails_config',			'~> 0.2'
 # Exception handling
 gem 'exceptional',			'~> 2.0'
 
+gem 'whenever', :require => false
+
 # Asset template engines
 gem 'sass-rails',			'~> 3.1.1'
 group :assets do
