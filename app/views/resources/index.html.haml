@@ -25,7 +25,37 @@
       %ul.resourcesList
         %li
           %article
-            todo
+            %h1 Découvrir Ruby on Rails
+            De nombreuses ressources sont disponibles pour decouvrir Rails en quelques minutes. 
+        %li
+          %article
+            %h2 Screencasts
+            %p
+              Profitez du show et apprenez Rails grace à ses nombreux screencasts :
+              %ul
+                %li
+                  = link_to "Rails 3 screencast", "http://rubyonrails.org/screencasts/rails3"
+                %li
+                  = link_to "Railscasts", "http://railscasts.com/"                  
+              Pousser l'apprentissage plus loin avec toute une collection payante de videos :
+              %ul
+                %li
+                  = link_to "Peepcode", "http://peepcode.com/"
+                %li
+                  = link_to "Ruby on Rails tutorial", "http://ruby.railstutorial.org/"
+                %li
+                  = link_to "Code School", "http://www.codeschool.com/"
+          %article
+            %h2 Tutoriaux interactifs
+            %p
+              Essayez Ruby et Rails directement dans votre navigateur sans rien installer :
+              %ul
+                %li
+                  = link_to "Ruby monk", "http://rubymonk.com/"
+                %li
+                  = link_to "Try Ruby", "http://tryruby.org/"
+                %li
+                  = link_to "Rails for Zombies", "http://railsforzombies.org/"                  
     #download
       %aside
         %h2
@@ -104,8 +134,30 @@
       %ul.resourcesList
         %li
           %article
-            todo
-
+            %h2 APIs
+            %ul
+              %li
+                = link_to "Rails API", "http://api.rubyonrails.org/"
+              %li
+                = link_to "Ruby Core", "http://ruby-doc.org/ruby-1.9/index.html"
+              %li
+                = link_to "Ruby Standard Library", "http://stdlib.rubyonrails.org/"
+          %article
+            %h2 Guides
+            %ul
+              %li
+                = link_to "Rails Guides en anglais", "http://guides.rubyonrails.org/"
+              %li
+                = link_to "Rails Guides en français", "https://github.com/railsfrance/docrails"
+          %article
+            %h2 Livres
+            %ul
+              %li
+                = link_to "Agile Web Development with Rails", "http://pragprog.com/book/rails4/agile-web-development-with-rails"
+              %li
+                = link_to "Rails Recipes", "http://pragprog.com/book/fr_rr/rails-recipes"
+              %li
+                = link_to "Ruby on Rails books", "http://www.amazon.com/gp/search?ie=UTF8&keywords=ruby%20on%20rails&tag=rubonrai-20&index=books&linkCode=ur2&camp=1789&creative=9325"
     #community
       %aside
         %h2
@@ -114,8 +166,10 @@
         %li
           %article
             %h1 Rejoignez la communauté Ruby On Rails !
+            La communauté Ruby on Rails française est très active, et accueille à bras ouverts les nouveaux arrivants.
           %article
             %h2 Mailing lists
+            Des questions? La communauté est là pour y répondre !
             %ul
               %li
                 = link_to "Railsfrance", "http://groups.google.com/group/railsfrance"
@@ -126,12 +180,12 @@
               %li
                 = link_to "Ruby On Rails Core", "http://groups.google.com/group/rubyonrails-core"
           %article
-            %h2
-              = link_to "Twitter", "http://twitter.com/#!/search/rails?q=rails"
+            %h2 Twitter
+            = link_to "Railsfrance", "http://twitter.com/rails_france"
           %article
-            %h2
-              Irc
-            Sur irc.freenode.net :
+            %h2 Irc
+            Venez discuter de Ruby on Rails 
+            %strong sur irc.freenode.net :
             %ul
               %li
                 \#rubyonrails.fr
@@ -143,3 +197,40 @@
                 \#ruby
               %li
                 \#rails-contrib
+        %article
+          %h2 Groupes locaux
+          De nombreuses villes en France se retrouvent pour partager autour de Rails et de son écosystème.
+          %ul
+            %li 
+              = link_to "Paris.rb", "http://meetup.rubyparis.org/"
+            %li
+              = link_to "Lyon.rb", "http://lyonrb.fr/"
+            %li 
+              = link_to "Montpellier.rb", "http://fr-fr.facebook.com/AperoRubyMontpellier"
+            %li 
+              = link_to "Lille.rb", "https://groups.google.com/forum/#!forum/ruby-nord"
+            %li 
+              = link_to "Bordeaux.rb", "http://www.facebook.com/rubybdx"
+        %article
+          %h2 News
+          Restez informés des nouveautés autour de Ruby on Rails.
+          %p En anglais :
+          %ul
+            %li
+              = link_to "Blog officiel", "http://weblog.rubyonrails.org/"
+            %li
+              = link_to "RubyFlow", "http://rubyflow.com"
+          %p En français :
+          %ul
+            %li
+              = link_to "RubyLive", "http://rubylive.fr"
+        %article
+          %h2 Participez !
+          %p 
+            Le code source de ce site est disponible sur 
+            = link_to "Github", "https://github.com/railsfrance/railsfrance.org" 
+            et vous pouvez participer à son évolution.
+          %p 
+            Vous pouvez aussi contribuer à la traduction française des guides officiels sur 
+            = link_to "Github", "https://github.com/railsfrance/docrails"
+            \.
