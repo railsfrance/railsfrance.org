@@ -46,6 +46,10 @@
   img{
     display:inline-block;
     vertical-align:top;
+    -webkit-border-radius: 7px;
+    -khtml-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
   }
   .userInformations{
     display:inline-block;
