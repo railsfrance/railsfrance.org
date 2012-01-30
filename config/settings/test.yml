@@ -6,6 +6,9 @@ devise:
 mailer:
   host: "0.0.0.0:3000"
   from: "no-reply@railsfrance.org"
+aws_ses:
+  access_key_id: ''
+  secret_access_key: ''
 redis:
   host: "localhost"
   port: 6379 
