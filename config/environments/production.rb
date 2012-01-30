@@ -62,8 +62,16 @@ RailsFrance::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  #MAIL CONF
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = Settings.mailer.smtp.to_hash
+  # config.action_mailer.delivery_method = :ses
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'www.railsfrance.org',
+    :user_name            => Settings.gmail.username,
+    :password             => Settings.gmail.password,
+    :authentication       => 'plain',
+    :enable_starttls_auto => true
+}
 end

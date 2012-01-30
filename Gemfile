@@ -1,14 +1,14 @@
 source 'http://rubygems.org'
 
-gem 'rails', 				'~> 3.1.1' 
+gem 'rails', '~> 3.1.1'
 
-gem 'pg', 				'~> 0.11'
-gem 'simple_form', 			'~> 1.5'
-gem 'kaminari', 			'~> 0.12'
+gem 'pg', '~> 0.11'
+gem 'simple_form', '~> 1.5'
+gem 'kaminari', '~> 0.12'
 gem 'make_voteable',			'~> 0.1'
 gem 'acts-as-taggable-on',		'~> 2.1'
 gem 'haml-rails',			'~> 0.3'
-gem 'friendly_id',			'~> 4.0.0.beta14' 
+gem 'friendly_id',			'~> 4.0.0.beta14'
 gem 'redis',				'~> 2.2'
 gem 'date_validator',			'~> 0.6'
 gem 'recaptcha',			'~> 0.3', :require => 'recaptcha/rails'
@@ -56,6 +56,8 @@ gem 'rails_config',			'~> 0.2'
 gem 'exceptional',			'~> 2.0'
 
 gem 'whenever', :require => false
+
+gem "aws-ses", "~> 0.4.4", :require => 'aws/ses'
 
 # Asset template engines
 group :assets do
