@@ -57,6 +57,7 @@ module RailsFrance
       :entitystore => URI.encode("file:#{Rails.root}/tmp/dragonfly/cache/body")
     }
     config.middleware.insert_after 'Rack::Cache', 'Dragonfly::Middleware', :images
+    config.middleware.use Rack::Gauges, :tracker => '4f292c3f844d522d4d000033'
 
     # 404 catch all routes
     config.after_initialize do |app|

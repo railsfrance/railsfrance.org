@@ -59,6 +59,8 @@ gem 'whenever', :require => false
 
 gem "aws-ses", "~> 0.4.4", :require => 'aws/ses'
 
+gem 'rack-gauges', :require => 'rack/gauges'
+
 # Asset template engines
 group :assets do
   gem 'sass-rails',			'~> 3.1.1'
