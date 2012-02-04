@@ -62,8 +62,9 @@ RailsFrance::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  # config.action_mailer.delivery_method = :ses
+  config.action_mailer.delivery_method = :ses
 
+=begin
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
@@ -74,4 +75,6 @@ RailsFrance::Application.configure do
     :authentication       => 'plain',
     :enable_starttls_auto => true
 }
+=end
+
 end
