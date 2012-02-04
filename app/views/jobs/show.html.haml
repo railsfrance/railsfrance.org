@@ -42,7 +42,7 @@
           Vous souhaitez postuler pour ce poste ?
         %p
           Envoyer un email à
-          = link_to @job.email, "mailto:@job.email", "data-skip-pjax" => true
+          = link_to @job.email, "mailto:#{@job.email}", "data-skip-pjax" => true
         
       
     
