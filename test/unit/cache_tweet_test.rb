@@ -1,9 +1,9 @@
 require 'test_helper'
-
+=begin
 class CacheTweetTest < ActiveSupport::TestCase
   test 'should be valid' do
-    CacheTweet.last_tweets(3, 'railsfrance')
-    assert !$redis.get("Twitter#railsfrance").nil?
+    CacheTweet.last_tweets(3, 'rails_france')
+    assert !$redis.get("Twitter#rails_france").nil?
     $redis.flushdb
   end
 
@@ -15,6 +15,5 @@ class CacheTweetTest < ActiveSupport::TestCase
     assert $redis.get("Twitter##{fake_account}").nil?
     $redis.flushdb
   end
-  
-
 end
+=end
