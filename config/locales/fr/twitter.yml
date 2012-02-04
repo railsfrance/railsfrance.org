@@ -1,0 +1,3 @@
+fr:
+  twitter:
+    new_job: "Nouvell offre d'emploi : %{title} #=> %{url}"

@@ -27,6 +27,10 @@ class Job < ActiveRecord::Base
       job.generate_token
     end
 
+    after_transition :confirmed => :activated do |job, trans|
+      job.send :notify_observers, :after_activation
+    end
+
     event :confirm do
       transition :pending => :confirmed
     end
@@ -36,9 +40,7 @@ class Job < ActiveRecord::Base
     end
   end
 
-  def to_s
-    title
-  end
+  def to_s; title end
 
   def contracts
     {cdi: cdi, cdd: cdd, freelance: freelance, internship: internship}.delete_if {|k,v| !v}.keys
@@ -52,4 +54,5 @@ class Job < ActiveRecord::Base
   def validate_contracts
     errors.add(:contracts_error, "Selectionner au moins un type de contrat") unless (cdd or cdi or freelance or internship)
   end
+
 end

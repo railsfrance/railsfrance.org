@@ -71,6 +71,7 @@ end
 group :development, :test do
   gem 'ruby-debug19' unless ENV["CI"]
   gem 'awesome_print'
+  gem "rspec-rails",                    '~> 2.6'
   gem 'factory_girl_rails',		'~> 1.6'
   gem 'launchy'
   gem 'active_reload',			'~> 0.6'
@@ -82,9 +83,7 @@ group :test do
   gem 'fuubar'
   gem 'capybara',			'~> 1.1'
   gem 'fakeweb'
-  gem "rspec-rails",                    '~> 2.6'
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails',		'~> 1.6'
   gem 'turn', :require => false
   gem 'database_cleaner',		'~> 0.6'
 end
