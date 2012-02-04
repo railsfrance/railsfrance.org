@@ -16,6 +16,11 @@ redis:
   db: 2
   expire_view: 86400
   expire_tweet: 3600
+twitter:
+  consumer_key: ''
+  consumer_secret: ''
+  oauth_token: ''
+  oauth_token_secret: ''
 recaptcha:
   public_key: ""
   private_key: ""
