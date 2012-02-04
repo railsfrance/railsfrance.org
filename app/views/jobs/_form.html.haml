@@ -33,5 +33,8 @@
       = f.input :internship
     - unless @job.errors[:contracts_error].empty?
       %span.error= @job.errors[:contracts_error].first
+    = recaptcha_tags
+    - if @job.errors[:base].any?
+      %span.error= @job.errors[:base].join("<br/>")
     .block
       = f.button :submit

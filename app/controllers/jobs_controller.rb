@@ -27,13 +27,13 @@ class JobsController < ApplicationController
   def create
     @job = Job.new params[:job]
 
-    unless @job.save
+    if verify_recaptcha(model: @job, message: I18n.t('recaptcha.errors.verification_failed')) && @job.save
+      session[:job_id] = @job.id
+      redirect_to preview_jobs_path
+    else
       error(:form_not_valid, {now: true})
       render(:new) and return
     end
-
-    session[:job_id] = @job.id
-    redirect_to preview_jobs_path
   end
 
   def edit
