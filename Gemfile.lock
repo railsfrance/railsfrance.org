@@ -88,11 +88,12 @@ GEM
       rack
     execjs (1.2.9)
       multi_json (~> 1.0)
-    factory_girl (2.1.2)
+    factory_girl (2.5.1)
       activesupport
-    factory_girl_rails (1.2.0)
-      factory_girl (~> 2.1.0)
+    factory_girl_rails (1.6.0)
+      factory_girl (~> 2.5.0)
       railties (>= 3.0.0)
+    fakeweb (1.3.0)
     faraday (0.7.5)
       addressable (~> 2.2.6)
       multipart-post (~> 1.1.3)
@@ -224,6 +225,7 @@ GEM
       ffi (~> 1.0.9)
       json_pure
       rubyzip
+    shoulda-matchers (1.0.0)
     simple_form (1.5.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -280,7 +282,8 @@ DEPENDENCIES
   devise (~> 1.1)
   dragonfly (~> 0.9)
   exceptional (~> 2.0)
-  factory_girl_rails (~> 1.2)
+  factory_girl_rails (~> 1.6)
+  fakeweb
   friendly_id (~> 4.0.0.beta14)
   fuubar
   geocoder (~> 1.0)
@@ -308,6 +311,7 @@ DEPENDENCIES
   ruby-debug19
   sanitize (~> 2.0)
   sass-rails (~> 3.1.1)
+  shoulda-matchers
   simple_form (~> 1.5)
   state_machine (~> 1.0)
   therubyracer (~> 0.9)
