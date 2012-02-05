@@ -151,14 +151,33 @@
    ========================================================================== */
 .jobForm{
   background:image-url('here.png') right 352px no-repeat;
+  .block{
+    margin-top:10px;
+    text-align:center;
+  }
 }  
  
-#jobFormLeft{
+.jobFormLeft{
   display:inline-block;
   width:450px;
 }
 
-#jobFormRight{
-  @extend #jobFormLeft;
+.jobFormRight{
+  @extend .jobFormLeft;
   margin-left:55px;
+}
+
+#jobFormType{
+  ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+  }
+  label{
+    display:inline-block;
+    margin-left:10px;
+  }
+  input{
+    display:inline-block;
+  }
 }
