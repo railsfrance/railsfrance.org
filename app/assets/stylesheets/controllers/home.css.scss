@@ -160,7 +160,7 @@
 .homeContent{
   position:relative;
   width:300px;
-  height:340px;
+  min-height:370px;
   display:inline-block;
   vertical-align:top;
   h2{
@@ -310,7 +310,7 @@
   }
 }
 
-.bx-wrapper{
+.bx-wrapper, .bx-window{
   margin: 0 auto;
 }
 
@@ -318,7 +318,7 @@
   display:block;
   position:absolute;
   top:25%;
-  left:20px;
+  left:-30px;
   width:30px;
   height:30px;
   line-height:25px;
@@ -353,5 +353,5 @@
 
 .bx-next{
   @extend .bx-prev;
-  left:850px;
+  left:900px;
 }
