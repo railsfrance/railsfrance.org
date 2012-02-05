@@ -1,37 +1,50 @@
 = simple_form_for @job , :html => {:multipart => true, :class => "jobForm"} do |f|
   %fieldset
     %legend= "Poster votre annonce"
-    #jobFormLeft
+    .jobFormLeft
       = f.input :company, :autofocus => "autofocus"
       = f.input :email, :label => "Email <span style='font-size:11px;'>(sera utilisé pour gérer votre annonce et vous faire contacter par un candidat)</span>".html_safe unless action_name == 'edit'
       = f.input :url, :placeholder => "http://www.railsfrance.org"
-      %label
-        Logo de votre entreprise
-        %span{:style => 'font-size:11px;'}
-          (sera redimensionné en 200x100px)
-      %div
-        Envoyer un fichier
-      = f.input :logo, :as => :file, :label => false
-      %div
+      #jobFormType
         %label
-          Ou renseigner une url
-      = f.text_field :logo_url
-
-      = image_tag @job.logo.thumb('200x100').url if @job.logo_uid
-      = f.hidden_field :retained_logo
-    #jobFormRight
+          Type de contrat
+        %ul
+          %li
+            = f.input :cdi
+            = f.input :cdd
+          %li
+            = f.input :freelance
+            = f.input :internship
+      - unless @job.errors[:contracts_error].empty?
+        .textError
+          = @job.errors[:contracts_error].first
+    .jobFormRight
       = f.input :title
       = f.input :street
       = f.input :city
       = f.input :postal_code
     = f.input :description, :as => :wysiwyg, :wrapper_html => { :class => "clear" }
     %p.markdownLink La syntaxe #{link_to "Markdown", "http://github.github.com/github-flavored-markdown/","data-skip-pjax" => "true", :target => "_blank", :id => "markdownHelp"} est supportée
-    #jobFormType
-      = f.input :cdi
-      = f.input :cdd
-      = f.input :freelance
-      = f.input :internship
-    - unless @job.errors[:contracts_error].empty?
-      %span.error= @job.errors[:contracts_error].first
-    .block
+    .jobFormLeft
+      %div
+        %label
+          Logo de votre entreprise
+          %span{:style => 'font-size:11px;'}
+            (sera redimensionné en 200x100px)
+        %div
+          Envoyer un fichier
+        = f.input :logo, :as => :file, :label => false
+      %div
+        %label
+          Ou renseigner une url
+        = f.text_field :logo_url
+  
+        = image_tag @job.logo.thumb('200x100').url if @job.logo_uid
+        = f.hidden_field :retained_logo
+    .jobFormRight
+      = recaptcha_tags 
+      - if @job.errors[:base].any?
+        .textError
+          = @job.errors[:base].join("<br/>")
+    .block.center
       = f.button :submit

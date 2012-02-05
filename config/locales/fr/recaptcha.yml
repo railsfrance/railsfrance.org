@@ -1,0 +1,4 @@
+fr:
+  recaptcha:
+    errors:
+      verification_failed: "Le captcha est invalide"
