@@ -15,6 +15,9 @@
           %li
             = f.input :freelance
             = f.input :internship
+      - unless @job.errors[:contracts_error].empty?
+        .textError
+          = @job.errors[:contracts_error].first
     .jobFormRight
       = f.input :title
       = f.input :street
@@ -39,12 +42,9 @@
         = image_tag @job.logo.thumb('200x100').url if @job.logo_uid
         = f.hidden_field :retained_logo
     .jobFormRight
-      = recaptcha_tags
-         
-    - unless @job.errors[:contracts_error].empty?
-      %span.error= @job.errors[:contracts_error].first
-   
-    - if @job.errors[:base].any?
-      %span.error= @job.errors[:base].join("<br/>")
-    .block
+      = recaptcha_tags 
+      - if @job.errors[:base].any?
+        .textError
+          = @job.errors[:base].join("<br/>")
+    .block.center
       = f.button :submit

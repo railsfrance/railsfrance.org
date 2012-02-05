@@ -688,6 +688,11 @@ footer{
   color:$blue;
   text-align:center;
 }
+
+.center{
+  margin-top:20px;
+  text-align:center;
+}
 /* =============================================================================
    PAGINATION
    ========================================================================== */
@@ -855,4 +860,22 @@ footer{
 .text.field_with_errors .error{
   bottom:120px;
   left:910px;
+}
+
+.textError{
+    font-family: $font-oswald;
+    font-size:1em;
+    color:#fff;
+    text-align:center;
+    box-shadow: 0 0 4px $black;
+    padding:5px 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: -moz-linear-gradient(top, #901414 0%, #811316 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#901414), color-stop(100%,#811316));
+    background: -webkit-linear-gradient(top, #901414 0%,#811316 100%);
+    background: -o-linear-gradient(top, #901414 0%,#811316 100%);
+    background: -ms-linear-gradient(top, #901414 0%,#811316 100%);
+    background: linear-gradient(top, #901414 0%,#811316 100%);
 }

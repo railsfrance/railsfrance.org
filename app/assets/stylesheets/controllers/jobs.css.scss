@@ -150,16 +150,16 @@
    THE CONTENT: JOB FORM
    ========================================================================== */
 .jobForm{
-  background:image-url('here.png') right 320px no-repeat;
+  background:image-url('here.png') right 340px no-repeat;
   .block{
-    margin-top:10px;
-    text-align:center;
+    margin-top:0px;
   }
 }  
  
 .jobFormLeft{
   display:inline-block;
   width:450px;
+  margin-bottom:20px;
 }
 
 .jobFormRight{
