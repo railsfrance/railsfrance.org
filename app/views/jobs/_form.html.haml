@@ -6,14 +6,14 @@
       = f.input :email, :label => "Email <span style='font-size:11px;'>(sera utilisé pour gérer votre annonce et vous faire contacter par un candidat)</span>".html_safe unless action_name == 'edit'
       = f.input :url, :placeholder => "http://www.railsfrance.org"
       #jobFormType
+        %label
+          Type de contrat
         %ul
           %li
             = f.input :cdi
-          %li
             = f.input :cdd
           %li
             = f.input :freelance
-          %li
             = f.input :internship
     .jobFormRight
       = f.input :title

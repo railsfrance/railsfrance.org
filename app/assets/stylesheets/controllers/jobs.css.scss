@@ -150,7 +150,7 @@
    THE CONTENT: JOB FORM
    ========================================================================== */
 .jobForm{
-  background:image-url('here.png') right 352px no-repeat;
+  background:image-url('here.png') right 320px no-repeat;
   .block{
     margin-top:10px;
     text-align:center;
@@ -173,11 +173,18 @@
     margin:0;
     padding:0;
   }
-  label{
+  li{
     display:inline-block;
-    margin-left:10px;
+    width:200px;
+    label{
+      display:inline-block;
+      margin-left:10px;
+    }
+    input{
+      display:inline-block;
+    }
   }
-  input{
-    display:inline-block;
+  div{
+    display:block;
   }
 }
