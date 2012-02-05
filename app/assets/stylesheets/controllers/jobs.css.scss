@@ -150,15 +150,41 @@
    THE CONTENT: JOB FORM
    ========================================================================== */
 .jobForm{
-  background:image-url('here.png') right 352px no-repeat;
+  background:image-url('here.png') right 340px no-repeat;
+  .block{
+    margin-top:0px;
+  }
 }  
  
-#jobFormLeft{
+.jobFormLeft{
   display:inline-block;
   width:450px;
+  margin-bottom:20px;
 }
 
-#jobFormRight{
-  @extend #jobFormLeft;
+.jobFormRight{
+  @extend .jobFormLeft;
   margin-left:55px;
+}
+
+#jobFormType{
+  ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+  }
+  li{
+    display:inline-block;
+    width:200px;
+    label{
+      display:inline-block;
+      margin-left:10px;
+    }
+    input{
+      display:inline-block;
+    }
+  }
+  div{
+    display:block;
+  }
 }
