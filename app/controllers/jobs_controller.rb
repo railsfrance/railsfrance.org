@@ -36,6 +36,10 @@ class JobsController < ApplicationController
     end
   end
 
+  def preview
+    render :show
+  end
+
   def edit
     redirect_to :root and return unless
       @job = Job.with_state(:activated).where(:token => params[:token]).first
@@ -50,10 +54,6 @@ class JobsController < ApplicationController
       error(:job_not_updated, {now: true})
       render :new and return
     end
-  end
-
-  def preview
-    render :show
   end
 
   def confirm

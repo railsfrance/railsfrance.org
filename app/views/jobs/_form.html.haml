@@ -47,4 +47,4 @@
         .textError
           = @job.errors[:base].join("<br/>")
     .block.center
-      = f.button :submit
+      = f.button :submit, id: 'job_form_submit'
