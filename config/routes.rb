@@ -1,4 +1,6 @@
 RailsFrance::Application.routes.draw do
+  filter :pagination
+  
   # Root
   root :to => "home#index"
 

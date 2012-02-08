@@ -61,6 +61,8 @@ gem "aws-ses", "~> 0.4.4", :require => 'aws/ses'
 
 gem 'rack-gauges', :require => 'rack/gauges'
 
+gem 'routing-filter', '~> 0.3.0'
+
 # Asset template engines
 group :assets do
   gem 'sass-rails',			'~> 3.1.1'
