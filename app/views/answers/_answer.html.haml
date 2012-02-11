@@ -6,14 +6,14 @@
         .votesNumber
           #{answer.votes}
         = link_to "Vote down", vote_question_answer_path(answer.question, answer, :vote => "down"), :class => "voteDown", "data-skip-pjax" => "true"
-      -else
+      - else
         = link_to "Vote up", "#", :class => "voteUp disabled"
         .votesNumber
           #{answer.votes}
         = link_to "Vote down", "#", :class => "voteDown disabled"
-      =  if can? :accept, answer
+      - if can? :accept, answer
         = link_to "Accepter la réponse", accept_question_answer_path(answer.question, answer),:class => "answerAccept", "data-skip-pjax" => "true"
-    -else
+    - else
       = link_to "Vote up", "#", :class => "voteUp disabled"
       .votesNumber
         #{answer.votes}
