@@ -1,5 +1,5 @@
 !!! 5
--ie_html :class => 'no-js', :lang => 'fr' do
+- ie_html :class => 'no-js', :lang => 'fr' do
   %head
     %meta{:charset => "utf-8"}
     = display_meta_tags :site => "Railsfrance.org", :reverse => true
@@ -15,23 +15,8 @@
         = yield
         #addContentBug.center960
           Vous avez envie d'ajouter du contenu ? Vous avez trouvé une erreur ? Merci 
-          = link_to "d\'ouvrir un ticket sur github", "https://github.com/railsfrance/railsfrance.org/issues/new"
+          = link_to "d'ouvrir un ticket sur github", "https://github.com/railsfrance/railsfrance.org/issues/new"
           !
-    = render "layouts/footer"
-    - if flash.present?
-      - if flash[:notice].present?
-        #flash.flashNotice
-          %div.center960
-            = image_tag "flash/true-icon.png"
-            = flash[:notice]
-      - elsif flash[:error].present?
-        #flash.flashError
-          %div.center960
-            = image_tag "flash/error-icon.png"
-            = flash[:error]
-      - elsif flash[:alert].present?
-        #flash.flashAlert
-          %div.center960
-            = image_tag "flash/notification-icon.png"
-            = flash[:alert]
+    = render 'layouts/footer'
+    = render 'layouts/flash', f: flash
     = javascript_include_tag :application

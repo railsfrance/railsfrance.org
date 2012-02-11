@@ -1,0 +1,8 @@
+- if f.present?
+  - [:notice, :error, :alert].each do |type|
+    - if f[type].present?
+      #flash{class: "flash#{type.to_s.titleize}"}
+        %div.center960
+          = image_tag "flash/#{type}-icon.png"
+          = f[type]
+          %a{href: '#', class: 'flash-closer'} - fermer
