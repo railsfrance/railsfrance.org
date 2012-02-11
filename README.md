@@ -52,6 +52,10 @@ The tests are in `test/unit`, `test/functional` and `test/integration`.
 
 If your code is tested and fits with the goals of the project, we will enjoy merging it !
 
+#### Note
+
+If you want your company / project logo to appear on the homepage slideshow please drop us an email to railsfrance.org[at]gmail[dot]com.
+
 ## Thanks to
 
 Everyone on this [list](http://github.com/railsfrance/railsfrance.org/contributors) !
