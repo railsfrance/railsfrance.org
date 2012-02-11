@@ -9,8 +9,6 @@ class Job < ActiveRecord::Base
 
   geocoded_by :address
 
-  default_scope :order => 'created_at DESC'
-
   validates_presence_of :company, :street, :city, :description
   validates_format_of :url, :with => /^(#{URI::regexp(%w(http https))})$/, :allow_blank => true
   validates :email, :presence => true, :format => {:with => Devise::email_regexp}

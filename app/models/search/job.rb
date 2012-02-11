@@ -1,14 +1,16 @@
 class Search::Job < BasicActiveModel
-
   attr_accessor :freelance, :cdi, :cdd, :internship, :remote
 
   def execute
     jobs = Job.with_state(:activated)
 
-    jobs = jobs.where(:freelance => true) if freelance
-    jobs = jobs.where(:cdi => true) if cdi
-    jobs = jobs.where(:cdd => true) if cdd
-    jobs = jobs.where(:internship => true) if internship
+    where = [:freelance, :cdi, :cdd, :internship].inject([]) do |a,b|
+      a << "#{b} = 't'" if send(b)
+      a
+    end.join(' OR ')
+
+    jobs = jobs.where(where) unless where.blank?
+    jobs = jobs.order('created_at DESC')
     jobs
   end
 
