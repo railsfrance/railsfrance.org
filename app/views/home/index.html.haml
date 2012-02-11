@@ -70,7 +70,7 @@
               = tweet['text']
               %br
               %span= "{ Il y a #{distance_of_time_in_words tweet['created_at'].to_time, Time.now} }"
-      = link_to  "Accéder au Twitter", "http://twitter.com/rails_france","data-skip-pjax" => true, :target => "_blank", :class => "smallButton"
+      = link_to  "Accéder au Twitter", "http://twitter.com/#{Settings.twitter.account}","data-skip-pjax" => true, :target => "_blank", :class => "smallButton"
     %h4
       Les projets sur les rails
     %ul#railsProjectSlider

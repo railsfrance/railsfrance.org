@@ -1,13 +1,13 @@
 %footer
   %ul
     %li
-      = link_to "Crédits", root_path, "data-skip-pjax" => "true", :class => "footerLeft"
-      %br<
-      = link_to "Twitter", "http://twitter.com/railsfrance", "data-skip-pjax" => "true", :class => "footerLeft", :target=>"_blank"
+      = link_to "Crédits", "https://github.com/railsfrance/railsfrance.org/contributors", "data-skip-pjax" => "true", :class => "footerLeft"
+      %br/
+      = link_to "Twitter", "http://twitter.com/#{Settings.twitter.account}", "data-skip-pjax" => "true", :class => "footerLeft", :target=>"_blank"
     %li
       = link_to "dotCloud", "https://www.dotcloud.com/", :id => "logoDotCloud", "data-skip-pjax" => "true", :target=>"_blank"
     %li
       = link_to "Contact", new_contact_path, "data-skip-pjax" => "true", :class => "footerRight"
-      %br<
+      %br/
       = link_to "Github", "https://github.com/railsfrance","data-skip-pjax" => "true", :class => "footerRight", :target=>"_blank"
   #footerBottom
