@@ -20,15 +20,15 @@
         %legend Mon compte
         #newUserLeft
           = f.input :email,:autofocus => "autofocus"
-          = f.input :github
           = f.input :twitter
-          = f.input :website
+          = f.input :street
+          = f.input :postal_code
           = f.input :city
         #newUserRight
-          = f.input :postal_code
+          = f.input :github
+          = f.input :website
           = f.input :password, :required => false, :placeholder => "Laisser vide si vous ne désirez pas le changer"
           = f.input :password_confirmation, :required => false
           = f.input :current_password, :required => true, :placeholder => "Requis pour confirmer les changements"
-          %br
           %br
           = f.button :submit, "Modifier"

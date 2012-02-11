@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Job do
+  it_should_behave_like "an addresseable object"
+
   before(:each) do
     Job.any_instance.stub(:geocode) { [1,1] }
     Factory(:job)
@@ -12,6 +14,7 @@ describe Job do
     it { should validate_presence_of(:street) }
     it { should validate_presence_of(:city) }
     it { should validate_presence_of(:description) }
+    it { should validate_presence_of(:postal_code) }
     #url
     it { should validate_format_of(:url).with('http://railsfrance.org') }
     it { should validate_format_of(:url).with('http://www.railsfrance.org') }
@@ -20,11 +23,6 @@ describe Job do
     #email
     it { should validate_presence_of(:email) }
     it { should validate_format_of(:email).with('p@o.fr') }
-    #postal_code
-    it { should validate_presence_of(:postal_code) }
-    it { should validate_format_of(:postal_code).with(75018) }
-    it { should validate_format_of(:postal_code).not_with(5018) }
-    it { should validate_format_of(:postal_code).not_with(750183) }
     #title
     it { should validate_presence_of(:title) }
     it { should validate_uniqueness_of(:title) }
