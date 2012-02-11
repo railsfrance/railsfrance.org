@@ -58,7 +58,7 @@ If you want your company / project logo to appear on the homepage slideshow plea
 
 ## Thanks to
 
-Everyone on this [list](http://github.com/railsfrance/railsfrance.org/contributors) !
+[Laurent Noblet](https://twitter.com/#!/LaurentNoblet) and Everyone on this [list](http://github.com/railsfrance/railsfrance.org/contributors) !
 
 ## License
 
