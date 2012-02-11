@@ -49,10 +49,10 @@ class JobsController < ApplicationController
   def update
     if @job.update_attributes(params[:job])
       notice(:job_updated)
-      redirect_to(@job) and return
+      redirect_to(@job)
     else
       error(:job_not_updated, {now: true})
-      render :new and return
+      render :new
     end
   end
 

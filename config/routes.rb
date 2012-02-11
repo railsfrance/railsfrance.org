@@ -1,12 +1,12 @@
 RailsFrance::Application.routes.draw do
   filter :pagination
-  
+
   # Root
   root :to => "home#index"
 
   # Devise
-  devise_for :users, :path => 'compte', 
-    :path_names => { :sign_in => 'connexion', :sign_out => 'deconnexion', 
+  devise_for :users, :path => 'compte',
+    :path_names => { :sign_in => 'connexion', :sign_out => 'deconnexion',
       :sign_up => 'inscription', :password => 'mot-de-passe' }
 
   # User

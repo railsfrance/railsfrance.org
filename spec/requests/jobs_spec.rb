@@ -3,11 +3,9 @@ require 'spec_helper'
 describe JobsController do
 
   describe "#index" do
-    before(:each) do
-      Factory(:job, state: 'activated')
-      visit jobs_path
-    end
-    let(:job) { Job.first }
+    let!(:job) { Factory(:job, state: 'activated') }
+
+    before(:each) { visit jobs_path }
 
     it "should display the page" do
       current_path.should == jobs_path
@@ -27,12 +25,8 @@ describe JobsController do
 
   describe "#show" do
     context "with an activated job" do
-      before(:each) do
-        job = Factory(:job, state: 'activated')
-        visit job_path(job)
-      end
-
-      let(:job) { Job.first }
+      let!(:job) { Factory(:job, state: 'activated') }
+      before(:each) { visit job_path(job) }
 
       it "should display the page" do
         current_path.should == job_path(job)
@@ -43,12 +37,8 @@ describe JobsController do
     end
 
     context "with an non activated job" do
-      before(:each) do
-        job = Factory(:job)
-        visit job_path(job)
-      end
-
-      let(:job) { Job.first }
+      let!(:job) { Factory(:job) }
+      before(:each) { visit job_path(job) }
 
       it "should display the page" do
         current_path.should == root_path
@@ -84,7 +74,82 @@ describe JobsController do
     end
   end
 
-  pending "#edit"
-  pending "#update"
-  pending "#validate"
+  describe "#edit, #update" do
+    context "with a valid job" do
+      let!(:job) { Factory(:job, state: 'activated', token: 'my_secure_token') }
+      before(:each) { visit edit_job_path(token: job.token) }
+
+      it "should display the page" do
+        current_path.should == edit_job_path(token: job.token)
+      end
+
+      it "should have the job datas" do
+        find_field('job_title').value.should eql job.title
+        find_field('job_company').value.should eql job.company
+        find_field('job_street').value.should eql job.street
+        find_field('job_city').value.should eql job.city
+        find_field('job_postal_code').value.should eql job.postal_code
+        find_field('job_description').value.should eql job.description
+      end
+
+      it "should update jobs attributes" do
+        fill_in "job_company", with: ''
+        click_on "job_form_submit"
+
+        current_path.should eql job_path(job)
+        page.should have_content I18n.t('messages.job_not_updated')
+        job.reload.company.should eql job.company
+      end
+
+      it "should not allow email update" do
+        page.should_not have_selector('input#job_email')
+      end
+    end
+
+    context "with an invalid state" do
+      let!(:job) { Factory(:job, state: 'confirmed', token: 'my_secure_token') }
+      before(:each) { visit edit_job_path(token: job.token) }
+      it "should redirect to root_path" do
+        current_path.should == root_path
+      end
+    end
+
+    context "with an invalid token" do
+      let!(:job) { Factory(:job, state: 'activated', token: 'my_secure_token') }
+      before(:each) { visit edit_job_path(token: '123') }
+      it "should display redirect to root_path" do
+        current_path.should == root_path
+      end
+    end
+  end
+
+  describe "#validate" do
+    context "with a valid job" do
+      it "should activate the job" do
+        job = Factory(:job, state: 'confirmed', token: 'my_secure_token')
+        double = double('contact_mailer').as_null_object
+        ContactMailer.should_receive(:valid_job).and_return(double)
+        visit validate_job_path(token: job.token)
+        job.reload.state.should eql 'activated'
+        current_path.should eql job_path(job)
+        page.should have_content I18n.t('messages.job_validated')
+      end
+    end
+
+    context "with an invalid job#state" do
+      it "should redirect to root" do
+        job = Factory(:job, state: 'pending', token: 'my_secure_token')
+        visit validate_job_path(token: job.token)
+        current_path.should eql root_path
+      end
+    end
+    context "with an invalid job#token" do
+      it "should redirect to root" do
+        job = Factory(:job, state: 'confirmed', token: 'my_secure_token')
+        visit validate_job_path(token: 'wrong token')
+        current_path.should eql root_path
+      end
+    end
+  end
+
 end
