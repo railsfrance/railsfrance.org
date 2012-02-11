@@ -10,7 +10,7 @@ class Home::IndexPresenter
   end
 
   def recent_jobs
-    Job.where(:state => 'activated').limit(3)
+    Job.where(:state => 'activated').order('created_at DESC').limit(3)
   end
 
   def recent_events
