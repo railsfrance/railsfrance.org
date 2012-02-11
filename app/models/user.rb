@@ -16,9 +16,6 @@ class User < ActiveRecord::Base
 
   before_validation :website_prefix
 
-  geocoded_by :address
-  after_validation :geocode
-
   has_many :questions
   has_many :answers
 
@@ -31,7 +28,6 @@ class User < ActiveRecord::Base
   validates :username, :presence => true, :uniqueness => true, :length => { :within => 3..42 }
   validates :github, :uniqueness => true, :allow_blank => true, :length => { :within => 0..40 }
   validates :twitter, :uniqueness => true, :allow_blank => true, :length => { :within => 0..15 }
-  validates :postal_code, :allow_blank => true, :format => { :with => /^[0-9]{5}$/ }
   validates_format_of :website, :with => /^(#{URI::regexp(%w(http https))})$/, :allow_blank => true
 
   ROLES = %w(editor moderator administrator)
