@@ -22,6 +22,7 @@ class Home::IndexPresenter
      {:img => 'tutorys.png', :link => "https://www.tutorys.com", :title => 'Tutorys'},
      {:img => 'github.png', :link => 'https://github.com', :title => 'Github'},
      {:img => 'groupon.png', :link => "http://www.groupon.fr", :title => 'Groupon'},
+     {:img => 'novagile.png', :link => "http://novagile.fr", :title => 'Novagile'},
      {:img => 'letitcast.png', :link => "https://letitcast.com", :title => 'Letitcast'},
      {:img => 'dimelo.png', :link => 'http://dimelo.com', :title => 'Dimelo'},
      {:img => 'linuxfr.png', :link => "http://linuxfr.org", :title => 'Linuxfr'},
