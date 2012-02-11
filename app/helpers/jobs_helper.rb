@@ -5,8 +5,6 @@ module JobsHelper
   end
 
   def format_contracts contracts
-    contracts.each do |contract|
-      Job.human_attribute_name(contract)
-    end.join(', ')
+    contracts.map { |v| Job.human_attribute_name(v.to_sym) }.join(', ')
   end
 end

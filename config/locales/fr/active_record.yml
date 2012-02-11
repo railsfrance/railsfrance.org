@@ -21,6 +21,8 @@ fr:
         city: "Ville"
         url: "Site internet"
         postal_code: "Code postal"
+        cdd: "CDD"
+        cdi: "CDI"
         internship: "Stage"
         remote: "A distance"
         part_time: "Temps partiel"
