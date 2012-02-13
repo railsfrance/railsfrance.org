@@ -9,6 +9,7 @@ fr:
       user:
         username: "Pseudo"
         password: "Mot de passe"
+        street: 'Adresse'
         website: "Site Internet"
         city: "Ville"
         postal_code: "Code postal"

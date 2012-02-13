@@ -1,7 +1,13 @@
 module Addresseable
+  extend ActiveSupport::Concern
+
+  included do
+    validates_format_of :postal_code, with: /^[0-9]{5}$/
+    geocoded_by :address
+    after_validation :geocode, if: lambda {|o| o.postal_code? && o.street? && o.city?}
+  end
+
   def address
-    # Forcing the country could be a good idea to ensure good coordinates
-    # [street, postal_code, city, 'France'].join(', ')
     [street, postal_code, city].join(', ')
   end
 end

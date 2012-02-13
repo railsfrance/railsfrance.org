@@ -7,16 +7,11 @@ class Job < ActiveRecord::Base
 
   friendly_id :title, :use => :slugged
 
-  geocoded_by :address
-
-  validates_presence_of :company, :street, :city, :description
+  validates_presence_of :company, :street, :city, :description, :postal_code
   validates_format_of :url, :with => /^(#{URI::regexp(%w(http https))})$/, :allow_blank => true
   validates :email, :presence => true, :format => {:with => Devise::email_regexp}
-  validates :postal_code, :presence => true, :format => {:with => /^[0-9]{5}$/}
   validates :title, :presence => true, :uniqueness => true, :length => { :maximum => 100 }
   validate :validate_contracts
-
-  after_validation :geocode
 
   paginates_per 10
 
