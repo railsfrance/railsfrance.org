@@ -19,7 +19,7 @@ class Home::IndexPresenter
 
   def rails_projects
     [
-     {:img => 'tutorys.png', :link => "https://www.tutorys.com", :title => 'Tutorys'},
+     {:img => 'tutorys.png', :link => "http://www.tutorys.com", :title => 'Tutorys'},
      {:img => 'github.png', :link => 'https://github.com', :title => 'Github'},
      {:img => 'groupon.png', :link => "http://www.groupon.fr", :title => 'Groupon'},
      {:img => 'novagile.png', :link => "http://novagile.fr", :title => 'Novagile'},
