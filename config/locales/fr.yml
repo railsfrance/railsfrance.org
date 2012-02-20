@@ -9,6 +9,8 @@ fr:
     job_not_updated: "Une erreur est survenue, votre annonce n'a pas été mise à jour !"
     job_unknown: "Ma joie de donner est morte à force de donner."
     job_not_activated: "Cette offre d'emploi n'a pas encore été validée !"
+    job_soft_deleted: "Offre d'emploi supprimée !"
+    job_not_soft_deleted: "Une erreur est survenue lors de la tentative de suppresion !"
     destroyed: "Entrée supprimé !"
     not_destroyed: "Une erreur est survenue, la suppression a échouée"
 

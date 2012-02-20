@@ -39,6 +39,7 @@ describe Job do
       its(:state) { job.state.should eql 'pending' }
       it { should respond_to :confirm }
       it { should respond_to :activate }
+      it { should respond_to :soft_delete }
     end
 
     context "confirmed transition" do
@@ -59,6 +60,15 @@ describe Job do
         job.should_receive(:notify_observers).with(:after_activation)
         job.activate
         job.state.should eql 'activated'
+      end
+    end
+
+    context "soft_deleted transition" do
+      let!(:job) { Factory(:job, state: 'activated') }
+
+      it "should allow transition from :confirmed to :activated and call Job#notify_observers with :after_activation" do
+        job.soft_delete
+        job.state.should eql 'soft_deleted'
       end
     end
   end

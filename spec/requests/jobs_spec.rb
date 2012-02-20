@@ -74,7 +74,7 @@ describe JobsController do
     end
   end
 
-  describe "#edit, #update" do
+  describe "#edit, #update, #destroy" do
     context "with a valid job" do
       let!(:job) { Factory(:job, state: 'activated', token: 'my_secure_token') }
       before(:each) { visit edit_job_path(token: job.token) }
@@ -103,6 +103,11 @@ describe JobsController do
 
       it "should not allow email update" do
         page.should_not have_selector('input#job_email')
+      end
+
+      it "should have a link to destroy the job" do
+        click_on "Supprimer"
+        job.soft_deleted? should be_true
       end
     end
 

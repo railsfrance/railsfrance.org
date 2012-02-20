@@ -1,8 +1,8 @@
 class JobsController < ApplicationController
   include Messages
 
-  before_filter :load_from_session, :only => [:preview, :confirm]
-  before_filter :load_from_params, :only => [:show, :update]
+  before_filter :load_from_session, :only => [:preview, :confirm, :update, :destroy]
+  before_filter :load_from_params, :only => :show
 
   respond_to :html, :atom
 
@@ -43,6 +43,7 @@ class JobsController < ApplicationController
   def edit
     redirect_to :root and return unless
       @job = Job.with_state(:activated).where(:token => params[:token]).first
+    session[:job_id] = @job.id
     render :new
   end
 
@@ -68,6 +69,15 @@ class JobsController < ApplicationController
     @job.activate!
     ContactMailer.valid_job(@job).deliver
     notice(:job_validated) and redirect_to job_path(@job)
+  end
+
+  def destroy
+    if @job.soft_delete
+      notice(:job_soft_deleted)
+    else
+      error(:job_not_soft_deleted)
+    end
+    redirect_to jobs_path
   end
 
   private

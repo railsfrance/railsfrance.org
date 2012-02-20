@@ -47,4 +47,5 @@
         .textError
           = @job.errors[:base].join("<br/>")
     .block.center
+      = link_to("Supprimer", job_path(@job), class: 'navButton', method: :delete, confirm: 'Etes-vous sûr?') if action_name.match('edit') and @job.activated?
       = f.button :submit, id: 'job_form_submit'

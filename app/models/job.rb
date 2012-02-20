@@ -31,6 +31,10 @@ class Job < ActiveRecord::Base
     event :activate do
       transition :confirmed => :activated
     end
+
+    event :soft_delete do
+      transition :activated => :soft_deleted
+    end
   end
 
   def to_s; title end
