@@ -78,6 +78,7 @@ group :development, :test do
   gem 'launchy'
   gem 'active_reload',			'~> 0.6'
   gem 'letter_opener'
+  gem 'sqlite3'
 end
 
 group :test do
