@@ -8,6 +8,16 @@ class UserTest < ActiveSupport::TestCase
   test 'should be valid' do
     assert @user.valid?
   end
+  
+  test 'should be valid without postal code' do
+    @user.postal_code = nil
+    assert @user.valid?
+  end
+  
+  test 'should not be valid with bad postal code' do
+    @user.postal_code = (0..6).map{ ('a'..'z').to_a[rand(26)] }.join
+    assert @user.invalid?
+  end
 
   test 'should not be valid with bad username' do
     @user.username = nil

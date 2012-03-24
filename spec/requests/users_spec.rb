@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe UsersController do
-
+  
   describe "#new" do
     let!(:user) { Factory.build(:user) }
     before(:each) { visit new_user_registration_path }
