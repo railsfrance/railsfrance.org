@@ -2,9 +2,10 @@ language: ruby
 rvm:
   - 1.9.3
 before_script:
-  - "cp config/database.yml.sample config/database.yml"
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - "bundle install"
-  - "psql -c 'create database rails_france_test;' -U postgres"
+  - cp config/database.yml.sample config/database.yml
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - bundle install
+  - psql -c 'create database rails_france_test;' -U postgres
+  - bundle exec rake db:test:load
 script: "bundle exec rake test spec"
