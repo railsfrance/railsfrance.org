@@ -7,5 +7,4 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - "bundle install"
   - "psql -c 'create database rails_france_test;' -U postgres"
-  - "bundle exec rake db:drop db:create db:test:load --trace"
 script: "bundle exec rake test spec"
