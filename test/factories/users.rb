@@ -1,12 +1,14 @@
-Factory.define :user do |u|
-  u.sequence(:username) { |n| "john#{n}" }
-  u.password 'johndoe'
-  u.password_confirmation 'johndoe'
-  u.sequence(:email) { |n| "john#{n}@doe.com" }
-  u.sequence(:github) { |n| "john#{n}" }
-  u.sequence(:twitter) { |n| "john#{n}" }
-  u.sequence(:city) { |n| "Paris" }
-  u.sequence(:postal_code) { |n| "75000" }
-  u.sequence(:street) { |n| "Rue Gambetta" }
-  u.after_create { |u| u.confirm! }
+FactoryGirl.define do
+  factory :user do
+    sequence(:username) { |n| "john#{n}" }
+    password 'johndoe'
+    password_confirmation 'johndoe'
+    sequence(:email) { |n| "john#{n}@doe.com" }
+    sequence(:github) { |n| "john#{n}" }
+    sequence(:twitter) { |n| "john#{n}" }
+    sequence(:city) { |n| "Paris" }
+    sequence(:postal_code) { |n| "75000" }
+    sequence(:street) { |n| "Rue Gambetta" }
+    after_create { |u| u.confirm! }
+  end
 end

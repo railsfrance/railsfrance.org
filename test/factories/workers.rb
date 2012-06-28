@@ -1,7 +1,9 @@
-Factory.define :worker do |w|
-  w.sequence(:name) { |n| "Entreprise #{n}" }
-  w.website 'http://www.google.fr'
-  w.street 'rue Gambetta'
-  w.postal_code '75020'
-  w.city 'Paris'
+FactoryGirl.define do
+  factory :worker do
+    sequence(:name) { |n| "Entreprise #{n}" }
+    website 'http://www.google.fr'
+    street 'rue Gambetta'
+    postal_code '75020'
+    city 'Paris'
+  end
 end

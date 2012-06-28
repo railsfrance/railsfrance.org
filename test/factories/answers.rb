@@ -1,5 +1,7 @@
-Factory.define :answer do |a|
-  a.association :user
-  a.association :question
-  a.sequence(:description) { |n| "Nice answer !#{n}" }
+FactoryGirl.define do
+  factory :answer do
+    association :user
+    association :question
+    sequence(:description) { |n| "Nice answer !#{n}" }
+  end
 end

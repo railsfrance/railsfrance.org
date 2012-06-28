@@ -71,7 +71,7 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'ruby-debug19' unless ENV["CI"]
+  gem 'pry-rails'
   gem 'awesome_print'
   gem "rspec-rails",                    '~> 2.6'
   gem 'factory_girl_rails',		'~> 1.6'
