@@ -1,16 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.1.1'
+gem 'rails', '~> 3.2.9'
 
 gem 'pg', '~> 0.11'
 gem 'simple_form', '~> 1.5'
 gem 'kaminari', '~> 0.12'
 gem 'make_voteable',			'~> 0.1'
 gem 'acts-as-taggable-on',		'~> 2.1'
-gem 'haml-rails',			'~> 0.3'
+gem 'haml-rails',			'~> 0.3.5'
 gem 'friendly_id',			'~> 4.0.0.beta14'
 gem 'redis',				'~> 2.2'
-gem 'date_validator',			'~> 0.6'
+gem 'date_validator',			'~> 0.6.3'
 gem 'recaptcha',			'~> 0.3', :require => 'recaptcha/rails'
 gem 'httparty'
 # Abilities / Authorization
@@ -63,20 +63,18 @@ gem 'rack-gauges', :require => 'rack/gauges'
 
 gem 'routing-filter', '~> 0.3.0'
 
+gem 'pry-rails'
+
 # Asset template engines
 group :assets do
-  gem 'sass-rails',			'~> 3.1.1'
-  gem 'coffee-rails',			'~> 3.1.1'
-  gem 'uglifier',			'~> 1.0'
+  gem 'sass-rails',			'~> 3.2.3'
+  gem 'coffee-rails',			'~> 3.2.1'
+  gem 'uglifier',			'>= 1.0.3'
 end
 
 group :development, :test do
-  gem 'pry-rails'
-  gem 'awesome_print'
   gem "rspec-rails",                    '~> 2.6'
   gem 'factory_girl_rails',		'~> 1.6'
-  gem 'launchy'
-  gem 'active_reload',			'~> 0.6'
   gem 'letter_opener'
 end
 
