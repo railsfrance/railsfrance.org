@@ -12,3 +12,4 @@
 /config/settings/development.yml
 *~
 *#*
+.dotcloud
