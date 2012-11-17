@@ -4,7 +4,7 @@ require 'rails/all'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require *Rails.groups(:assets => %w(development test))
+  Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
@@ -32,13 +32,11 @@ module RailsFrance
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
     config.time_zone = 'Paris'
-    
+
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('config','locales', '**','*.{rb,yml}').to_s]
     config.i18n.default_locale = :fr
     I18n.locale = config.i18n.locale = config.i18n.default_locale
-    # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w()
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -46,18 +44,6 @@ module RailsFrance
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password, :confirmation_password]
 
-    # Configure asset pipeline
-    config.assets.enabled = true
-
-    # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
-
-    config.middleware.insert 0, 'Rack::Cache', {
-      :verbose     => true,
-      :metastore   => URI.encode("file:#{Rails.root}/tmp/dragonfly/cache/meta"),
-      :entitystore => URI.encode("file:#{Rails.root}/tmp/dragonfly/cache/body")
-    }
-    config.middleware.insert_after 'Rack::Cache', 'Dragonfly::Middleware', :images
     config.middleware.use Rack::Gauges, :tracker => '4f292c3f844d522d4d000033'
 
     # 404 catch all routes
@@ -67,7 +53,15 @@ module RailsFrance
 
     # Devise mailer layout
     config.to_prepare do
-        Devise::Mailer.layout "mail"
+      Devise::Mailer.layout "mail"
     end
+
+    config.action_view.javascript_expansions[:defaults] = %w()
+
+    # Enable the asset pipeline
+    config.assets.enabled = true
+
+    # Version of your assets, change this if you want to expire all your assets
+    config.assets.version = '1.0'
   end
 end

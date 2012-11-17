@@ -6,7 +6,7 @@
     - if @feeds
       - @feeds.each do |link, title|
         = auto_discovery_link_tag(:atom, link, { :title => title })
-    = stylesheet_link_tag :application
+    = stylesheet_link_tag :application, media: :all
     = csrf_meta_tag
   %body
     #container

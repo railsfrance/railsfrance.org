@@ -1,0 +1,31 @@
+app:
+  secret_token: env["SECRET_TOKEN"]
+  cookie_key: "_rails_france_session"
+devise:
+  pepper: env["PEPPER"]
+mailer:
+  host: "railsfrance.org"
+  from: "RailsFrance"
+aws_ses:
+  access_key_id: env["ACCESS_KEY_ID"]
+  secret_access_key: env["SECRET_ACCESS_KEY"]
+redis:
+  host: env["DOTCLOUD_REDIS_REDIS_HOST"]
+  port: env["DOTCLOUD_REDIS_REDIS_PORT"]
+  login: env["DOTCLOUD_REDIS_REDIS_LOGIN"]
+  password: env["DOTCLOUD_REDIS_REDIS_PASSWORD"]
+  db: 1
+  expire_view: 86400
+  expire_tweet: 3600
+twitter:
+  account: ''
+  consumer_key: ''
+  consumer_secret: ''
+  oauth_token: ''
+  oauth_token_secret: ''
+recaptcha:
+  public_key: ""
+  private_key: ""
+api:
+  meetup:
+    key: ""

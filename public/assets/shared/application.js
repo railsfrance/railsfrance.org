@@ -1,0 +1,1 @@
+(function(){$(function(){var e;return e=window.location.hostname,$("a").each(function(t,n){if(n.hostname!==e&&!n.href.match("javascript"))return $(n).attr({target:"_blank","data-skip-pjax":"true"})})})}).call(this);
