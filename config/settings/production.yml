@@ -1,19 +1,19 @@
 app:
-  secret_token: env["SECRET_TOKEN"]
+  secret_token: <%= ENV["SECRET_TOKEN"] %>
   cookie_key: "_rails_france_session"
 devise:
-  pepper: env["PEPPER"]
+  pepper: <%= ENV["PEPPER"] %>
 mailer:
   host: "railsfrance.org"
   from: "RailsFrance"
 aws_ses:
-  access_key_id: env["ACCESS_KEY_ID"]
-  secret_access_key: env["SECRET_ACCESS_KEY"]
+  access_key_id: <%= ENV["ACCESS_KEY_ID"] %>
+  secret_access_key: <%= ENV["SECRET_ACCESS_KEY"] %>
 redis:
-  host: env["DOTCLOUD_REDIS_REDIS_HOST"]
-  port: env["DOTCLOUD_REDIS_REDIS_PORT"]
-  login: env["DOTCLOUD_REDIS_REDIS_LOGIN"]
-  password: env["DOTCLOUD_REDIS_REDIS_PASSWORD"]
+  host: <%= ENV["DOTCLOUD_REDIS_REDIS_HOST"] %>
+  port: <%= ENV["DOTCLOUD_REDIS_REDIS_PORT"] %>
+  login: <%= ENV["DOTCLOUD_REDIS_REDIS_LOGIN"] %>
+  password: <%= ENV["DOTCLOUD_REDIS_REDIS_PASSWORD"] %>
   db: 1
   expire_view: 86400
   expire_tweet: 3600
