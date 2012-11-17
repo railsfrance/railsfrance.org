@@ -1,4 +1,4 @@
-- set_meta_tags :title => "RailsFrance.org | La communauté francophone des utilisateurs de Ruby On Rails", 
+- set_meta_tags :title => "RailsFrance.org | La communauté francophone des utilisateurs de Ruby On Rails",
 :description => "Questions, offres d'emplois, événements, Ruby On Rails, France"
 
 %section#homeSection.worldMap
@@ -9,7 +9,7 @@
           %span
             Découvrir
           %br
-          Ruby on Rails     
+          Ruby on Rails
       %li
         = link_to resources_path(:anchor => "download"), "data-skip-pjax" => true, :id => "downloadRuby" do
           %span
@@ -56,9 +56,9 @@
           %li
             %article
               %h3
-                = link_to truncate(job.title, length: 35), job_path(job), "data-skip-pjax" => true
+                = link_to truncate(job.company, length: 35), job_path(job), "data-skip-pjax" => true
               %p
-                = truncate(sanitize(job.description), length: 100).html_safe 
+                = truncate(sanitize(job.to_s), length: 100).html_safe
       = link_to "Voir tous les Jobs", jobs_path, "data-skip-pjax" => true, :class => "smallButton"
     #homeTweets.homeContent
       %h2
@@ -77,4 +77,4 @@
       - @presenter.rails_projects.each do |project|
         %li
           = link_to image_tag("home/caroussel/#{project[:img]}"), project[:link], :title => project[:title], :target =>"_blank", 'data-skip-pjax' => true
-    
+

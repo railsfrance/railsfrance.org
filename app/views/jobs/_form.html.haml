@@ -38,11 +38,10 @@
         %label
           Ou renseigner une url
         = f.text_field :logo_url
-  
         = image_tag @job.logo.thumb('200x100').url if @job.logo_uid
         = f.hidden_field :retained_logo
     .jobFormRight
-      = recaptcha_tags 
+      = recaptcha_tags
       - if @job.errors[:base].any?
         .textError
           = @job.errors[:base].join("<br/>")
