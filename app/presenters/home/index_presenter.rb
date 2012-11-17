@@ -1,20 +1,18 @@
 class Home::IndexPresenter
-  extend ActiveSupport::Memoizable
-
   def recent_tweet
     CacheTweet.last_tweets(3, Settings.twitter.account).each { |tweet| tweet['text'] = tweet['text'].gsub(/http[s]?:\/\/(\S)*/, '<a href="\0" target="_blank" data-skip-pjax>\0</a>').html_safe }
   end
 
   def recent_questions
-    Question.order('created_at DESC').limit(3)
+    @recent_questions ||= Question.order('created_at DESC').limit(3)
   end
 
   def recent_jobs
-    Job.where(:state => 'activated').order('created_at DESC').limit(3)
+    @recent_jobs ||= Job.where(:state => 'activated').order('created_at DESC').limit(3)
   end
 
   def recent_events
-    Event.limit(3)
+    @recent_events ||= Event.limit(3)
   end
 
   def rails_projects
@@ -33,6 +31,4 @@ class Home::IndexPresenter
      {:img => 'locomotive.png', :link => "http://locomotivecms.com", :title => 'Locomotive'}
     ]
   end
-
-  memoize :recent_questions, :recent_jobs, :recent_events
 end
