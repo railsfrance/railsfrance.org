@@ -5,9 +5,9 @@ describe Job do
 
   before(:each) do
     Job.any_instance.stub(:geocode) { [1,1] }
-    Factory(:job)
   end
-  let(:job) { Job.first }
+
+  let!(:job) { FactoryGirl.create(:job) }
 
   describe "validations" do
     it { should validate_presence_of(:company) }

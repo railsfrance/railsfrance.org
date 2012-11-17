@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120122173335) do
+ActiveRecord::Schema.define(:version => 20121117153037) do
 
   create_table "answers", :force => true do |t|
     t.integer  "user_id"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(:version => 20120122173335) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "street"
-    t.string   "state"
+    t.string   "state",       :default => "pending"
     t.string   "logo_uid"
     t.string   "email"
     t.string   "token"

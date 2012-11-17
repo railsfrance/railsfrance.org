@@ -8,7 +8,7 @@ gem 'kaminari', '~> 0.12'
 gem 'make_voteable',			'~> 0.1'
 gem 'acts-as-taggable-on',		'~> 2.1'
 gem 'haml-rails',			'~> 0.3.5'
-gem 'friendly_id',			'~> 4.0.0.beta14'
+gem 'friendly_id',			'~> 4.0.9'
 gem 'redis',				'~> 2.2'
 gem 'date_validator',			'~> 0.6.3'
 gem 'recaptcha',			'~> 0.3', :require => 'recaptcha/rails'
@@ -79,8 +79,6 @@ group :development, :test do
 end
 
 group :test do
-  # Pretty printed test output
-  gem 'fuubar'
   gem 'capybara',			'~> 1.1'
   gem 'fakeweb'
   gem 'shoulda-matchers'
