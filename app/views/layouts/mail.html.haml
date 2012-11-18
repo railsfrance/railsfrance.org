@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-%html{:xmlns => "http://www.w3.org/1999/xhtml"}  
+%html{xmlns: "http://www.w3.org/1999/xhtml"}  
   %head    
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
     %title 
@@ -44,11 +44,11 @@
       }
       </style>
   %body
-    %table#backgroundTable{:border => "0", :cellpadding => "0", :cellspacing => "0"}
+    %table#backgroundTable{border: "0", cellpadding: "0", cellspacing: "0"}
       %tr
         %td
           %center
-            %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width=> 700}
+            %table{border: "0", cellpadding: "0", cellspacing: "0", width: 700}
               %tr
                 %td
                   %a(href="#{root_url}" title="RailsFrance.org" target="_blank" style="color: #99090a;")
@@ -57,7 +57,7 @@
                 %td
                   = yield
               %tr
-                %td{:style => "text-align:right;"}
+                %td{style: "text-align:right;"}
                   %i
-                    = link_to "L’équipe RailsFrance.org", root_url,:target =>"_blank", :style => "color: #99090a;"
+                    = link_to "L’équipe RailsFrance.org", root_url, target: "_blank", style: "color: #99090a;"
                   

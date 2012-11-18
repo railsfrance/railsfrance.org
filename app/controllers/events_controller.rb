@@ -1,11 +1,11 @@
 class EventsController < ApplicationController
   include PreLoginParams
 
-  keep_params :event, :only => [:create]
-  load_params :event, :only => [:new]
+  keep_params :event, only: [:create]
+  load_params :event, only: [:new]
 
-  load_and_authorize_resource :event, :only => [:show, :edit]
-  load_and_authorize_resource :through => :current_user, :only => [:create, :update]
+  load_and_authorize_resource :event, only: [:show, :edit]
+  load_and_authorize_resource through: :current_user, only: [:create, :update]
 
   respond_to :html, :atom
 
@@ -17,7 +17,7 @@ class EventsController < ApplicationController
 
   def create
     if @event.save
-      redirect_to @event, :notice => t('event.flash.created')
+      redirect_to @event, notice: t('event.flash.created')
     else
       render :new
     end
@@ -25,7 +25,7 @@ class EventsController < ApplicationController
 
   def update
     if @event.update_attributes params[:event]
-      redirect_to @event, :notice => t('event.flash.updated')
+      redirect_to @event, notice: t('event.flash.updated')
     else
       render :edit
     end

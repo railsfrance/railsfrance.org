@@ -1,23 +1,23 @@
-%li{:class => ((answer == answer.question_accepted_answer) ? "theContentListLi validated" : "theContentListLi")}
+%li{class: ((answer == answer.question_accepted_answer) ? "theContentListLi validated" : "theContentListLi")}
   %aside.votesContainer
     - if user_signed_in?
       - if can? :vote, answer
-        = link_to "Vote up", vote_question_answer_path(answer.question, answer, :vote => "up"), :class => "voteUp"
+        = link_to "Vote up", vote_question_answer_path(answer.question, answer, vote: "up"), class: "voteUp"
         .votesNumber
           #{answer.votes}
-        = link_to "Vote down", vote_question_answer_path(answer.question, answer, :vote => "down"), :class => "voteDown"
+        = link_to "Vote down", vote_question_answer_path(answer.question, answer, vote: "down"), class: "voteDown"
       - else
-        = link_to "Vote up", "#", :class => "voteUp disabled"
+        = link_to "Vote up", "#", class: "voteUp disabled"
         .votesNumber
           #{answer.votes}
-        = link_to "Vote down", "#", :class => "voteDown disabled"
+        = link_to "Vote down", "#", class: "voteDown disabled"
       - if can? :accept, answer
-        = link_to "Accepter la réponse", accept_question_answer_path(answer.question, answer),:class => "answerAccept"
+        = link_to "Accepter la réponse", accept_question_answer_path(answer.question, answer),class: "answerAccept"
     - else
-      = link_to "Vote up", "#", :class => "voteUp disabled"
+      = link_to "Vote up", "#", class: "voteUp disabled"
       .votesNumber
         #{answer.votes}
-      = link_to "Vote down", "#", :class => "voteDown disabled"
+      = link_to "Vote down", "#", class: "voteDown disabled"
   %article
     = markdown answer.description
     .postHourUser

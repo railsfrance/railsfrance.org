@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-FakeWeb.register_uri(:get, %r|http://maps\.googleapis\.com/|, :body => '{
+FakeWeb.register_uri(:get, %r|http://maps\.googleapis\.com/|, body: '{
                        "results" : [
                          {
                            "address_components" : [

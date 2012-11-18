@@ -9,10 +9,10 @@
     %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Retour aux questions", questions_path, :class => "navButton back"
+          = link_to "Retour aux questions", questions_path, class: "navButton back"
   .theContent
-    = simple_form_for @question, :html => { :class => "questionForm" } do |form|
+    = simple_form_for @question, html: { class: "questionForm" } do |form|
       %fieldset
         %legend Editez votre question
-        = render 'form', :f => form
+        = render 'form', f: form
         = render 'markdown/markdown'

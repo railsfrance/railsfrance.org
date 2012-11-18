@@ -4,20 +4,20 @@ class Question < ActiveRecord::Base
   extend FriendlyId
   extend Sortable
 
-  belongs_to :user, :counter_cache => :questions_count
-  has_many :answers, :dependent => :destroy
-  belongs_to :accepted_answer, :class_name => 'Answer', :foreign_key => :accepted_answer_id
+  belongs_to :user, counter_cache: :questions_count
+  has_many :answers, dependent: :destroy
+  belongs_to :accepted_answer, class_name: 'Answer', foreign_key: :accepted_answer_id
 
-  friendly_id :title, :use => :slugged
+  friendly_id :title, use: :slugged
   paginates_per 10
 
-  delegate :page, :to => :answers, :prefix => true, :allow_nil => true
-  delegate :username, :to => :user, :prefix => true, :allow_nil => true
+  delegate :page, to: :answers, prefix: true, allow_nil: true
+  delegate :username, to: :user, prefix: true, allow_nil: true
 
   attr_accessible :title, :description, :tag_list
 
   validates_presence_of :user, :description
-  validates :title, :presence => true, :length => { :maximum => 100 }
+  validates :title, presence: true, length: { maximum: 100 }
   validate :max_tags
 
   make_voteable

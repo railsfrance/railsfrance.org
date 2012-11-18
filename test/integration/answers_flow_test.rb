@@ -6,12 +6,12 @@ class AnswersFlowTest < ActionController::IntegrationTest
   test 'create answer not signed in' do
     answer = Factory.build(:answer)
     visit question_path answer.question
-    fill_in 'answer_description', :with => answer.description
+    fill_in 'answer_description', with: answer.description
     page.find('.button').click
     assert current_path == new_user_session_path
     user = Factory.create :user
-    fill_in 'user_username', :with => user.username
-    fill_in 'user_password', :with => user.password
+    fill_in 'user_username', with: user.username
+    fill_in 'user_password', with: user.password
     page.find('.button').click
     assert current_path == question_path(answer.question)
     assert page.has_content? answer.description

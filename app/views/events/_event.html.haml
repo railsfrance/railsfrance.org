@@ -1,9 +1,9 @@
 %li.theContentListLi
-  %aside{:class => event.date > Time.now ? "blue" : "red"}
-    = l(event.date, :format => :tiny)
+  %aside{class: event.date > Time.now ? "blue" : "red"}
+    = l(event.date, format: :tiny)
   %article
     %h2.theContentListTitle
-      = link_to truncate(event.title, :length => 50), event, :class => "theContentListTitle"
+      = link_to truncate(event.title, length: 50), event, class: "theContentListTitle"
     .eventDescription
       = truncate(sanitize(event.description), length: 200).html_safe
     .informationsBlock
@@ -18,5 +18,5 @@
       .eventHour
         Heure de l'événement :
         %span
-          = l(event.date, :format => :short)
+          = l(event.date, format: :short)
       

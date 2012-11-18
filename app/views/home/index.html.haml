@@ -1,35 +1,35 @@
-- set_meta_tags :title => "RailsFrance.org | La communauté francophone des utilisateurs de Ruby On Rails", 
-:description => "Questions, offres d'emplois, événements, Ruby On Rails, France"
+- set_meta_tags title: "RailsFrance.org | La communauté francophone des utilisateurs de Ruby On Rails", 
+description: "Questions, offres d'emplois, événements, Ruby On Rails, France"
 
 %section#homeSection.worldMap
   %header#homeHeader
     %ul
       %li
-        = link_to resources_path(:anchor => "discover"), :id => "discoverRuby" do
+        = link_to resources_path(anchor: "discover"), id: "discoverRuby" do
           %span
             Découvrir
           %br
           Ruby on Rails     
       %li
-        = link_to resources_path(:anchor => "download"),:id => "downloadRuby" do
+        = link_to resources_path(anchor: "download"), id: "downloadRuby" do
           %span
             Télécharger
           %br
           Ruby on Rails
       %li
-        = link_to resources_path(:anchor => "learn"), :id => "learnRuby" do
+        = link_to resources_path(anchor: "learn"), id: "learnRuby" do
           %span
             Apprendre
           %br
           à développer
       %li
-        = link_to resources_path(:anchor => "community"), :id => "contributeRuby" do
+        = link_to resources_path(anchor: "community"), id: "contributeRuby" do
           %span
             Contribuer
           %br
           à la communauté
   #homeHgroup
-    = link_to "Rails", "http://rubyonrails.org/", :target => "_blank"
+    = link_to "Rails", "http://rubyonrails.org/", target: "_blank"
     %div
       %h1
         Bienvenue sur le portail francophone de la communauté Ruby on Rails
@@ -47,7 +47,7 @@
                 = link_to truncate(event.title, length: 35), event_path(event)
               %p
                 = truncate(sanitize(event.description), length: 100).html_safe
-      = link_to "Voir tous les évènements", events_path,:class => "smallButton"
+      = link_to "Voir tous les évènements", events_path, class: "smallButton"
     #homeJobs.homeContent
       %h2
         Les Jobs Rails
@@ -59,7 +59,7 @@
                 = link_to truncate(job.title, length: 35), job_path(job)
               %p
                 = truncate(sanitize(job.description), length: 100).html_safe 
-      = link_to "Voir tous les Jobs", jobs_path, :class => "smallButton"
+      = link_to "Voir tous les Jobs", jobs_path, class: "smallButton"
     #homeTweets.homeContent
       %h2
         Les Derniers Tweets
@@ -70,11 +70,11 @@
               = tweet['text']
               %br
               %span= "{ Il y a #{distance_of_time_in_words tweet['created_at'].to_time, Time.now} }"
-      = link_to  "Accéder au Twitter", "http://twitter.com/#{Settings.twitter.account}", :target => "_blank", :class => "smallButton"
+      = link_to  "Accéder au Twitter", "http://twitter.com/#{Settings.twitter.account}", target: "_blank", class: "smallButton"
     %h4
       Les projets sur les rails
     %ul#railsProjectSlider
       - @presenter.rails_projects.each do |project|
         %li
-          = link_to image_tag("home/caroussel/#{project[:img]}"), project[:link], :title => project[:title], :target =>"_blank"
+          = link_to image_tag("home/caroussel/#{project[:img]}"), project[:link], title: project[:title], target: "_blank"
     

@@ -1,4 +1,4 @@
-atom_feed :language => 'fr' do |feed|
+atom_feed language: 'fr' do |feed|
   feed.title "RailsFrance > Jobs"
   if @jobs.any?
     feed.updated @jobs.first.created_at
@@ -7,7 +7,7 @@ atom_feed :language => 'fr' do |feed|
       feed.entry(item) do |entry|
         entry.url job_url(item)
         entry.title item.title
-        entry.content :type => 'xhtml' do |html|
+        entry.content type: 'xhtml' do |html|
           html.p "Entreprise -- #{item.company}"
           html.p "Ville -- #{item.city}"
           html.p item.description

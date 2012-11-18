@@ -1,7 +1,7 @@
 class ContactMailer < ActionMailer::Base
   layout 'mail'
 
-  default :from => Settings.mailer.from
+  default from: Settings.mailer.from
   default_url_options[:host] = Settings.mailer.host
 
   def contact contact_form

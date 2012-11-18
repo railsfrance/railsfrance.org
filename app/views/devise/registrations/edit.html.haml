@@ -9,17 +9,17 @@
     %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Mon profil", user_path(resource), :class=> "buttonBlue"
+          = link_to "Mon profil", user_path(resource), class: "buttonBlue"
         %li
-          = link_to "Deconnexion", destroy_user_session_path, :method => :delete, :class=> "buttonBlue"
+          = link_to "Deconnexion", destroy_user_session_path, method: :delete, class: "buttonBlue"
         %li
-          = link_to "Annuler mon compte", registration_path(resource_name), :confirm => "Etes-vous sûr?", :method => :delete, :class=> "buttonBlue"
+          = link_to "Annuler mon compte", registration_path(resource_name), confirm: "Etes-vous sûr?", method: :delete, class: "buttonBlue"
   .theContent
-    = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "woodForm normalForm" }) do |f|
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "woodForm normalForm" }) do |f|
       %fieldset
         %legend Mon compte
         #newUserLeft
-          = f.input :email,:autofocus => "autofocus"
+          = f.input :email, autofocus: "autofocus"
           = f.input :twitter
           = f.input :street
           = f.input :postal_code
@@ -27,8 +27,8 @@
         #newUserRight
           = f.input :github
           = f.input :website
-          = f.input :password, :required => false, :placeholder => "Laisser vide si vous ne désirez pas le changer"
-          = f.input :password_confirmation, :required => false
-          = f.input :current_password, :required => true, :placeholder => "Requis pour confirmer les changements"
+          = f.input :password, required: false, placeholder: "Laisser vide si vous ne désirez pas le changer"
+          = f.input :password_confirmation, required: false
+          = f.input :current_password, required: true, placeholder: "Requis pour confirmer les changements"
           %br
           = f.button :submit, "Modifier"
