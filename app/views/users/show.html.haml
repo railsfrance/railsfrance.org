@@ -1,4 +1,4 @@
-- set_meta_tags :title => @user.username
+- set_meta_tags title: @user.username
 %section.worldMap
   %header#sectionHeader
     %hgroup.userHeader
@@ -10,7 +10,7 @@
     %div#secondaryNavContainer
   .theContent
     #theUserName
-      = image_tag @user.gravatar_url(:size => 42)
+      = image_tag @user.gravatar_url(size: 42)
       = @user.username
     #theUserAddressAndSocial
       %p
@@ -18,16 +18,16 @@
         %a(href="#{@user.website}" target="_blank") #{@user.website}
         %br
         Github :
-        = link_to @user.github, "https://github.com/#{@user.github}", :target => "_blank"
+        = link_to @user.github, "https://github.com/#{@user.github}", target: "_blank"
         %br
         Twitter :
-        = link_to @user.twitter, "http://twitter.com/#{@user.twitter}", :target => "_blank"
+        = link_to @user.twitter, "http://twitter.com/#{@user.twitter}", target: "_blank"
       %p
         Ville :
         %span= @user.city
         %br
         Date d'inscription :
-        %span= l(@user.created_at, :format => :tiny)
+        %span= l(@user.created_at, format: :tiny)
     #questionsEventsTabs
       #questionTab
         #questionTabAsk
@@ -50,7 +50,7 @@
               = @user.answers_count
           - @presenter.recent_answers.each do |a|
             %div
-              = link_to truncate(a.description, :length => 50), question_path(a.question)
+              = link_to truncate(a.description, length: 50), question_path(a.question)
               %p
                 %span
                   &nbsp;

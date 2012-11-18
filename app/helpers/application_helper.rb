@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def sanitize(html)
-    Sanitize.clean(markdown(html), :elements => %w[p br])
+    Sanitize.clean(markdown(html), elements: %w[p br])
   end
   
   def ie_tag(name=:body, attrs={}, &block)
@@ -35,7 +35,7 @@ module ApplicationHelper
     classes.strip!
     classes = ' ' + classes if !classes.blank?
     classes = name + classes
-    attrs.merge(:class => classes)
+    attrs.merge(class: classes)
   end
 
 end

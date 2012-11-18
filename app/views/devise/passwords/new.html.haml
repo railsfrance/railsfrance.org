@@ -7,10 +7,10 @@
         de passe oublie
   %nav#secondaryNav
     %div#secondaryNavContainer
-      = render :partial => "devise/shared/links"
+      = render partial: "devise/shared/links"
   .theContent
-    = simple_form_for(resource, :url => password_path(resource), :html => { :class => "woodForm smallForm" }) do |f|
+    = simple_form_for(resource, url: password_path(resource), html: { class: "woodForm smallForm" }) do |f|
       %fieldset
         %legend Mot de passe oublié ?
-        = f.input :email, :autofocus => "autofocus"
+        = f.input :email, autofocus: "autofocus"
         = f.button :submit, "Envoyer"

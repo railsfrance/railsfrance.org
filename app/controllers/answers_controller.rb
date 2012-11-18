@@ -1,14 +1,14 @@
 class AnswersController < ApplicationController
   include PreLoginParams
 
-  keep_params :answer, :only => [:create]
+  keep_params :answer, only: [:create]
 
-  load_and_authorize_resource :only => [:vote, :accept]
+  load_and_authorize_resource only: [:vote, :accept]
   load_and_authorize_resource :question
 
   def create
-    if current_user.answers.create(params[:answer].merge(:question => @question))
-      redirect_to @question, :notice => t('answer.flash.created')
+    if current_user.answers.create(params[:answer].merge(question: @question))
+      redirect_to @question, notice: t('answer.flash.created')
     else
       @answers = @question.answers_page(params[:page])
       render 'questions/show'

@@ -1,3 +1,3 @@
 %p Veuillez cliquer sur le lien suivant pour éditer votre offre d'emploi :
 %p
-  = link_to "Editer", edit_job_url({:token => @job.token}), :style => "color: #99090a;"
+  = link_to "Editer", edit_job_url(token: @job.token), style: "color: #99090a;"

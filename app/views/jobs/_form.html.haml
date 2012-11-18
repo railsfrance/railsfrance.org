@@ -1,10 +1,10 @@
-= simple_form_for @job , :html => {:multipart => true, :class => "jobForm"} do |f|
+= simple_form_for @job , html: { multipart: true, class: "jobForm"} do |f|
   %fieldset
     %legend= "Poster votre annonce"
     .jobFormLeft
-      = f.input :company, :autofocus => "autofocus"
-      = f.input :email, :label => "Email <span style='font-size:11px;'>(sera utilisé pour gérer votre annonce et vous faire contacter par un candidat)</span>".html_safe unless action_name == 'edit'
-      = f.input :url, :placeholder => "http://www.railsfrance.org"
+      = f.input :company, autofocus: "autofocus"
+      = f.input :email, label: "Email <span style='font-size:11px;'>(sera utilisé pour gérer votre annonce et vous faire contacter par un candidat)</span>".html_safe unless action_name == 'edit'
+      = f.input :url, placeholder: "http://www.railsfrance.org"
       #jobFormType
         %label
           Type de contrat
@@ -23,17 +23,17 @@
       = f.input :street
       = f.input :city
       = f.input :postal_code
-    = f.input :description, :as => :wysiwyg, :wrapper_html => { :class => "clear" }
-    %p.markdownLink La syntaxe #{link_to "Markdown", "http://github.github.com/github-flavored-markdown/", :target => "_blank", :id => "markdownHelp"} est supportée
+    = f.input :description, as: :wysiwyg, wrapper_html: { class: "clear" }
+    %p.markdownLink La syntaxe #{link_to "Markdown", "http://github.github.com/github-flavored-markdown/", target: "_blank", id: "markdownHelp"} est supportée
     .jobFormLeft
       %div
         %label
           Logo de votre entreprise
-          %span{:style => 'font-size:11px;'}
+          %span{style: 'font-size:11px;'}
             (sera redimensionné en 200x100px)
         %div
           Envoyer un fichier
-        = f.input :logo, :as => :file, :label => false
+        = f.input :logo, as: :file, label: false
       %div
         %label
           Ou renseigner une url

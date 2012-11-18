@@ -2,15 +2,15 @@ class QuestionsController < ApplicationController
   include HitView
   include PreLoginParams
 
-  autocomplete :tag, :name, :class_name => 'ActsAsTaggableOn::Tag'
+  autocomplete :tag, :name, class_name: 'ActsAsTaggableOn::Tag'
 
-  keep_params :question, :only => [:create]
+  keep_params :question, only: [:create]
 
-  load_params :question, :only => [:new]
-  load_params :answer, :only => [:show]
+  load_params :question, only: [:new]
+  load_params :answer, only: [:show]
 
-  load_and_authorize_resource :question, :only => [:show, :vote, :edit]
-  load_and_authorize_resource :through => :current_user, :only => [:create, :update]
+  load_and_authorize_resource :question, only: [:show, :vote, :edit]
+  load_and_authorize_resource through: :current_user, only: [:create, :update]
 
   hit_view
   respond_to :html, :atom
@@ -29,7 +29,7 @@ class QuestionsController < ApplicationController
 
   def create
     if @question.save
-      redirect_to @question, :notice => t('question.flash.created')
+      redirect_to @question, notice: t('question.flash.created')
     else
       render :new
     end
@@ -37,7 +37,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update_attributes params[:question]
-      redirect_to @question, :notice => t('question.flash.updated')
+      redirect_to @question, notice: t('question.flash.updated')
     else
       render :edit
     end

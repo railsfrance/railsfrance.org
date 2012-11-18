@@ -1,17 +1,17 @@
 !!! 5
-- ie_html :class => 'no-js', :lang => 'fr' do
+- ie_html class: 'no-js', lang: 'fr' do
   %head
-    %meta{:charset => "utf-8"}
-    = display_meta_tags :site => "Railsfrance.org", :reverse => true
+    %meta{charset: "utf-8"}
+    = display_meta_tags site: "Railsfrance.org", reverse: true
     - if @feeds
       - @feeds.each do |link, title|
-        = auto_discovery_link_tag(:atom, link, { :title => title })
+        = auto_discovery_link_tag(:atom, link, { title: title })
     = stylesheet_link_tag :application, media: :all
     = csrf_meta_tag
   %body
     #container
       = render "layouts/header"
-      #main{:role => "main"}
+      #main{role: "main"}
         = yield
         #addContentBug.center960
           Vous avez envie d'ajouter du contenu ? Vous avez trouvé une erreur ? Merci 

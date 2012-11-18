@@ -1,3 +1,3 @@
 %p Veuillez cliquer sur le lien suivant pour confirmer votre offre d'emploi :
 %p
-  = link_to "Confirmer", validate_job_url({:token => @job.token}), :style => "color: #99090a;"
+  = link_to "Confirmer", validate_job_url(token: @job.token), style: "color: #99090a;"

@@ -3,7 +3,7 @@ module QuestionsHelper
     title ||= column.titleize
     css_class = column == sort_column ? "sort #{sort_direction}" : 'sort'
     direction = column == sort_column && sort_direction == 'desc' ? 'asc' : 'desc'
-    link_to title, { :sort => column, :direction => direction }, { :class => css_class }
+    link_to title, { sort: column, direction: direction }, { class: css_class }
   end
 
   def pluralize_word(count, singular, plural = nil)
@@ -14,7 +14,7 @@ module QuestionsHelper
     content_tag :div do
       raw(
           tags.collect do |tag|
-            link_to(tag.name, questions_path(:tag => tag.name), :class => "questionTag")
+            link_to(tag.name, questions_path(tag: tag.name), class: "questionTag")
           end.join
           )
     end

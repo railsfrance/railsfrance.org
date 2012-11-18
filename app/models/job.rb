@@ -5,35 +5,35 @@ class Job < ActiveRecord::Base
   image_accessor :logo
   attr_accessor :contracts_error
 
-  friendly_id :title, :use => :slugged
+  friendly_id :title, use: :slugged
 
   validates_presence_of :company, :street, :city, :description, :postal_code
-  validates_format_of :url, :with => /^(#{URI::regexp(%w(http https))})$/, :allow_blank => true
-  validates :email, :presence => true, :format => {:with => Devise::email_regexp}
-  validates :title, :presence => true, :uniqueness => true, :length => { :maximum => 100 }
+  validates_format_of :url, with: /^(#{URI::regexp(%w(http https))})$/, allow_blank: true
+  validates :email, presence: true, format: {with: Devise::email_regexp}
+  validates :title, presence: true, uniqueness: true, length: { maximum: 100 }
   validate :validate_contracts
 
   paginates_per 10
 
-  state_machine :initial => :pending do
-    after_transition :pending => :confirmed do |job, trans|
+  state_machine initial: :pending do
+    after_transition pending: :confirmed do |job, trans|
       job.generate_token
     end
 
-    after_transition :confirmed => :activated do |job, trans|
+    after_transition confirmed: :activated do |job, trans|
       job.send :notify_observers, :after_activation
     end
 
     event :confirm do
-      transition :pending => :confirmed
+      transition pending: :confirmed
     end
 
     event :activate do
-      transition :confirmed => :activated
+      transition confirmed: :activated
     end
 
     event :soft_delete do
-      transition :activated => :soft_deleted
+      transition activated: :soft_deleted
     end
   end
 
