@@ -23,9 +23,9 @@
             = f.label :internship, "Stage"
             = f.input :internship, :as => :boolean, :label => false, :wrapper => false
           %li.shadow
-            = link_to "Déposer une offre", new_job_path, "data-skip-pjax" => true, :class => "navButton add"
+            = link_to "Déposer une offre", new_job_path, :class => "navButton add"
           %li
-            = link_to "RSS", jobs_url(:atom), "data-skip-pjax" => true, :class => "navButton rss"
+            = link_to "RSS", jobs_url(:atom), :class => "navButton rss"
   .theContent
     - if @jobs.empty?
       %p.noAnwser Aucune offre d'emploi pour le moment

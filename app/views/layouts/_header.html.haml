@@ -2,25 +2,25 @@
   %nav#primaryNav
     %ul
       %li
-        = link_to @meta_tags[:title], root_path, :id => "homeRailsFrance", "data-skip-pjax" => true
+        = link_to @meta_tags[:title], root_path, :id => "homeRailsFrance"
       %li
-        = link_to "QUESTIONS", questions_path, "data-skip-pjax" => true, :class => class_for_tab(:questions)
+        = link_to "QUESTIONS", questions_path, :class => class_for_tab(:questions)
       %li
-        = link_to "RESSOURCES", resources_path, "data-skip-pjax" => true, :class => class_for_tab(:resources)
+        = link_to "RESSOURCES", resources_path, :class => class_for_tab(:resources)
       %li
-        = link_to "EVENEMENTS", events_path, "data-skip-pjax" => true, :class => class_for_tab(:events)
+        = link_to "EVENEMENTS", events_path, :class => class_for_tab(:events)
       %li
-        = link_to "JOBS", jobs_path, "data-skip-pjax" => true, :class => class_for_tab(:jobs)
+        = link_to "JOBS", jobs_path,:class => class_for_tab(:jobs)
       %li
-        = link_to "MEMBRES", users_path, "data-skip-pjax" => true, :class => class_for_tab(:users)
+        = link_to "MEMBRES", users_path,:class => class_for_tab(:users)
       %li
-        = link_to "CARTE", map_index_path, "data-skip-pjax" => true, :class => class_for_tab(:map)
+        = link_to "CARTE", map_index_path, :class => class_for_tab(:map)
       - if user_signed_in?
         %li
-          = link_to "DECONNEXION", destroy_user_session_path, :method => :delete, "data-skip-pjax" => "true"
+          = link_to "DECONNEXION", destroy_user_session_path, :method => :delete
       %li
         - if user_signed_in?
-          = link_to "MON COMPTE", edit_user_registration_path, :class => "connectionButton connected", "data-skip-pjax" => true, :title => "Accès à votre profil Rails France"
+          = link_to "MON COMPTE", edit_user_registration_path, :class => "connectionButton connected", :title => "Accès à votre profil Rails France"
         - else
-          = link_to "CONNEXION", new_user_session_path, :class => "connectionButton", "data-skip-pjax" => true, :title => "Connexion à votre compte Rails France"
+          = link_to "CONNEXION", new_user_session_path, :class => "connectionButton", :title => "Connexion à votre compte Rails France"
 

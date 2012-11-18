@@ -1,4 +1,4 @@
-$(document).bind 'pageChanged', ->
+$ ->
   $('#Questionstags').isotope({
     sortBy : 'count'
     sortAscending : false
