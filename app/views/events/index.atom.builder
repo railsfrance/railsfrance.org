@@ -1,4 +1,4 @@
-atom_feed :language => 'fr' do |feed|
+atom_feed language: 'fr' do |feed|
   feed.title "RailsFrance » Evénéments"
   feed.updated @events.first.created_at
 
@@ -6,7 +6,7 @@ atom_feed :language => 'fr' do |feed|
     feed.entry(item) do |entry|
       entry.url event_url(item)
       entry.title item.title
-      entry.content :type => 'xhtml' do |html|
+      entry.content type: 'xhtml' do |html|
         html.p "Ville -- #{item.city}"
 	html.p "Lieu -- #{item.street}"
 	html.p "Date -- #{item.date.strftime("%d-%m-%Y à %H:%M")}"

@@ -9,9 +9,9 @@
     %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Retour aux événements", events_path, :class => "navButton back"
+          = link_to "Retour aux événements", events_path, class: "navButton back"
   .theContent
-    = simple_form_for @event, :html => { :class => "eventForm"} do |form|
+    = simple_form_for @event, html: { class: "eventForm"} do |form|
       %fieldset
         %legend Editez votre événement
-        = render 'form', :f => form
+        = render 'form', f: form

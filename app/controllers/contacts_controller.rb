@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
 
     if @contact_form.valid? && verify_recaptcha
       ContactMailer.contact(@contact_form).deliver
-      redirect_to :root, :notice => "Nous allons vous répondre dans les plus brefs délais !"
+      redirect_to :root, notice: "Nous allons vous répondre dans les plus brefs délais !"
     else
       flash.now[:error] = 'Veuillez remplir tous les champs'
       render :new

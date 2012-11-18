@@ -7,13 +7,13 @@
         MAP
   %nav#secondaryNav
     %div#secondaryNavContainer
-      %form{:id => "map_filters"}
+      %form#map_filters
         %ul
           - [[:jobs,"jobs"],[:users,"utilisateurs"],[:events,"événements"]].each do |filter|
             %li
               %label
                 = filter.second
-              %input{:type => 'checkbox', :name => filter.first, :id => "filter_#{filter.first}", :checked => true}
+              %input{type: 'checkbox', name: filter.first, id: "filter_#{filter.first}", checked: true}
   .theContent
     #theMap
-      %div{:id => "map_canvas"}
+      #map_canvas

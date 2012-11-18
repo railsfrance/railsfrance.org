@@ -1,4 +1,4 @@
-- set_meta_tags :title => "Offre d'emploi : #{@job.title}", :description => @job.description.truncate(150)
+- set_meta_tags title: "Offre d'emploi : #{@job.title}", description: @job.description.truncate(150)
 %section.worldMap
   %header#sectionHeader
     %hgroup.jobsHeader
@@ -10,15 +10,15 @@
     %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Retour aux annonces", jobs_path, :class => "navButton back"
+          = link_to "Retour aux annonces", jobs_path, class: "navButton back"
         - if params[:action] == "preview"
           %li
-            = link_to "Confirmer", confirm_jobs_path, :class => "navButton"
+            = link_to "Confirmer", confirm_jobs_path, class: "navButton"
   .theContent
     %article#theJob
-      = image_tag (@job.logo_uid.present? ? @job.logo.thumb('56x').url : image_path('jobs/job_default.png')), :width => 56
+      = image_tag (@job.logo_uid.present? ? @job.logo.thumb('56x').url : image_path('jobs/job_default.png')), width: 56
       #theJobDate
-        = l(@job.created_at, :format => :tiny)
+        = l(@job.created_at, format: :tiny)
       %hgroup
         %h1
           = @job.title
@@ -45,7 +45,7 @@
           = link_to @job.email, "mailto:#{@job.email}"
       - if params[:action] == "preview"
         .center
-          = link_to "Confirmer", confirm_jobs_path, :class => "button"
+          = link_to "Confirmer", confirm_jobs_path, class: "button"
         
       
     
