@@ -5,23 +5,23 @@
         CONNEXION
   %nav#secondaryNav
     %div#secondaryNavContainer
-      = render :partial => "devise/shared/links"
+      = render partial: "devise/shared/links"
   .theContent
-    = simple_form_for(resource, :url => registration_path(resource),:html => {:class => "woodForm normalForm"}) do |f|
+    = simple_form_for(resource, url: registration_path(resource),html: {class: "woodForm normalForm"}) do |f|
       %fieldset
         %legend Inscription
         #newUserLeft
-          = f.input :username, :autofocus => "autofocus"
+          = f.input :username, autofocus: "autofocus"
           = f.input :email
-          = f.input :github, :placeholder => "railsfrance"
-          = f.input :twitter, :placeholder => "railsfrance"
-          = f.input :website, :placeholder => "http://www.railsfrance.org"
+          = f.input :github, placeholder: "railsfrance"
+          = f.input :twitter, placeholder: "railsfrance"
+          = f.input :website, placeholder: "http://www.railsfrance.org"
         #newUserRight
           = f.input :street
           = f.input :city
-          = f.input :postal_code
-          = f.input :password, :required => true
-          = f.input :password_confirmation, :required => true
+          = f.input :postal_code, required: true
+          = f.input :password, required: true
+          = f.input :password_confirmation, required: true
           %br
           %br
           = f.button :submit, "S'enregister"

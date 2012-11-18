@@ -9,10 +9,10 @@
     %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Retour aux événements", events_path, :class => "navButton back"
+          = link_to "Retour aux événements", events_path, class: "navButton back"
         - if can? :update, @event
           %li
-            = link_to "Editer", edit_event_path(@event), :class => "navButton"
+            = link_to "Editer", edit_event_path(@event), class: "navButton"
   .theContent
     %article#theEvent
       %hgroup
@@ -22,18 +22,18 @@
         #theEventAddress
           Adresse :
           %span
-            = link_to "#{@event.street} #{@event.postal_code} #{@event.city}", "http://maps.google.com/maps?q=#{CGI::escape([@event.street, @event.postal_code, @event.city].compact.join(' '))}","data-skip-pjax" => true, :target => "_blank"
+            = link_to "#{@event.street} #{@event.postal_code} #{@event.city}", "http://maps.google.com/maps?q=#{CGI::escape([@event.street, @event.postal_code, @event.city].compact.join(' '))}", target: "_blank"
         #theEventDate
           Date :
           %span
-            = l(@event.date, :format => :tiny)
+            = l(@event.date, format: :tiny)
         #theEventHour
           Heure :
           %span
-            = l(@event.date, :format => :short)
+            = l(@event.date, format: :short)
     #theEventDescription.userMarkdown
       = markdown @event.description
       %p
-        = link_to @event.website, @event.website,"data-skip-pjax" => true, :target => "_blank"
+        = link_to @event.website, @event.website, target: "_blank"
    
       

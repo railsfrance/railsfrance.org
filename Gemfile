@@ -20,7 +20,6 @@ gem 'devise',				'~> 1.1'
 # Js
 gem 'jquery-rails',			'~> 1.0'
 gem 'therubyracer',			'~> 0.9'
-gem 'pjax_rails',			:git => 'git://github.com/Sush/pjax_rails.git'
 gem 'rails3-jquery-autocomplete',	'~> 1.0'
 
 # Geocoding solution
@@ -34,10 +33,6 @@ gem 'redcarpet',			'~> 1.17'
 gem 'albino',				'~> 1.3'
 gem 'nokogiri',				'~> 1.3'
 gem 'sanitize',				'~> 2.0'
-
-# Upload solution
-gem 'rack-cache', :require => 'rack/cache'
-gem 'dragonfly',			'~> 0.9'
 
 # Social
 gem 'twitter',				'~> 1.7'

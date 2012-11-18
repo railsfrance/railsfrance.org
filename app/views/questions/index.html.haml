@@ -1,5 +1,5 @@
 - feed("RailsFrance » Questions", questions_url(:atom))
-- set_meta_tags :title => "Toutes les questions à propos de Ruby On Rails"
+- set_meta_tags title: "Toutes les questions à propos de Ruby On Rails"
 %section.worldMap
   %header#sectionHeader
     %hgroup
@@ -19,11 +19,11 @@
         %li.shadow
           = sortable "Réponses", "answers_count"
         %li.shadow
-          = link_to "Poser une question", new_question_path, :class => "navButton add"
+          = link_to "Poser une question", new_question_path, class: "navButton add"
         %li
-          = link_to "Tags", tags_path, :class => "navButton add"
+          = link_to "Tags", tags_path, class: "navButton add"
         %li
-          = link_to "RSS", questions_url(:atom), "data-skip-pjax" => true, :class => "navButton rss"
+          = link_to "RSS", questions_url(:atom), class: "navButton rss"
   .theContent
     - if @questions.empty?
       %p.noAnwser Aucune question pour le moment

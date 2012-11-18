@@ -14,12 +14,12 @@
       %span= pluralize_word(question.answers_count, "réponse")
   %article
     %h2.theContentListTitle
-      = link_to truncate(question.title, :length => 50), question, :class => "theContentListTitle"
+      = link_to truncate(question.title, length: 50), question, class: "theContentListTitle"
     .questionDescription
       = truncate(sanitize(question.description), length: 200).html_safe
     = tag_box question.tags
     .postHourUser
       %span
         Postée il y a #{distance_of_time_in_words_to_now(question.created_at)}
-      par #{link_to question.user_username, user_path(question.user), "data-skip-pjax" => true}
+      par #{link_to question.user_username, user_path(question.user)}
       = image_tag question.user.gravatar_url

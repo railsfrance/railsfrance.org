@@ -7,13 +7,13 @@
         de passe oublie
   %nav#secondaryNav
     %div#secondaryNavContainer
-      = render :partial => "devise/shared/links"
+      = render partial: "devise/shared/links"
   .theContent
-    = simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:class => "woodForm smallForm", :method => :put }) do |f|
+    = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: "woodForm smallForm", method: :put }) do |f|
       %fieldset
         %legend Changement de votre mot de passe
-        = f.input :reset_password_token, :as => :hidden
-        = f.input :password, :autofocus => "autofocus"
+        = f.input :reset_password_token, as: :hidden
+        = f.input :password, autofocus: "autofocus"
         = f.input :password_confirmation
         = f.button :submit, "Changer mon mot de passe"
 

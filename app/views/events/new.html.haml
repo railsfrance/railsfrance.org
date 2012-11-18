@@ -1,4 +1,4 @@
-- set_meta_tags :title => "Postez votre événement!"
+- set_meta_tags title: "Postez votre événement!"
 %section.worldMap
   %header#sectionHeader
     %hgroup.eventHeader
@@ -10,10 +10,10 @@
     %div#secondaryNavContainer
       %ul
         %li
-          = link_to "Retour aux événements", events_path, :class => "navButton back"
+          = link_to "Retour aux événements", events_path, class: "navButton back"
   .theContent
-    = simple_form_for @event , :url => events_path, :html => { :class => "eventForm", :method => :post } do |form|
+    = simple_form_for @event , url: events_path, html: { class: "eventForm", method: :post } do |form|
       %fieldset
         %legend Créer votre événement
-        = render 'form', :f => form
+        = render 'form', f: form
         = render 'markdown/markdown'

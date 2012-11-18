@@ -1,4 +1,4 @@
-- set_meta_tags :title => "Tous les événements à venir"
+- set_meta_tags title: "Tous les événements à venir"
 - feed("RailsFrance » Evénéments", events_url(:atom))
 %section.worldMap
   %header#sectionHeader
@@ -15,9 +15,9 @@
         = @presenter.incoming_events
       %ul
         %li
-          = link_to "Créer un événement", new_event_path, :id => "addEvent", :class => "navButton add"
+          = link_to "Créer un événement", new_event_path, id: "addEvent", class: "navButton add"
         %li
-          = link_to "RSS", events_url(:atom), "data-skip-pjax" => true, :class => "navButton rss"
+          = link_to "RSS", events_url(:atom), class: "navButton rss"
   .theContent
     %ul.eventList.theContentList
       = render @events

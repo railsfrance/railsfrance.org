@@ -15,7 +15,7 @@ class EventsControllerTest < ActionController::TestCase
   end
 
   test 'show' do
-    get :show, :id => @event.id
+    get :show, id: @event.id
     assert_response :success
     assert_template 'events/show'
   end
@@ -30,7 +30,7 @@ class EventsControllerTest < ActionController::TestCase
     new_event = Factory.build(:event)
     sign_in new_event.user
     assert_difference('Event.count') do
-      post :create, :event => new_event.attributes
+      post :create, event: new_event.attributes
     end
     assert_redirected_to event_path assigns(:event)
     assert_equal I18n.t('event.flash.created'), flash[:notice]
@@ -38,21 +38,21 @@ class EventsControllerTest < ActionController::TestCase
 
   test 'should edit own event' do
     sign_in @event.user
-    get :edit, :id => @event.id
+    get :edit, id: @event.id
     assert_response :success
     assert_template 'events/edit'
   end
 
   test 'should not edit other one event' do
     sign_in Factory.create :user
-    assert_raise(CanCan::AccessDenied) { get :edit, :id => @event.id }
+    assert_raise(CanCan::AccessDenied) { get :edit, id: @event.id }
   end
 
   test 'update' do
     sign_in @event.user
     @event.title = 'test'
     @event.description = 'test'
-    put :update, :id => @event.id
+    put :update, id: @event.id
     assert_redirected_to @event
     assert_equal I18n.t('event.flash.updated'), flash[:notice]
   end

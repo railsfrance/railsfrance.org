@@ -7,24 +7,24 @@
         JOBS
   %nav#secondaryNav
     %div#secondaryNavContainer
-      = simple_form_for @search, :url => jobs_path, :html => {:id => 'search',:method => :get} do |f|
+      = simple_form_for @search, url: jobs_path, html: { id: 'search', method: :get} do |f|
         %ul
           %li
             = f.label :cdi
-            = f.input :cdi, :as => :boolean, :label => false, :wrapper => false
+            = f.input :cdi, as: :boolean, label: false, wrapper: false
           %li.shadow
             = f.label :cdd
-            = f.input :cdd, :as => :boolean, :label => false, :wrapper => false
+            = f.input :cdd, as: :boolean, label: false, wrapper: false
           %li.shadow
             = f.label :freelance
-            = f.input :freelance, :as => :boolean, :label => false, :wrapper => false
+            = f.input :freelance, as: :boolean, label: false, wrapper: false
           %li.shadow
             = f.label :internship, "Stage"
-            = f.input :internship, :as => :boolean, :label => false, :wrapper => false
+            = f.input :internship, as: :boolean, label: false, wrapper: false
           %li.shadow
-            = link_to "Déposer une offre", new_job_path, "data-skip-pjax" => true, :class => "navButton add"
+            = link_to "Déposer une offre", new_job_path, class: "navButton add"
           %li
-            = link_to "RSS", jobs_url(:atom), "data-skip-pjax" => true, :class => "navButton rss"
+            = link_to "RSS", jobs_url(:atom), class: "navButton rss"
   .theContent
     - if @jobs.empty?
       %p.noAnwser Aucune offre d'emploi pour le moment

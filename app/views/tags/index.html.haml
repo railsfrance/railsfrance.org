@@ -11,9 +11,9 @@
         Trier par
       %ul
         %li.shadow
-          = link_to "Occurences", "#count", { :id => "tagCount", "data-skip-pjax" => "true", :class => "sort" }
+          = link_to "Occurences", "#count", { id: "tagCount", class: "sort" }
         %li.shadow
-          = link_to "Nom", "#name", { :id => "tagName", "data-skip-pjax" => "true", :class => "sort" }
+          = link_to "Nom", "#name", { id: "tagName", class: "sort" }
   .theContent
     #Questionstags
       = colorize_tags @tags

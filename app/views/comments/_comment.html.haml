@@ -6,4 +6,4 @@
       Posté il y a #{distance_of_time_in_words_to_now(comment.created_at)}
       par
     = comment.user_username
-    = image_tag comment.user_gravatar_url, :alt => comment.user_username, :title => comment.user_username, :class => "attendees"
+    = image_tag comment.user_gravatar_url, alt: comment.user_username, title: comment.user_username, class: "attendees"

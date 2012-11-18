@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  load_and_authorize_resource :only => [:show]
+  load_and_authorize_resource only: [:show]
 
   def index
     @presenter = Users::IndexPresenter.new

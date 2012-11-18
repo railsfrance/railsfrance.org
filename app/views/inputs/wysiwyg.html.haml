@@ -1,10 +1,10 @@
-%div{:id => "wysiwyg_for_#{name}", :class => "userMarkdown"}
-  %div{:id => "wysiwyg_tabs_for_#{name}", :class => "wysiwyg"}
+%div{id: "wysiwyg_for_#{name}", class: "userMarkdown"}
+  %div{id: "wysiwyg_tabs_for_#{name}", class: "wysiwyg"}
     %ul
-      %li{:id => "wysiwyg_write_tab_for_#{name}"}
-        = link_to "Ecrire", "#write_#{name}", "data-skip-pjax" => true
-      %li{:id => "wysiwyg_preview_tab_for_#{name}"}
-        = link_to "Prévisualiser", "#preview_#{name}", "data-skip-pjax" => true, :class => "wysiwyg_preview_tab"
-    %div{:id => "write_#{name}", :class => "wysiwyg_write"}
-      = builder.input name, :label => false, :wrapper_html => false
-    %div{:id => "preview_#{name}", :class => "wysiwyg_preview"}
+      %li{id: "wysiwyg_write_tab_for_#{name}"}
+        = link_to "Ecrire", "#write_#{name}"
+      %li{id: "wysiwyg_preview_tab_for_#{name}"}
+        = link_to "Prévisualiser", "#preview_#{name}", class: "wysiwyg_preview_tab"
+    %div{id: "write_#{name}", class: "wysiwyg_write"}
+      = builder.input name, label: false, wrapper_html: false
+    %div{id: "preview_#{name}", class: "wysiwyg_preview"}

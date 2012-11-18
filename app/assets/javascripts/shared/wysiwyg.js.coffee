@@ -1,4 +1,4 @@
-$(document).bind 'pageChanged', ->
+$ ->
   $('.wysiwyg').tabs({ select: (event, ui) ->
     self = this
     if ui.tab.className == 'wysiwyg_preview_tab'
