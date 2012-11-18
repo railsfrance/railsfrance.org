@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/Sush/pjax_rails.git
-  revision: 749aa53ccabc6d69dec992648b9afd60d75b6a37
-  specs:
-    pjax_rails (0.1.5)
-      jquery-rails
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -283,7 +276,6 @@ DEPENDENCIES
   minitest
   nokogiri (~> 1.3)
   pg (~> 0.11)
-  pjax_rails!
   pry-rails
   rack-cache
   rack-gauges

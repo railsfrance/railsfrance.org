@@ -11,7 +11,7 @@
     %div#secondaryNavContainer
       %ul
         %li
-          =link_to "RSS", question_url(@question, :atom), "data-skip-pjax" => true, :class => "navButton rss", :target => "_blank"
+          =link_to "RSS", question_url(@question, :atom), :class => "navButton rss", :target => "_blank"
         %li
           = link_to "Retour aux questions", questions_path, :class => "navButton back"
         - if can? :update, @question
@@ -21,10 +21,10 @@
     %aside.votesContainer
       - if user_signed_in?
         - if can? :vote, @question
-          = link_to "Vote up", vote_question_path(:vote => "up"), :class => "voteUp", "data-skip-pjax" => "true"
+          = link_to "Vote up", vote_question_path(:vote => "up"), :class => "voteUp"
           .votesNumber
             #{@question.votes}
-          = link_to "Vote down", vote_question_path(:vote => "down"), :class => "voteDown", "data-skip-pjax" => "true"
+          = link_to "Vote down", vote_question_path(:vote => "down"), :class => "voteDown"
         -else
           = link_to "Vote up", "#", :class => "voteUp disabled"
           .votesNumber
@@ -61,7 +61,7 @@
           = paginate @answers
       = simple_form_for @answer, :url => question_answers_path(@question), :html => { :method => :post, :class => "answerForm" } do |f|
         = f.input :description, :as => :wysiwyg, :required => false
-        %p.markdownLink La syntaxe #{link_to "Markdown", "http://github.github.com/github-flavored-markdown/","data-skip-pjax" => "true", :target => "_blank", :id => "markdownHelp"} est supportée
+        %p.markdownLink La syntaxe #{link_to "Markdown", "http://github.github.com/github-flavored-markdown/", :target => "_blank", :id => "markdownHelp"} est supportée
         = f.button :submit
       = render 'markdown/markdown'
     
