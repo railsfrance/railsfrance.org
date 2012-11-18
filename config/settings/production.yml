@@ -2,12 +2,12 @@ app:
   secret_token: <%= Dotcloud.env["SECRET_TOKEN"] %>
   cookie_key: "_rails_france_session"
 devise:
-  pepper: <%= ENV["PEPPER"] %>
+  pepper: <%= Dotcloud.env["PEPPER"] %>
 mailer:
   host: "railsfrance.org"
   from: "RailsFrance"
 aws_ses:
-  access_key_id: <%= ENV["ACCESS_KEY_ID"] %>
+  access_key_id: <%= Dotcloud.env["ACCESS_KEY_ID"] %>
   secret_access_key: <%= Dotcloud.env["SECRET_ACCESS_KEY"] %>
 redis:
   host: <%= Dotcloud.env["DOTCLOUD_REDIS_REDIS_HOST"] %>
