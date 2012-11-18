@@ -1,14 +1,18 @@
-cd /home/dotcloud/current && bundle exec whenever -c && \
-echo "Symlink creation" && \
-ln -s /home/dotcloud/shared/config/production.yml /home/dotcloud/current/config/settings/production.yml && \
-ln -s /home/dotcloud/shared/config/exceptional.yml /home/dotcloud/current/config/exceptional.yml && \
-ln -s /home/dotcloud/shared/config/database.yml /home/dotcloud/current/config/database.yml && \
-echo "Cache dir creation" && \
-mkdir -p /home/dotcloud/current/tmp && \
-mkdir -p /home/dotcloud/shared/tmp/dragonfly/cache/{meta,body} && \
-ln -nfs /home/dotcloud/shared/tmp/dragonfly /home/dotcloud/current/tmp/dragonfly && \
-ln -nfs /home/dotcloud/shared/public/system /home/dotcloud/current/public/system && \
-echo "Rake" && \
-cd /home/dotcloud/current && bundle exec rake db:migrate  && \
-cd /home/dotcloud/current && bundle exec rake assets:precompile && \
-cd /home/dotcloud/current && bundle exec whenever -i
+#! /usr/bin/env ruby
+
+require 'yaml'
+environment = YAML.load_file('../environment.yml')
+database = YAML.load_file('config/database.yml')
+prod_db = database['production']
+prod_db['username'] = environment['DOTCLOUD_DB_SQL_LOGIN']
+prod_db['password'] = environment['DOTCLOUD_DB_SQL_PASSWORD']
+prod_db['host'] = environment['DOTCLOUD_DB_SQL_HOST']
+prod_db['port'] = Integer(environment['DOTCLOUD_DB_SQL_PORT'])
+prod_db['adapter'] = 'postgresql'
+prod_db['database'] = 'rails_france_production'
+
+File.open( 'config/database.yml', 'w' ) do |out|
+    YAML.dump( database, out )
+end
+
+`cd /home/dotcloud/current && bundle exec whenever -c && cd /home/dotcloud/current && bundle exec rake db:migrate  && cd /home/dotcloud/current && bundle exec whenever -i`
