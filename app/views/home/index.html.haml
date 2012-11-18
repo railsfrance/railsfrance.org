@@ -44,7 +44,7 @@
           %li
             %article
               %h3
-                = link_to truncate(event.title, length: 35), event_path(event), "data-skip-pjax" => true
+                = link_to truncate(event.title, length: 42), event_path(event), "data-skip-pjax" => true
               %p
                 = truncate(sanitize(event.description), length: 100).html_safe
       = link_to "Voir tous les évènements", events_path, "data-skip-pjax" => true, :class => "smallButton"
@@ -56,9 +56,9 @@
           %li
             %article
               %h3
-                = link_to truncate(job.company, length: 35), job_path(job), "data-skip-pjax" => true
+                = link_to truncate(job.title, length: 42), job_path(job), "data-skip-pjax" => true
               %p
-                = truncate(sanitize(job.to_s), length: 100).html_safe
+                = truncate(sanitize("Chez #{job.company}, à #{job.city}"), length: 100).html_safe
       = link_to "Voir tous les Jobs", jobs_path, "data-skip-pjax" => true, :class => "smallButton"
     #homeTweets.homeContent
       %h2

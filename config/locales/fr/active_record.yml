@@ -16,7 +16,7 @@ fr:
         password_confirmation: "Confirmation mot de passe"
         current_password: "Mot de passe actuel"
       job:
-        company: "Nom de votre entreprise"
+        company: "Entreprise"
         title: "Intitulé du poste"
         street: "Adresse"
         city: "Ville"

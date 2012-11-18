@@ -4,15 +4,15 @@ fr:
   messages:
     form_not_valid: "Veuillez remplir tous les champs requis"
     job_confirmation: "Un email vient de vous être envoyé. Merci de cliquer sur le lien de confirmation afin de mettre l'annonce en ligne."
-    job_validated: "Votre annonce est desormais en ligne !"
+    job_validated: "Votre annonce est désormais en ligne !"
     job_updated: "Votre annonce a été mise à jour !"
     job_not_updated: "Une erreur est survenue, votre annonce n'a pas été mise à jour !"
     job_unknown: "Ma joie de donner est morte à force de donner."
     job_not_activated: "Cette offre d'emploi n'a pas encore été validée !"
     job_soft_deleted: "Offre d'emploi supprimée !"
     job_not_soft_deleted: "Une erreur est survenue lors de la tentative de suppresion !"
-    destroyed: "Entrée supprimé !"
-    not_destroyed: "Une erreur est survenue, la suppression a échouée"
+    destroyed: "Entrée supprimée !"
+    not_destroyed: "Une erreur est survenue, la suppression a échoué !"
 
   # Question
   question:
@@ -22,7 +22,7 @@ fr:
 
   # Vote
   vote:
-    flash: 
+    flash:
       voted: "Votre vote a été pris en compte"
 
   # Answer
@@ -36,10 +36,10 @@ fr:
     flash:
       created: "Votre événement a été créé"
       updated: "Votre événement a été edité"
-      attended: "Vous êtes inscris a cet evenement"
-      unattended: "Vous êtes desinscris de cet evenement"
+      attended: "Vous êtes inscrit à cet événement"
+      unattended: "Vous êtes désinscrit de cet événement"
     error:
-      date: "La date doit être supérieure à aujourd'hui" 
+      date: "La date doit être supérieure à aujourd'hui"
 
   # Comment
   comment:
@@ -47,7 +47,7 @@ fr:
       created: "Votre commentaire a été créé"
 
   # Kaminari
-  views: 
+  views:
     pagination:
       previous: "<"
       first: "<<"
