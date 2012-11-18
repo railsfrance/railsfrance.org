@@ -19,7 +19,7 @@
         #newUserRight
           = f.input :street
           = f.input :city
-          = f.input :postal_code
+          = f.input :postal_code, required: true
           = f.input :password, required: true
           = f.input :password_confirmation, required: true
           %br
