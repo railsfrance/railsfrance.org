@@ -1,4 +1,4 @@
-$(document).bind 'pageChanged', ->
+$ ->
   $('#dialogMarkdownHelp').dialog
     autoOpen: false
     show: "blind"

@@ -1,4 +1,4 @@
-$(document).bind 'pageChanged', ->
+$ ->
    $('#event_date').datetimepicker
     showMinute: true
     dateFormat: 'dd-mm-yy'

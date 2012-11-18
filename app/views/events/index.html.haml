@@ -17,7 +17,7 @@
         %li
           = link_to "Créer un événement", new_event_path, :id => "addEvent", :class => "navButton add"
         %li
-          = link_to "RSS", events_url(:atom), "data-skip-pjax" => true, :class => "navButton rss"
+          = link_to "RSS", events_url(:atom), :class => "navButton rss"
   .theContent
     %ul.eventList.theContentList
       = render @events

@@ -20,7 +20,6 @@ gem 'devise',				'~> 1.1'
 # Js
 gem 'jquery-rails',			'~> 1.0'
 gem 'therubyracer',			'~> 0.9'
-gem 'pjax_rails',			:git => 'git://github.com/Sush/pjax_rails.git'
 gem 'rails3-jquery-autocomplete',	'~> 1.0'
 
 # Geocoding solution

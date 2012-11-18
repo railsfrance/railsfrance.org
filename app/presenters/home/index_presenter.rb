@@ -1,6 +1,6 @@
 class Home::IndexPresenter
   def recent_tweet
-    CacheTweet.last_tweets(3, Settings.twitter.account).each { |tweet| tweet['text'] = tweet['text'].gsub(/http[s]?:\/\/(\S)*/, '<a href="\0" target="_blank" data-skip-pjax>\0</a>').html_safe }
+    CacheTweet.last_tweets(3, Settings.twitter.account).each { |tweet| tweet['text'] = tweet['text'].gsub(/http[s]?:\/\/(\S)*/, '<a href="\0" target="_blank">\0</a>').html_safe }
   end
 
   def recent_questions
