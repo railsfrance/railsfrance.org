@@ -34,10 +34,6 @@ gem 'albino',				'~> 1.3'
 gem 'nokogiri',				'~> 1.3'
 gem 'sanitize',				'~> 2.0'
 
-# Upload solution
-gem 'rack-cache', :require => 'rack/cache'
-gem 'dragonfly',			'~> 0.9'
-
 # Social
 gem 'twitter',				'~> 1.7'
 gem 'gravtastic',			'~> 3.2'

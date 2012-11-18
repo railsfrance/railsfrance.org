@@ -2,7 +2,6 @@ class Job < ActiveRecord::Base
   extend FriendlyId
   include Addresseable
 
-  image_accessor :logo
   attr_accessor :contracts_error
 
   friendly_id :title, use: :slugged
@@ -21,7 +20,8 @@ class Job < ActiveRecord::Base
     end
 
     after_transition confirmed: :activated do |job, trans|
-      job.send :notify_observers, :after_activation
+
+      job.send:notify_observers, :after_activation
     end
 
     event :confirm do
