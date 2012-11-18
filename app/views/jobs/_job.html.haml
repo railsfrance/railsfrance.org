@@ -5,7 +5,7 @@
   %article
     = image_tag (job.logo_uid.present? ? job.logo.thumb('56x').url : image_path('jobs/job_default.png')), :width => 56
     %h2.theContentListTitle
-      = link_to job.title, job_path(job), :class => "theContentListTitle"
+      = link_to job.to_s, job_path(job), :class => "theContentListTitle"
     .jobDescription
       = truncate(sanitize(job.description), length: 200).html_safe
     .informationsBlock

@@ -25,7 +25,6 @@ describe Job do
     it { should validate_format_of(:email).with('p@o.fr') }
     #title
     it { should validate_presence_of(:title) }
-    it { should validate_uniqueness_of(:title) }
     it { should ensure_length_of(:title).is_at_most(100) }
 
     it "should validate #validate_contracts" do
@@ -75,7 +74,7 @@ describe Job do
 
   describe '#to_s' do
     it "should return title" do
-      job.to_s.should eql job.title
+      job.to_s.should eql "#{job.company} - #{job.title}"
     end
   end
 
