@@ -5,7 +5,7 @@ devise:
   pepper: <%= Dotcloud.env["PEPPER"] %>
 mailer:
   host: "railsfrance.org"
-  from: "RailsFrance"
+  from: "railsfrance.org@gmail.com"
 aws_ses:
   access_key_id: <%= Dotcloud.env["ACCESS_KEY_ID"] %>
   secret_access_key: <%= Dotcloud.env["SECRET_ACCESS_KEY"] %>
