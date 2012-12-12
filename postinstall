@@ -1,18 +1,55 @@
-#! /usr/bin/env ruby
-
+#!/usr/bin/env ruby
 require 'yaml'
-environment = YAML.load_file('../environment.yml')
-database = YAML.load_file('config/database.yml')
-prod_db = database['production']
-prod_db['username'] = environment['DOTCLOUD_DB_SQL_LOGIN']
-prod_db['password'] = environment['DOTCLOUD_DB_SQL_PASSWORD']
-prod_db['host'] = environment['DOTCLOUD_DB_SQL_HOST']
-prod_db['port'] = Integer(environment['DOTCLOUD_DB_SQL_PORT'])
-prod_db['adapter'] = 'postgresql'
-prod_db['database'] = 'rails_france_production'
 
-File.open( 'config/database.yml', 'w' ) do |out|
-    YAML.dump( database, out )
+DB_ADAPTER = "postgresql"
+DATABASE = "rails_france_production"
+ENCODING = 'utf8'
+TIMEOUT = 5000
+POOL = 5
+
+def load_dotcloud_env
+  YAML.load(IO.read('/home/dotcloud/environment.yml'))
 end
 
-`cd /home/dotcloud/current && bundle exec whenever -c && cd /home/dotcloud/current && bundle exec rake db:migrate  && cd /home/dotcloud/current && bundle exec whenever -i`
+def write_to_file(file, data)
+  File.open(file, 'w') do |file|
+    file.write data
+  end
+end
+
+def overwrite_database_file
+  env = load_dotcloud_env
+  database = {
+    'production' => {
+      'adapter' => DB_ADAPTER,
+      'database' => DATABASE,
+      'host' => env['DOTCLOUD_DB_SQL_HOST'],
+      'port' => env['DOTCLOUD_DB_SQL_PORT'].to_i,
+      'username' => env['DOTCLOUD_DB_SQL_LOGIN'],
+      'password' => env['DOTCLOUD_DB_SQL_PASSWORD'],
+      'encoding' => ENCODING,
+      'timeout' => TIMEOUT,
+      'pool' => POOL
+    }
+  }
+
+  write_to_file('config/database.yml', database.to_yaml)
+end
+
+def create_exceptional_file
+  env = load_dotcloud_env
+  exceptional = {
+    'api-key' => env['EXCEPTIONAL_API_KEY']
+  }
+
+  write_to_file('config/exceptional.yml', exceptional.to_yaml)
+end
+
+puts '=== Start to overwrite database.yml ==='
+overwrite_database_file
+puts '=== Finished overwriting! ==='
+puts '=== Creating exceptional.yml ==='
+create_exceptional_file
+puts '=== Finished exceptional.yml ==='
+
+`cd /home/dotcloud/current && bundle exec whenever -c && cd /home/dotcloud/current && bundle exec rake db:migrate  && cd /home/dotcloud/current && bundle exec whenever -i && cd /home/dotcloud/current && bundle exec rake assets:precompile`
