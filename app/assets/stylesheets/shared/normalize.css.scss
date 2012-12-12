@@ -57,9 +57,6 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 a { 
   color: #00e;
   text-decoration:none;
-  &:visited{
-    color: #551a8b;
-  }
   &:hover{
     color: #551a8b;
   }
