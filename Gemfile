@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.2.9'
+gem 'rails', '~> 3.2.11'
 
 gem 'pg', '~> 0.11'
 gem 'simple_form', '~> 1.5'
