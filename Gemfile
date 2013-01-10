@@ -35,7 +35,7 @@ gem 'nokogiri',				'~> 1.3'
 gem 'sanitize',				'~> 2.0'
 
 # Social
-gem 'twitter',				'~> 1.7'
+gem 'twitter',				'~> 4.4'
 gem 'gravtastic',			'~> 3.2'
 
 # SEO

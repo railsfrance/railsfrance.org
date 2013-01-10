@@ -2,6 +2,7 @@ class CacheTweet
   def self.last_tweets(nb, user)
     key = "Twitter##{user}"
     last_tweets = $redis.get(key)
+
     if last_tweets.nil?
       begin
         last_tweets = Twitter.user_timeline(user)[0..nb].inject([]) do |container, object|
