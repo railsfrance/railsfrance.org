@@ -130,16 +130,16 @@ describe JobsController do
 
   describe "#validate" do
     context "with a valid job" do
-      let(:job) { Factory(:job, state: 'confirmed', token: 'my_secure_token') }
+      let!(:job) { Factory(:job, state: 'confirmed', token: 'my_secure_token') }
       let(:mail) { double('contact_mailer').as_null_object }
 
       it "should activate the job" do
         ContactMailer.should_receive(:valid_job)
           .and_return(mail)
 
-        JobObserver.any_instance
-          .should_receive(:after_activation)
-          .with(job)
+        Job.any_instance
+          .should_receive(:notify_observers) {|record| record.id.should eql(job.id) }
+          .with(:after_activation)
           .and_return
 
         visit validate_job_path(token: job.token)
