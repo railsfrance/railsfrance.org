@@ -4,7 +4,7 @@ class EventsFlowTest < ActionController::IntegrationTest
   include Capybara::DSL
 
   test 'create event not signed in' do
-    event = Factory.build(:event)
+    event = FactoryGirl.build(:event)
     visit events_path
     click_on 'addEvent'
     fill_in 'event_title', with: event.title
@@ -15,7 +15,7 @@ class EventsFlowTest < ActionController::IntegrationTest
     fill_in 'event_date', with: event.date
     page.find('.button').click
     assert current_path == new_user_session_path
-    user = Factory.create :user
+    user = FactoryGirl.create :user
     fill_in 'user_username', with: user.username
     fill_in 'user_password', with: user.password
     page.find('.button').click

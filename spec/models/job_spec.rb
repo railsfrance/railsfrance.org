@@ -54,7 +54,7 @@ describe Job do
     end
 
     context "activated transition" do
-      let(:job) { Factory(:job, state: 'confirmed') }
+      let(:job) { FactoryGirl.create(:job, state: 'confirmed') }
 
       it "should allow transition from :confirmed to :activated and call Job#notify_observers with :after_activation" do
         job.should_receive(:notify_observers).with(:after_activation)
@@ -64,7 +64,7 @@ describe Job do
     end
 
     context "soft_deleted transition" do
-      let!(:job) { Factory(:job, state: 'activated') }
+      let!(:job) { FactoryGirl.create(:job, state: 'activated') }
 
       it "should allow transition from :activated to :soft_deleted" do
         job.soft_delete

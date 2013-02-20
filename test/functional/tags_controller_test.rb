@@ -5,7 +5,7 @@ class TagsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
-    @question = Factory.create :question
+    @question = FactoryGirl.create :question
   end
 
   test 'index' do

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class QuestionTest < ActiveSupport::TestCase
   setup do
-    @question = Factory.build :question
+    @question = FactoryGirl.build :question
   end
 
   test 'should be valid' do
@@ -27,12 +27,12 @@ class QuestionTest < ActiveSupport::TestCase
   end
 
   test 'should count up vote' do
-    user = Factory.create :user
+    user = FactoryGirl.create :user
     assert @question.vote(user, 'up')
   end
 
   test 'should count down vote' do
-    user = Factory.create :user
+    user = FactoryGirl.create :user
     assert @question.vote(user, 'down')
   end
 
@@ -41,7 +41,7 @@ class QuestionTest < ActiveSupport::TestCase
   end
 
   test 'should not count vote if user already voted' do
-    user = Factory.create :user
+    user = FactoryGirl.create :user
     @question.vote(user, 'up')
     assert !@question.voteable_by?(@question.user)
   end

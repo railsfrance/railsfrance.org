@@ -2,7 +2,7 @@ require 'test_helper'
 
 class EventTest < ActiveSupport::TestCase
   setup do
-    @event = Factory.build :event
+    @event = FactoryGirl.build :event
   end
 
   test 'should be valid' do

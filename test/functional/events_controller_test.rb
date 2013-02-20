@@ -5,7 +5,7 @@ class EventsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
-    @event = Factory.create :event
+    @event = FactoryGirl.create :event
   end
 
   test 'index' do
@@ -27,7 +27,7 @@ class EventsControllerTest < ActionController::TestCase
   end
 
   test 'create' do
-    new_event = Factory.build(:event)
+    new_event = FactoryGirl.build(:event)
     sign_in new_event.user
     assert_difference('Event.count') do
       post :create, event: new_event.attributes
@@ -44,7 +44,7 @@ class EventsControllerTest < ActionController::TestCase
   end
 
   test 'should not edit other one event' do
-    sign_in Factory.create :user
+    sign_in FactoryGirl.create :user
     assert_raise(CanCan::AccessDenied) { get :edit, id: @event.id }
   end
 

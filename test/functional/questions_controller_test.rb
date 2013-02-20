@@ -5,7 +5,7 @@ class QuestionsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
-    @question = Factory.create :question
+    @question = FactoryGirl.create :question
   end
 
   test 'index' do
@@ -33,7 +33,7 @@ class QuestionsControllerTest < ActionController::TestCase
   end
 
   test 'create' do
-    new_question = Factory.build(:question)
+    new_question = FactoryGirl.build(:question)
     sign_in new_question.user
     assert_difference('Question.count') do
       post :create, question: new_question.attributes
@@ -50,7 +50,7 @@ class QuestionsControllerTest < ActionController::TestCase
   end
 
   test 'should not edit other one question' do
-    sign_in Factory.create :user
+    sign_in FactoryGirl.create :user
     assert_raise(CanCan::AccessDenied) { get :edit, id: @question.id }
   end
 
@@ -64,7 +64,7 @@ class QuestionsControllerTest < ActionController::TestCase
   end
 
   test 'should vote up question' do
-    user = Factory.create :user
+    user = FactoryGirl.create :user
     sign_in user
     get :vote, id: @question.id, vote: 'up'
     assert_redirected_to @question
@@ -79,7 +79,7 @@ class QuestionsControllerTest < ActionController::TestCase
   end
 
   test 'should vote down question' do
-    user = Factory.create :user
+    user = FactoryGirl.create :user
     sign_in user
     get :vote, id: @question.id, vote: 'down'
     assert_redirected_to @question

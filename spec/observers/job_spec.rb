@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe JobObserver do
-  let(:job) { Factory(:job) }
+  let(:job) { FactoryGirl.create(:job) }
   let(:observer) { JobObserver.send(:new) }
 
   describe '#after_activation' do

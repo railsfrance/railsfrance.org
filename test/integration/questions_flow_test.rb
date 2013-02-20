@@ -15,7 +15,7 @@ class QuestionsFlowTest < ActionController::IntegrationTest
   end
 
   test 'create question not signed in' do
-    question = Factory.build(:question, user: nil)
+    question = FactoryGirl.build(:question, user: nil)
     visit questions_path
     click_on 'Poser une question'
     assert current_path == new_question_path
@@ -23,7 +23,7 @@ class QuestionsFlowTest < ActionController::IntegrationTest
     fill_in 'question_description', with: question.description
     page.find('.button').click
     assert current_path == new_user_session_path
-    user = Factory.create :user
+    user = FactoryGirl.create :user
     fill_in 'user_username', with: user.username
     fill_in 'user_password', with: user.password
     page.find('.button').click
@@ -34,7 +34,7 @@ class QuestionsFlowTest < ActionController::IntegrationTest
   end
 
   test 'tags autocomplete should work' do
-    question = Factory.create(:question)
+    question = FactoryGirl.create(:question)
     Capybara.current_driver = :selenium
     visit new_question_path
     fill_in 'question_tag_list', with: 'tag4'

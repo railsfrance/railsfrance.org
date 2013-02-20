@@ -2,7 +2,7 @@ require 'test_helper'
 
 class HiteableTest < ActiveSupport::TestCase
   setup do
-    @object = Factory.create :question
+    @object = FactoryGirl.create :question
   end
 
   test 'should not be hiteable if bot' do

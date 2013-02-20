@@ -3,7 +3,7 @@ require 'spec_helper'
 describe JobsController do
 
   describe "#index" do
-    let!(:job) { Factory(:job, state: 'activated') }
+    let!(:job) { FactoryGirl.create(:job, state: 'activated') }
 
     before(:each) { visit jobs_path }
 
@@ -25,7 +25,7 @@ describe JobsController do
 
   describe "#show" do
     context "with an activated job" do
-      let!(:job) { Factory(:job, state: 'activated') }
+      let!(:job) { FactoryGirl.create(:job, state: 'activated') }
       before(:each) { visit job_path(job) }
 
       it "should display the page" do
@@ -37,7 +37,7 @@ describe JobsController do
     end
 
     context "with an non activated job" do
-      let!(:job) { Factory(:job) }
+      let!(:job) { FactoryGirl.create(:job) }
       before(:each) { visit job_path(job) }
 
       it "should display the page" do
@@ -51,7 +51,7 @@ describe JobsController do
 
   describe "job creation workflow #create, #preview, #confirm" do
     it "should create a job" do
-      job = Factory.build :job
+      job = FactoryGirl.build :job
       visit new_job_path
 
       within("#new_job") do
@@ -76,7 +76,7 @@ describe JobsController do
 
   describe "#edit, #update, #destroy" do
     context "with a valid job" do
-      let!(:job) { Factory(:job, state: 'activated', token: 'my_secure_token') }
+      let!(:job) { FactoryGirl.create(:job, state: 'activated', token: 'my_secure_token') }
       before(:each) { visit edit_job_path(token: job.token) }
 
       it "should display the page" do
@@ -112,7 +112,7 @@ describe JobsController do
     end
 
     context "with an invalid state" do
-      let!(:job) { Factory(:job, state: 'confirmed', token: 'my_secure_token') }
+      let!(:job) { FactoryGirl.create(:job, state: 'confirmed', token: 'my_secure_token') }
       before(:each) { visit edit_job_path(token: job.token) }
       it "should redirect to root_path" do
         current_path.should == root_path
@@ -120,7 +120,7 @@ describe JobsController do
     end
 
     context "with an invalid token" do
-      let!(:job) { Factory(:job, state: 'activated', token: 'my_secure_token') }
+      let!(:job) { FactoryGirl.create(:job, state: 'activated', token: 'my_secure_token') }
       before(:each) { visit edit_job_path(token: '123') }
       it "should display redirect to root_path" do
         current_path.should == root_path
@@ -130,7 +130,7 @@ describe JobsController do
 
   describe "#validate" do
     context "with a valid job" do
-      let!(:job) { Factory(:job, state: 'confirmed', token: 'my_secure_token') }
+      let!(:job) { FactoryGirl.create(:job, state: 'confirmed', token: 'my_secure_token') }
       let(:mail) { double('contact_mailer').as_null_object }
 
       it "should activate the job" do
@@ -151,7 +151,7 @@ describe JobsController do
 
     context "with an invalid job#state" do
       it "should redirect to root" do
-        job = Factory(:job, state: 'pending', token: 'my_secure_token')
+        job = FactoryGirl.create(:job, state: 'pending', token: 'my_secure_token')
         visit validate_job_path(token: job.token)
         current_path.should eql root_path
       end
@@ -159,7 +159,7 @@ describe JobsController do
 
     context "with an invalid job#token" do
       it "should redirect to root" do
-        job = Factory(:job, state: 'confirmed', token: 'my_secure_token')
+        job = FactoryGirl.create(:job, state: 'confirmed', token: 'my_secure_token')
         visit validate_job_path(token: 'wrong token')
         current_path.should eql root_path
       end
