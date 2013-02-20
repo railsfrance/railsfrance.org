@@ -130,10 +130,18 @@ describe JobsController do
 
   describe "#validate" do
     context "with a valid job" do
+      let(:job) { Factory(:job, state: 'confirmed', token: 'my_secure_token') }
+      let(:mail) { double('contact_mailer').as_null_object }
+
       it "should activate the job" do
-        job = Factory(:job, state: 'confirmed', token: 'my_secure_token')
-        double = double('contact_mailer').as_null_object
-        ContactMailer.should_receive(:valid_job).and_return(double)
+        ContactMailer.should_receive(:valid_job)
+          .and_return(mail)
+
+        JobObserver.any_instance
+          .should_receive(:after_activation)
+          .with(job)
+          .and_return
+
         visit validate_job_path(token: job.token)
         job.reload.state.should eql 'activated'
         current_path.should eql job_path(job)
@@ -148,6 +156,7 @@ describe JobsController do
         current_path.should eql root_path
       end
     end
+
     context "with an invalid job#token" do
       it "should redirect to root" do
         job = Factory(:job, state: 'confirmed', token: 'my_secure_token')

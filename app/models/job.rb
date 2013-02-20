@@ -21,7 +21,7 @@ class Job < ActiveRecord::Base
 
     after_transition confirmed: :activated do |job, trans|
 
-      job.send:notify_observers, :after_activation
+      job.send(:notify_observers, :after_activation)
     end
 
     event :confirm do
