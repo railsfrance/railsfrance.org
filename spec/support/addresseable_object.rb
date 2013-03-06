@@ -21,7 +21,7 @@ shared_examples_for "an addresseable object" do
       callback.call(klass).should be_true
     end
 
-    it "should not perform the ge6ocode callback" do
+    it "should not perform the geocode callback" do
       callback = described_class._validation_callbacks.detect{|o| o.filter == :geocode}.options[:if].first
       klass = described_class.new
       callback.call(klass).should be_false
