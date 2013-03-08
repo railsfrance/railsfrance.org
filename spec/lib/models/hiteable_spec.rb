@@ -9,7 +9,7 @@ describe Hiteable do
   end
 
   describe "#hit_view" do
-    it { expect(question.hit_view('Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.X.Y.Z Safari/525.13.', '127.0.0.1')).to be_true }
+    before { question.hit_view('Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.X.Y.Z Safari/525.13.', '127.0.0.1') }
     it { expect($redis.get("Question:#{question.id}:127.0.0.1").nil?).to_not be_nil }
   end
 end

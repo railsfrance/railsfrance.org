@@ -3,6 +3,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'capybara/rails'
 require 'capybara/rspec'
 require 'fakeweb'
 
@@ -23,15 +24,7 @@ RSpec.configure do |config|
   # config.mock_with :rr
   config.mock_with :rspec
 
-
-
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, remove the following line or assign false
-  # instead of true.
   config.use_transactional_fixtures = true
   #Fakeweb
-  FakeWeb.allow_net_connect = false
+  FakeWeb.allow_net_connect = %r[^https?://(localhost|127.0.0.1)]
 end

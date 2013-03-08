@@ -74,10 +74,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'minitest'
-  gem 'capybara',			'~> 1.1'
+  gem 'capybara',			'~> 2.0'
   gem 'fakeweb'
   gem 'shoulda-matchers'
-  gem 'turn', :require => false
-  gem 'database_cleaner',		'~> 0.6'
 end
