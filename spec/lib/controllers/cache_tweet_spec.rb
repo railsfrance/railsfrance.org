@@ -1,4 +1,6 @@
-require 'test_helper'
+require 'spec_helper'
+
+# old spec
 =begin
 class CacheTweetTest < ActiveSupport::TestCase
   test 'should be valid' do
@@ -17,3 +19,7 @@ class CacheTweetTest < ActiveSupport::TestCase
   end
 end
 =end
+
+describe CacheTweet do
+  pending
+end
