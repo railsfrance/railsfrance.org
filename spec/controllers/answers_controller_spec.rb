@@ -5,13 +5,13 @@ describe AnswersController do
   let(:user) { create(:user) }
 
   describe 'POST create' do
-
     let(:post_call) do
       -> { post(:create,
                question_id: answer.question.id,
                answer: { description: answer.description })
       }
     end
+
     before { sign_in(answer.user) }
 
     context "around create" do
