@@ -65,6 +65,7 @@ describe EventsController do
 
       it { expect(subject).to redirect_to(event.reload) }
       it { expect{subject}.to change{ Event.first.title }.to('titletest') }
+      it { expect{subject}.to change{ Event.first.description }.to('desctest') }
       it { expect{subject}.to change{flash[:notice]}.to(I18n.t('event.flash.updated')) }
     end
   end
