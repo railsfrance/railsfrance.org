@@ -67,7 +67,9 @@ describe JobsController do
       click_on "job_form_submit"
       Job.last.title.should eql job.title
       current_path.should == preview_jobs_path
-      click_on 'Confirmer'
+
+      within("#theJob") { click_on 'Confirmer' }
+
       ActionMailer::Base.deliveries.last.to.should == [job.email]
       current_path.should == root_path
       page.should have_content I18n.t('messages.job_confirmation')
