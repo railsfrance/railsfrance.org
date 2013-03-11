@@ -6,7 +6,7 @@ This Git repository is the the current Rails application of railsfrance.org.
 
 ## Installation
 
-railsfrance.org is built on the top of Rails 3.1.
+railsfrance.org is built on the top of Rails 3.2.
 
 ### Prerequisites
 
@@ -40,13 +40,13 @@ Contributions are welcome, here how to contribute :
 
 #### 2. Run the tests
 
-railsfrance.org uses Test:Unit and Capybara for testing.
+railsfrance.org uses Rspec and Capybara for testing.
 
-    rake test
+    rake spec
 
 #### 3. Write some test-driven code
 
-The tests are in `test/unit`, `test/functional` and `test/integration`.
+The tests are in `spec/`.
 
 #### 4. Create a pull request
 
@@ -69,4 +69,3 @@ This program is free software: you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 
 See the LICENSE file for the full license.
-
