@@ -25,7 +25,7 @@ railsfrance.org is built on the top of Rails 3.2.
 
 ### Running the test suite
 
-    rake test spec
+    rake spec
 
 ## Contributing
 
