@@ -15,7 +15,7 @@ class Search::Job < BasicActiveModel
   end
 
   def initialize(attributes)
-    attributes = attributes.each_pair {|k,v| attributes[k] = (v.to_i == 1 ? true : false)}
+    attributes = attributes.each_pair {|k,v| attributes[k] = (v.to_i == 1 or v == "true" ? true : false)}
     super(attributes)
   end
 
