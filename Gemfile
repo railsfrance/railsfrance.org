@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.2.13'
+gem 'rails', '~> 3.2.19'
 
 gem 'pg', '~> 0.11'
 gem 'simple_form', '~> 1.5'
@@ -19,7 +19,7 @@ gem 'devise',				'~> 1.1'
 
 # Js
 gem 'jquery-rails',			'~> 1.0'
-gem 'therubyracer',			'~> 0.9'
+gem 'therubyracer',			'~> 0.12.1'
 gem 'rails3-jquery-autocomplete',	'~> 1.0'
 
 # Geocoding solution
