@@ -3,7 +3,7 @@
   %header#sectionHeader
     %hgroup.resourcesHeader
       %h1
-        %span 
+        %span
           Les
         RESSOURCES
   %nav#secondaryNav
@@ -26,7 +26,7 @@
         %li
           %article
             %h1 Découvrir Ruby on Rails
-            De nombreuses ressources sont disponibles pour decouvrir Rails en quelques minutes. 
+            De nombreuses ressources sont disponibles pour decouvrir Rails en quelques minutes.
         %li
           %article
             %h2 Screencasts
@@ -36,7 +36,7 @@
                 %li
                   = link_to "Rails 3 screencast", "http://rubyonrails.org/screencasts/rails3"
                 %li
-                  = link_to "Railscasts", "http://railscasts.com/"                  
+                  = link_to "Railscasts", "http://railscasts.com/"
               Pousser l'apprentissage plus loin avec toute une collection payante de videos :
               %ul
                 %li
@@ -55,7 +55,7 @@
                 %li
                   = link_to "Try Ruby", "http://tryruby.org/"
                 %li
-                  = link_to "Rails for Zombies", "http://railsforzombies.org/"                  
+                  = link_to "Rails for Zombies", "http://railsforzombies.org/"
     #download
       %aside
         %h2
@@ -71,14 +71,12 @@
               Installer Ruby
             %p
               Nous recommandons l'utilisation de
-              %strong Ruby 1.9.3
-              avec Rails.
-              Rails 3.2 est la dernière version à supporter Ruby 1.8.
-              %br/
-              Ruby 1.8.6, ses versions précédentes ainsi que la 1.9.1 ne sont plus supportées.
+              %strong Ruby 2.1.3
+              avec Rails 4.1.6.
+              Rails 3.2.19 est la dernière version à supporter Ruby 1.9.3 ou antérieurs.
             %p
               %ul
-                %li 
+                %li
                   Depuis un gestionnaire de version de ruby :
                   = link_to "rbenv", "https://github.com/sstephenson/rbenv"
                   \/
@@ -87,7 +85,7 @@
                   Depuis les sources :
                   = link_to "Compilez le vous-même", "ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p0.tar.gz"
                 %li
-                  Pour windows : 
+                  Pour windows :
                   = link_to "Ruby installer", "http://rubyforge.org/frs/?group_id=167"
                   ,
                   = link_to "Rails installer", "http://railsinstaller.org/"
@@ -101,7 +99,7 @@
               = link_to "RubyGems", "http://docs.rubygems.org/"
               est le gestionnaire de paquet standard de Ruby.
               Il peut-être comparé à apt-get, emerge et d'autres gestionnaires de paquets.
-              Pour le télécharger,  
+              Pour le télécharger,
               = link_to "cliquez ici", "http://rubygems.org/pages/download"
           %article
             %h2 Installer Rails
@@ -111,7 +109,7 @@
               gem install rails
             %p
               Les nouvelles versions de rails s'installent de la même façon.
-            
+
           %article
             %h2
               Votre première application
@@ -124,7 +122,7 @@
             %pre
               rails server
             %p
-              Vous avez créé votre première application Rails ! Pour continuer, suivez les instructions présentes à 
+              Vous avez créé votre première application Rails ! Pour continuer, suivez les instructions présentes à
               = link_to "http://localhost:3000", "http://localhost:3000"
 
     #learn
@@ -203,7 +201,7 @@
                 = link_to "Ruby On Rails Core", "http://groups.google.com/group/rubyonrails-core"
           %article
             %h2 Offres d'emploi
-            %ul  
+            %ul
               %li
                 = link_to "Human Coders Jobs", "http://jobs.humancoders.com/ruby"
               %li
@@ -215,7 +213,7 @@
             = link_to "Railsfrance", "http://twitter.com/#{Settings.twitter.account}"
           %article
             %h2 Irc
-            Venez discuter de Ruby on Rails 
+            Venez discuter de Ruby on Rails
             %strong sur irc.freenode.net :
             %ul
               %li
@@ -232,19 +230,19 @@
           %h2 Groupes locaux
           De nombreuses villes en France se retrouvent régulièrement pour partager autour de Rails et de son écosystème.
           %ul
-            %li 
+            %li
               = link_to "Bordeaux", "http://www.facebook.com/rubybdx"
-            %li 
+            %li
               = link_to "Lille", "https://groups.google.com/forum/#!forum/ruby-nord"
             %li
               = link_to "Lyon", "http://lyonrb.fr/"
             %li
               = link_to "Marseille", "http://www.pastisrb.org/"
-            %li 
+            %li
               = link_to "Montpellier", "http://fr-fr.facebook.com/AperoRubyMontpellier"
             %li
               = link_to "Orleans", "http://www.meetup.com/Orleans-rb/"
-            %li 
+            %li
               = link_to "Paris", "http://www.meetup.com/parisrb/"
             %li
               = link_to "Rennes", "http://www.rennesonrails.com/"
@@ -269,11 +267,11 @@
               = link_to "Human Coders News – Ruby", "http://news.humancoders.com/t/ruby"
         %article
           %h2 Participez !
-          %p 
-            Le code source de ce site est disponible sur 
-            = link_to "Github", "https://github.com/railsfrance/railsfrance.org" 
+          %p
+            Le code source de ce site est disponible sur
+            = link_to "Github", "https://github.com/railsfrance/railsfrance.org"
             et vous pouvez participer à son évolution.
-          %p 
-            Vous pouvez aussi contribuer à la traduction française des guides officiels sur 
+          %p
+            Vous pouvez aussi contribuer à la traduction française des guides officiels sur
             = link_to "Github", "https://github.com/railsfrance/docrails"
             \.
