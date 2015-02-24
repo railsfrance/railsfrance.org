@@ -2,7 +2,7 @@
 
 [railsfrance.org](http://www.railsfrance.org) is the French Ruby on Rails community website.
 
-This Git repository is the the current Rails application of railsfrance.org.
+This Git repository is the current Rails application of railsfrance.org.
 
 ## Installation
 
