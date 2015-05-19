@@ -5,7 +5,7 @@ branches:
 cache:
   bundler: true
 sudo: false
-bundler_args: --without development --local
+bundler_args: --without development
 rvm:
   - 2.2.2
 before_install:
