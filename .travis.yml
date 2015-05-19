@@ -2,6 +2,9 @@ language: ruby
 branches:
   only:
     - master
+cache:
+  bundler: true
+bundler_args: --without development --local
 rvm:
   - 2.2.2
 before_install:
@@ -16,4 +19,3 @@ before_script:
 script: "bundle exec rake test:travis"
 services:
   - redis-server
-cache: bundler

@@ -77,6 +77,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'minitest'
   gem 'capybara',			'~> 2.0'
   gem 'fakeweb'
   gem 'shoulda-matchers'
