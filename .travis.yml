@@ -4,6 +4,7 @@ branches:
     - master
 cache:
   bundler: true
+sudo: false
 bundler_args: --without development --local
 rvm:
   - 2.2.2
