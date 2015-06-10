@@ -270,6 +270,7 @@ DEPENDENCIES
   rails (~> 3.2.21)
   rails3-jquery-autocomplete (~> 1.0)
   rails_config (~> 0.2)
+  rake (~> 10.0)
   recaptcha (~> 0.3)
   redcarpet (~> 1.17)
   redis (~> 2.2)
