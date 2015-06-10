@@ -78,6 +78,7 @@ end
 
 group :test do
   gem 'rake',     '~> 10.0'
+  gem 'test-unit',     '~> 3.1'
   gem 'minitest'
   gem 'capybara',			'~> 2.0'
   gem 'fakeweb'
