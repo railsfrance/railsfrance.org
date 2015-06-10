@@ -41,8 +41,6 @@ GEM
       xml-simple
     basic_active_model (1.0.0)
     bcrypt-ruby (3.0.1)
-    bourne (1.1.2)
-      mocha (= 0.10.5)
     builder (3.0.4)
     cancan (1.6.8)
     capybara (2.0.2)
@@ -101,7 +99,7 @@ GEM
     httparty (0.8.1)
       multi_json
       multi_xml
-    i18n (0.6.11)
+    i18n (0.7.0)
     journey (1.0.4)
     jquery-rails (1.0.14)
       railties (~> 3.0)
@@ -122,13 +120,10 @@ GEM
       activerecord (~> 3.0)
     meta-tags (1.2.4)
       actionpack
-    metaclass (0.0.1)
     method_source (0.7.1)
     mime-types (1.25.1)
     minitest (5.6.1)
-    mocha (0.10.5)
-      metaclass (~> 0.0.1)
-    multi_json (1.10.1)
+    multi_json (1.11.0)
     multi_xml (0.5.1)
     multipart-post (1.1.5)
     nokogiri (1.5.5)
@@ -202,9 +197,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
-    shoulda-matchers (1.4.2)
+    shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
-      bourne (~> 1.1.2)
     simple_form (1.5.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -285,10 +279,13 @@ DEPENDENCIES
   rspec-rails (~> 2.6)
   sanitize (~> 2.0)
   sass-rails (~> 3.2.3)
-  shoulda-matchers
+  shoulda-matchers (~> 2.8)
   simple_form (~> 1.5)
   state_machine (~> 1.0)
   therubyracer (~> 0.12.1)
   twitter (~> 4.4)
   uglifier (>= 1.0.3)
   whenever
+
+BUNDLED WITH
+   1.10.3

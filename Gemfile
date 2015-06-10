@@ -81,5 +81,5 @@ group :test do
   gem 'minitest'
   gem 'capybara',			'~> 2.0'
   gem 'fakeweb'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers',    '~> 2.8'
 end
