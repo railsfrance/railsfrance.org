@@ -7,7 +7,7 @@ cache:
 sudo: false
 bundler_args: --without development
 rvm:
-  - 2.2.2
+  - 2.1.6
 before_install:
   - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
 before_script:

@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.2.2'
+ruby '2.1.6'
 
 gem 'rails', '~> 3.2.21'
 
@@ -38,7 +38,7 @@ gem 'nokogiri',				'~> 1.3'
 gem 'sanitize',				'~> 2.0'
 
 # Social
-gem 'twitter',				'~> 4.4'
+gem 'twitter'
 gem 'gravtastic',			'~> 3.2'
 
 # SEO
@@ -77,7 +77,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'minitest'
   gem 'capybara',			'~> 2.0'
   gem 'fakeweb'
   gem 'shoulda-matchers'

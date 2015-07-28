@@ -20,7 +20,6 @@ class Job < ActiveRecord::Base
     end
 
     after_transition confirmed: :activated do |job, trans|
-
       job.send(:notify_observers, :after_activation)
     end
 
