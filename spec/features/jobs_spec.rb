@@ -136,6 +136,7 @@ describe JobsController do
       let(:mail) { double('contact_mailer').as_null_object }
 
       it "should activate the job" do
+        mock_job_twitter_update!(job)
         ContactMailer.should_receive(:valid_job)
           .and_return(mail)
 

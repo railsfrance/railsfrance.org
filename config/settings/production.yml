@@ -1,31 +1,27 @@
 app:
-  secret_token: <%= Dotcloud.env["SECRET_TOKEN"] %>
+  secret_token: <%= ENV["SECRET_TOKEN"] %>
   cookie_key: "_rails_france_session"
 devise:
-  pepper: <%= Dotcloud.env["PEPPER"] %>
+  pepper: <%= ENV["PEPPER"] %>
 mailer:
   host: "railsfrance.org"
   from: "railsfrance.org@gmail.com"
 aws_ses:
-  access_key_id: <%= Dotcloud.env["ACCESS_KEY_ID"] %>
-  secret_access_key: <%= Dotcloud.env["SECRET_ACCESS_KEY"] %>
+  access_key_id: <%= ENV["ACCESS_KEY_ID"] %>
+  secret_access_key: <%= ENV["SECRET_ACCESS_KEY"] %>
 redis:
-  host: <%= Dotcloud.env["DOTCLOUD_REDIS_REDIS_HOST"] %>
-  port: <%= Dotcloud.env["DOTCLOUD_REDIS_REDIS_PORT"] %>
-  login: <%= Dotcloud.env["DOTCLOUD_REDIS_REDIS_LOGIN"] %>
-  password: <%= Dotcloud.env["DOTCLOUD_REDIS_REDIS_PASSWORD"] %>
-  db: 1
+  url: <%= ENV["REDISTOGO_URL"] %>
   expire_view: 86400
   expire_tweet: 3600
 twitter:
-  account: <%= Dotcloud.env['TWITTER_ACCOUNT'] %>
-  consumer_key: <%= Dotcloud.env['TWITTER_CONSUMER_KEY'] %>
-  consumer_secret: <%= Dotcloud.env['TWITTER_CONSUMER_SECRET'] %>
-  oauth_token: <%= Dotcloud.env['TWITTER_OAUTH_TOKEN'] %>
-  oauth_token_secret: <%= Dotcloud.env['TWITTER_OAUTH_TOKEN_SECRET'] %>
+  account: <%= ENV['TWITTER_ACCOUNT'] %>
+  consumer_key: <%= ENV['TWITTER_CONSUMER_KEY'] %>
+  consumer_secret: <%= ENV['TWITTER_CONSUMER_SECRET'] %>
+  oauth_token: <%= ENV['TWITTER_OAUTH_TOKEN'] %>
+  oauth_token_secret: <%= ENV['TWITTER_OAUTH_TOKEN_SECRET'] %>
 recaptcha:
-  public_key: <%= Dotcloud.env['RECAPTCHA_PUBLIC_KEY'] %>
-  private_key: <%= Dotcloud.env['RECAPTCHA_PRIVATE_KEY'] %>
+  public_key: <%= ENV['RECAPTCHA_PUBLIC_KEY'] %>
+  private_key: <%= ENV['RECAPTCHA_PRIVATE_KEY'] %>
 api:
   meetup:
-    key: <%= Dotcloud.env['MEETUP_KEY'] %>
+    key: <%= ENV['MEETUP_KEY'] %>
