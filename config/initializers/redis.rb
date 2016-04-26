@@ -1,3 +1,3 @@
 require 'redis'
 
-$redis = Redis.new(Settings.redis.to_hash)
+$redis = Redis.new(url: ENV["REDISTOGO_URL"])

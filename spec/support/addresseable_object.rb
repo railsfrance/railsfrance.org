@@ -2,10 +2,10 @@ require 'spec_helper'
 
 shared_examples_for "an addresseable object" do
   context "validations" do
-    it { should validate_format_of(:postal_code).with(75018) }
-    it { should validate_format_of(:postal_code).not_with(5018) }
-    it { should validate_format_of(:postal_code).not_with(750183) }
-    it { should validate_format_of(:postal_code).not_with("yo") }
+    it { should allow_value(75018).for(:postal_code) }
+    it { should_not allow_value(5018).for(:postal_code) }
+    it { should_not allow_value(750183).for(:postal_code) }
+    it { should_not allow_value("yo").for(:postal_code) }
   end
 
   it { should respond_to :address }

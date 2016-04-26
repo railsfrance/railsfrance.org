@@ -1,15 +1,18 @@
 source 'http://rubygems.org'
+ruby '2.2.2'
 
 gem 'rails', '~> 3.2.21'
 
-gem 'pg', '~> 0.11'
+gem 'foreman'
+
+gem 'pg'
 gem 'simple_form', '~> 1.5'
 gem 'kaminari', '~> 0.12'
 gem 'make_voteable',			'~> 0.1'
 gem 'acts-as-taggable-on',		'~> 2.1'
 gem 'haml-rails',			'~> 0.3.5'
 gem 'friendly_id',			'~> 4.0.9'
-gem 'redis',				'~> 2.2'
+gem 'redis'
 gem 'date_validator',			'~> 0.6.3'
 gem 'recaptcha',			'~> 0.3', :require => 'recaptcha/rails'
 gem 'httparty'
@@ -75,7 +78,9 @@ end
 
 group :test do
   gem 'rake',     '~> 10.0'
+  gem 'test-unit',     '~> 3.1'
+  gem 'minitest'
   gem 'capybara',			'~> 2.0'
   gem 'fakeweb'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers',    '~> 2.8'
 end
