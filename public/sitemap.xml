@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.railsfrance.org/</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/ressources</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/map</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/compte/connexion</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/code-lab-3-open-source</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/code-lab-3-open-source--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/nantes-rb-reprend-du-service</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/devellopeur-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/cto-ruby-on-rails-cdi-vesting</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-ruby-on-rails--3</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/contacts/new</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?direction=asc&amp;sort=created_at</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?direction=desc&amp;sort=up_votes</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?direction=desc&amp;sort=answers_count</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/new</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/tags</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/formation-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=rails+france</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/myzen2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/comment-inserer-deux-boutons-avec-des-widgets-via-gtk</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=ruby</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=gtk</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=combobox</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/beginner</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/comment-cloisonner-proprement-les-variables-de-classes-ou-globales-entre-thread</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=threads</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=class-variables</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=globals</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/matrix</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/31</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/rmyahiaoui</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/les-symbole</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/besoin-d-avis-debutant</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=debutant</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=avis</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=sites</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/mathissart</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/rails-chez-1and1-en-hebergement-mutualise</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=passenger</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=1and1</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=redmine</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ray</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/recherche-de-formateur</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/hbo</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/bug-deploiement</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/sampistaroy</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/demande-d-aide-de-programmation</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/babyrails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/3</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/new</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/speed-dating-employeurs-developpeurs-ruby-a-la-cordee-gratuit-pour-les-devs</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/formation-happy-freelancing-travailler-moins-et-gagner-plus</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/formation-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/rails-girls-lyon-2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/codelab-railsgirls-boys-welcome</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/railsgirls-4</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/speed-dating-employeurs-developpeurs-ruby</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/page/2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/page/3</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/page/4</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/page/5</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/page/7</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/new</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-react-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/dev-ruby-on-rails-pour-ecommerce-sous-spree</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/dev-ruby-saas-strategie-environnementale</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-developer-ruby-ruby-on-rails-security-unlimited-h-f</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/h-f-fullstack-ruby-on-rails-developer-fan-de-e-learning</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-fullstack-ruby-on-rails-hf</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/architecte-back-end-h-f-specialisation-ror</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/2?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/3?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/4?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/5?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/57?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/21croissants</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/aaaaaa</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/aaugier</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/abonin</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/adomik</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/adrieng</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/adriensiami</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/agence-e</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ahialy</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/alan</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ali</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/allister-freelance</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/alsquire</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/amberflynn</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/anicet</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/anis-benabdallah</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/anoiaque</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/apneadiving</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/arachid</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/arnyak</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/3</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/4</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/5</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/15</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/compte/inscription</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/compte/mot-de-passe/new</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?direction=desc&amp;sort=created_at</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/pourquoi-n-y-a-t-il-pas-de-questions-postees-sur-ce-site</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=question</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/camilleroux</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/validation-sur-des-nested-attributes</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/rayficul</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/sondage-conference-rulu-2012</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=conference</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=sondage</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=lyon</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/hebergeur-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/railsimple</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/git-schema-rb</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=git</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=.gitignore</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=migrate</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=schema.rb</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/rortn</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/probleme-d-installation</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/grosalex</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/conception-modele-de-donnee</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=model</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=association</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/pontek</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/listes-deroulante-dynamique</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/quentin</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/prise-de-contact-avec-ror</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/renand</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/slideshow</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=slideshow</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=base+de+donn%C3%A9es</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=jquery</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/vinavina</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/2?direction=asc&amp;sort=created_at</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/3?direction=asc&amp;sort=created_at</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?direction=asc&amp;sort=up_votes</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/passenger-spawn-server-haute-activite-cpu-au-repos</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=passenger+spawn+server</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=apache2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=cpu</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/obitux</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/2?direction=desc&amp;sort=up_votes</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/3?direction=desc&amp;sort=up_votes</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?direction=asc&amp;sort=answers_count</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/debugger-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=debug</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/lulin</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/2?direction=desc&amp;sort=answers_count</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/3?direction=desc&amp;sort=answers_count</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=canada</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=communaut%C3%A9</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=montr%C3%A9al</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=round</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions?tag=controller</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/islem-berkoune</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/plombix</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ouvrages</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/bug-deploiement/page/2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/probleme-avec-la-methode-round-dans-un-controller</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/spider1712</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/c-est-moins-une-question-qu-une-invitation</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/garyharan</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/questions-de-debutants</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/brakkar</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/code-surf-camp-le-wagon</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/rails-girls-lyon</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/lyon-rb-meetup-de-juin</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/railsgirls-paris-3</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/riviera-ruby-meetup-of-april-2014</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/riviera-ruby-meetup-of-march-2014</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/first-riviera-ruby-meetup-of-2014</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/railsgirls-lille</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/debian-ruby-team-talk-qa-and-workshop</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/lyon-rb-meetup-de-janvier</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/page/6</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/lyon-rb-meetup-de-decembre</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/lyon-rb-meetup-de-novembre</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/rubymotion-workshop-dotrb-2013</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/gemnasium-workshop-dotrb-2013</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/railsgirls-paris-2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/dotrb</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/apero-pre-dotrb</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/lyon-rb-meetup-d-octobre</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-init-salle-initiation-openworldforum</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-openworldforum</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-de-la-rentree-verseau-paris</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/rails-angular-rails-4-upgrade</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-init-salle-initiation-epita-epitech</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-init-salle-initiation-p05-epita-epitech</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-init-salle-initiation-p06-epita-epitech</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-epita-amphi-4-avec-mattt-d-heroku</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-epita-amphi-4</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/master-class-impromptue-avec-chad-pytel-thoughtbot-ceo-lacantine</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/thoughtbot-s-ceo-and-chad-pytel-for-paris-rb</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-epita-fevrier-guest_star-laurent-sansonetti</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/apero-ruby-a-saint-etienne</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-nouvelle-annee</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-epita-amphi-1</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-epita--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/meetup-ptit-dej-a-l-open-world-forum-eurosites-georges-v</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/apero-nantes-rb</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-epita</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/apero-ruby-d-ete-doodle-inside</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/aprero-ruby-montpellier</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/parisrb-af83</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/apero-ruby-strasbourg-4</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/presentation-de-mongo-ror-vcr-et-de-spinejs</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/conference-tutorial-ruby-rails-presentation-coffeescript</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/conference-nouveaux-tutorial-sur-rails-experts-eventmachine-sproutcore</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/meetup-special-freelances-federation-plan-d-action-et-surprises</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/conf-sur-la-partie-vue-du-mvc-sprockets-compass-bourbon-asset-pipeline</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/apero-conference-sur-squeel-perfs-du-gc-et-tests-javascript-dans-rails-3-1</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ruby-on-rails-lyon</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/cdi-vie-lead-dev-ror-angular-socialbusiness</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/backend-developpeur-rails-h-f-aircall</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-editeur-d-applications-mobiles-et-web</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ror-devops</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-developpeur-ror</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-developpeur-rails-mobile</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/stage-developpeur-ruby-on-rails-h-f--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-chez-brand-and-celebrities</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-back-end-chez-brand-and-celebrities</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/6?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-developpeuse-fullstack-ruby-on-rails-experimente-ou-senior</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-web-junior-rubyonrails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-back-end-ruby</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ruby-on-rails-roma-italia</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-python-paris-n-y</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/senior-rubyon-rails-fullstack-js</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-full-stack-ror</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/full-stack-cto-ror</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/cto-lead-ror-python-fintech</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ror-full-stack--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/7?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/responsable-recrutement</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-backend</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-h-f--13</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ingenieur-r-d-logiciels-saas-metiers</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-developpeur-ror-responsable-technique-de-famest</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/cto-mobile</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ror-senior</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/dev-fullstack-rails-esprit-hacker-autodidacte</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/dev-rails-angular-sur-nantes-mars-a-juin-2016</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/bilog-est-a-la-recherche-d-un-e-developpeur-se-ruby-on-rails-pour-la-maintenance-d-une-application</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/8?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/stage-developpeur-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-fullstack-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-h-f--12</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/cto-free-lance-3-mois</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/effilab-ruby</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-developpeur-ruby-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/expert-ruby-on-rails-ultra-creatif</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-junior-somnambule</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-junior-scalabilite-agilite</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ingenieur-ruby-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/9?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/associe-developpement-cto</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpement-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-web-rails-javascript-h-f</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails--3</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-front-end</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-web-ruby-on-rails-nantes--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/r-d-ruby-back-end-engineer</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/architecte-developpeur-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/stagiaire-developpement-web-rails-backbone-js--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/56?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/53?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/54?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/55?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/astroneo</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/atef88</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/atmoner</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/augment</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/aupray</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/aurelie</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/baalthazard</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/bacdol</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/bachirc</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/balam</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/balita</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/barodeur</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/bartocc</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/benjamin</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/benoit</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/beta</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/bguimberteau</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/bmouret</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/6</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/bobmaerten</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/bourgui</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/boza</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/brightraven</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/brunto</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/cam</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/cbo</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/cesario</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/cfabianski</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ch4rlou</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/chok</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/chriguuiii</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ciblo</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/cisco</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/claun</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/codii</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/creative-valley</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/cuprar_on_rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/7</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/cveneziani</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dandan</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/daoud-fares</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/darkshark</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/david-berkowicz</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/davydrey</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dermane</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/derprogrammer</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dev95</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/devsigner</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dinatih</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dinedine</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dlupu</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dmathieu</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dmr41</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/doctolib</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dongpf</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dorian_c</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/dougui</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/duosrx</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/8</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/edouard</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ehab</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/elentras</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/eloise</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/enigmater</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/evernichon</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/exphirian</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/fbenariac</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/felideon</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ferdinand</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/first-developer</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/foohey</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/fouine</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/fpousserot</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/fusco</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/fuse</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/fusilly</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/gahon-alexis</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/gasomnium</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/9</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/virtualmice</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/vod</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/wizville</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/xablen</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/xav</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/xcapetir</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/xenox</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/xibman</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/yanishouu</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/yannski</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/yeca</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/yinfei</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/zeldemir</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/zencocoon</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ziburudebian</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/zifro</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/zyriuse</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/14</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/11</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/12</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/page/13</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/2?direction=desc&amp;sort=created_at</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/3?direction=desc&amp;sort=created_at</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/pimpin</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/slainer68</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/le_daf</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/kemar79</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/papepathe</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/2?direction=asc&amp;sort=up_votes</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/3?direction=asc&amp;sort=up_votes</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/2?direction=asc&amp;sort=answers_count</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/questions/page/3?direction=asc&amp;sort=answers_count</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/ruby-lugdunum-2012</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/rails-girls-paris</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/ruby-meetup-la-cantine</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/meetup-ruby-epita-with</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/3e-meetup-parisrb-epita</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/meet-up-ruby-a-geneve</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/apero-ruby-lyon-mars-2012</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/2e-meetup-parisrb-epita</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/apero-ruby-montpellier-6</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/evenements/meetup-ruby-a-la-cantine</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/wordpress-security-scanning-saas</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/cto-lille</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-back-end-ruby-rails-hegoa</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-backend</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/cherche-fantastique-cto-pour-un-projet-a-fort-potentiel-dans-l-automobile</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/cto-ruby-on-rails-agence-de-communication-h-f</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-back-ruby</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/stage-developpeur-ruby-on-rails--4</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/belle-start-up-francaise-de-l-edtech-cherche-le-meilleur-stagiaire-pour-animer-et-federer-la-pl</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/cofondateur-et-cto</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/10?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-logiciel-saas</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-full-stack--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-dev-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-sur-rails-4</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/cto-ror-full-stack</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/stage-developpement-ruby-on-rails-editeur-logiciel-saas</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-hf--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ruby-on-rails-londres-remote</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-front-end-mobile-et-back-end-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/stage-dev-ror</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/11?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-front-end-back-end-h-f--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ruby-on-rails-montreal</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/fullstack-ror-python-js</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/dev-ruby-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-ruby</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/dev-ruby--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-senior-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-back-end-experimente-ruby</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-front-end-experimente</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-back-end-confirme-ruby-php-python</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/12?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/responsable-d-infrastructure-devops</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-web-full-stack--3</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby--4</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ror-developer--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/fullstack-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-rails-full-stack-editeur-open-source</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-web-backend-ruby-on-rails-h-f</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-grand-compte-e-commerce</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-back-end-senior</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/dev-ruby-on-rails--7</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/13?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/experienced-web-developer</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-javascript-h-f</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-technique-ruby-on-rails-h-f</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-h-f</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-en-start-up</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ror-confirme-contrat-de-2-mois</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/virtuose-du-ruby-3-ans-et-plus</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-stagiaire-ror</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/stagiaire-developpement</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/52?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/lead-developer-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeurs-ruby-on-rails-au-vietnam</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeurs-ruby-on-rails--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/futur-website-agences-s-abstenir-l-immobilier-sans-commissions-recherche-co-fondateur-associe-webdev</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-rails-startup-micro-finance-methode-agile</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeurs-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ror--2</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/chef-de-projet-lead-ror</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/concepteur-developpeur-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails--4</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/49?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/50?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/page/51?</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-confirme-ruby</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/specialiste-ruby-on-rails</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/recherche-developpeur-ruby-freelance</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ingenieur-developpement-web-ruby-on-rails-h-f</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-web</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rail-poste-freelance</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/proposition-de-poste-de-developpeur-web-back-end-ruby-php-h-f</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ruby-on-rails-lead-developer</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-lyon</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ruby-on-rails-billetterie-en-ligne</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developeur-ruby</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/startup-recherche-associe-developpeur-se-rails-cto-associe-e</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/junior-developper</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ingenieur-en-developpement-web-h-f</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-web-ruby-on-rails-web-developer</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/stage-4-a-12-mois-bac-2-a-bac-5-pouvant-deboucher-sur-un-cdi-developpeur-ror</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-htlm5</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-ror</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/ruby-on-rails-web-application-developer</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/jobs/developpeur-se-ruby</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/gasston</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/gayahel</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/gdurelle</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/geraud</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/germanlinux</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/glejeune</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/guryn</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/hallelujah</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/hanouman</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/happy-sharing</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ianmarc</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/ifgezen</loc>
+</url>
+<url>
+  <loc>http://www.railsfrance.org/membres/i-lahouar</loc>
+</url>
+</urlset>
