@@ -32,7 +32,7 @@ gem 'state_machine',			'~> 1.0'
 gem 'redcarpet',			'~> 1.17'
 gem 'albino',				'~> 1.3'
 gem 'nokogiri',				'~> 1.3'
-gem 'sanitize',				'~> 2.0'
+gem 'sanitize',				'~> 4.6'
 
 # Social
 gem 'twitter',				'~> 4.4'
