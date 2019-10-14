@@ -18,7 +18,7 @@ gem 'cancan',				'~> 1.6'
 gem 'devise',				'~> 1.1'
 
 # Js
-gem 'jquery-rails',			'~> 1.0'
+gem 'jquery-rails',			'~> 3.1'
 gem 'therubyracer',			'~> 0.12.1'
 gem 'rails3-jquery-autocomplete',	'~> 1.0'
 
