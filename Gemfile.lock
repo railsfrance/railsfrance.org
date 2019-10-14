@@ -111,7 +111,7 @@ GEM
     letter_opener (0.0.2)
       launchy
     libv8 (3.16.14.7)
-    mail (2.5.4)
+    mail (2.5.5)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     make_voteable (0.1.1)
