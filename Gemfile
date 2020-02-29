@@ -74,7 +74,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rake',     '~> 10.0'
+  gem 'rake',     '~> 12.3'
   gem 'capybara',			'~> 2.0'
   gem 'fakeweb'
   gem 'shoulda-matchers'
