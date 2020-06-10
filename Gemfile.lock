@@ -85,7 +85,7 @@ GEM
       multipart-post (~> 1.1)
     ffi (1.4.0)
     friendly_id (4.0.9)
-    geocoder (1.0.5)
+    geocoder (1.6.1)
     gravtastic (3.2.6)
     haml (3.1.7)
     haml-rails (0.3.5)
@@ -254,7 +254,7 @@ DEPENDENCIES
   factory_girl_rails (~> 1.6)
   fakeweb
   friendly_id (~> 4.0.9)
-  geocoder (~> 1.0)
+  geocoder (~> 1.6)
   gravtastic (~> 3.2)
   haml-rails (~> 0.3.5)
   httparty
