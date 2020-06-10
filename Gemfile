@@ -23,7 +23,7 @@ gem 'therubyracer',			'~> 0.12.1'
 gem 'rails3-jquery-autocomplete',	'~> 1.0'
 
 # Geocoding solution
-gem 'geocoder',				'~> 1.0'
+gem 'geocoder',				'~> 1.6'
 
 # State Machine
 gem 'state_machine',			'~> 1.0'
