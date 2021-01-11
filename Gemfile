@@ -29,7 +29,7 @@ gem 'geocoder',				'~> 1.0'
 gem 'state_machine',			'~> 1.0'
 
 # Markdown syntax
-gem 'redcarpet',			'~> 1.17'
+gem 'redcarpet',			'~> 3.5'
 gem 'albino',				'~> 1.3'
 gem 'nokogiri',				'~> 1.3'
 gem 'sanitize',				'~> 2.0'
